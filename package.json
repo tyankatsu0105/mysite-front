@@ -20,9 +20,9 @@
     }
   },
   "dependencies": {
-    "@gridsome/source-wordpress": "^0.0.4",
+    "@gridsome/source-wordpress": "^0.1.0",
     "dotenv": "^6.1.0",
-    "gridsome": "^0.2.0"
+    "gridsome": "^0.3.3"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
