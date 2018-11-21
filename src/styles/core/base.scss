@@ -1,0 +1,42 @@
+/* stylelint-disable selector-no-qualifying-type */
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  color: $color-base;
+  background-color: #fff;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: $tst-default;
+}
+
+img {
+  // 変化時のカクつき防止
+  backface-visibility: hidden;
+  // img下の隙間を埋める
+  vertical-align: middle;
+}
+
+button {
+  cursor: pointer;
+  transition: $tst-default;
+}
+
+input,
+label,
+select,
+button,
+textarea {
+  transition: $tst-default;
+  &:focus {
+    box-shadow: $box-shadow-default;
+  }
+}

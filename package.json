@@ -1,0 +1,77 @@
+{
+  "name": "my-gridsome-site",
+  "scripts": {
+    "test": "echo 'this is test'",
+    "gs:build": "gridsome build",
+    "build": "run-s env-production gs:build",
+    "gs:develop": "gridsome develop",
+    "develop:dev": "run-s env-develop gs:develop",
+    "develop:prod": "run-s env-production gs:develop",
+    "explore": "gridsome explore",
+    "env-develop": "cp .env.develop .env",
+    "env-production": "cp .env.production .env",
+    "commit": "git-cz",
+    "precommit": "lint-staged",
+    "format": "fixpack"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./cz-custom"
+    }
+  },
+  "dependencies": {
+    "@gridsome/source-wordpress": "^0.0.4",
+    "dotenv": "^6.1.0",
+    "gridsome": "^0.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "commitizen": "^3.0.4",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "fixpack": "^2.3.1",
+    "lint-staged": "^8.0.5",
+    "node-sass": "^4.10.0",
+    "npm-run-all": "^4.1.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "sass-resources-loader": "^2.0.0",
+    "stylelint": "^9.8.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-recess-order": "^2.0.0",
+    "stylelint-config-sass-guidelines": "^5.2.0"
+  },
+  "private": true,
+  "lint-staged": {
+    "linters": {
+      "*.scss": [
+        "prettier --write",
+        "stylelint --fix --cache --cache-location '.stylelintcache'",
+        "git add"
+      ],
+      "*.js": [
+        "prettier --write",
+        "eslint --fix --cache --cache-location '.eslintcache'",
+        "git add"
+      ],
+      "*.vue": [
+        "prettier --write",
+        "eslint --fix --cache --cache-location '.eslintcache'",
+        "stylelint --fix --cache --cache-location '.stylelintcache'",
+        "git add"
+      ],
+      "*.md": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "node_modules/**/*",
+      "cz-custom/**/*",
+      "src/.temp/**/*"
+    ]
+  }
+}

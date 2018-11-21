@@ -1,0 +1,10 @@
+.page-enter-active,
+.page-leave-active {
+  transition: $tst-default;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}

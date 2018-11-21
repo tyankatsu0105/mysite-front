@@ -1,0 +1,9 @@
+.v-enter-active,
+.v-leave-active {
+  transition: $tst-default;
+}
+
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}

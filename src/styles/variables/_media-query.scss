@@ -1,0 +1,63 @@
+$xs-min-size: 480px;
+$sm-min-size: 768px;
+$md-min-size: 1025px;
+$lg-min-size: 1280px;
+
+$xs-break: $sm-min-size - 1px;
+$sm-break: $md-min-size - 1px;
+$md-break: $lg-min-size - 1px;
+
+// 対象サイズ未満のみ less than
+// --------------------------------------------------
+@mixin lt-xs() {
+  @media screen and (max-width: $xs-break) {
+    @content;
+  }
+}
+@mixin lt-sm() {
+  @media screen and (max-width: $sm-break) {
+    @content;
+  }
+}
+@mixin lt-md() {
+  @media screen and (max-width: $md-break) {
+    @content;
+  }
+}
+
+// 対象サイズ以上のみ get more than
+// --------------------------------------------------
+@mixin gt-sm() {
+  @media screen and (min-width: $sm-min-size) {
+    @content;
+  }
+}
+@mixin gt-md() {
+  @media screen and (min-width: $md-min-size) {
+    @content;
+  }
+}
+@mixin gt-lg() {
+  @media screen and (min-width: $lg-min-size) {
+    @content;
+  }
+}
+
+// 対象サイズ範囲内のみ（ほぼ使わない）
+// --------------------------------------------------
+@mixin in-xs() {
+  @include lt-xs;
+}
+@mixin in-sm() {
+  @media screen and (min-width: $sm-min-size) and (max-width: $sm-break) {
+    @content;
+  }
+}
+@mixin in-md() {
+  @media screen and (min-width: $md-min-size) and (max-width: $md-break) {
+    @content;
+  }
+}
+@mixin in-lg() {
+  @include gt-lg;
+}
