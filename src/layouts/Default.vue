@@ -1,27 +1,23 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong> <g-link :to="{ name: 'home' }">Gridsome</g-link> </strong>
-      <nav class="nav">
-        <g-link 
-          :to="{ name: 'home' }" 
-          class="nav__link">Home</g-link>
-        <g-link 
-          :to="{ name: 'about' }" 
-          class="nav__link">About</g-link>
-      </nav>
-    </header>
+  <div class="Default">
+    <v-header />
     <transition-group 
       name="page" 
       tag="main" 
       appear>
-      <div key="main"><slot></slot></div>
+      <div 
+        key="main" 
+        class="contents"><slot></slot></div>
     </transition-group>
   </div>
 </template>
 
 <script>
+import VHeader from "@/components/VHeader";
 export default {
+  components: {
+    VHeader
+  },
   metaInfo: {
     htmlAttrs: {
       lang: "ja"
@@ -42,28 +38,13 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/styles/utility/transition-page.scss";
-.layout {
+.Default {
+  background-color: #333;
+}
+.contents {
   max-width: 600px;
   padding-right: 20px;
   padding-left: 20px;
   margin: 0 auto;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.nav {
-  display: flex;
-}
-
-.nav__link {
-  margin-left: 20px;
-  color: $color-primary;
 }
 </style>

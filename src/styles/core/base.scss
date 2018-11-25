@@ -1,14 +1,15 @@
 /* stylelint-disable selector-no-qualifying-type */
 
 :root {
-  font-size: 62.5%;
+  font-size: 16px;
 }
 
 body {
   font-family: $font-family-base;
   line-height: $line-height-base;
-  color: $color-base;
-  background-color: #fff;
+  color: $color-font;
+  background-color: $color-primary;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -36,6 +37,7 @@ select,
 button,
 textarea {
   transition: $tst-default;
+
   &:focus {
     box-shadow: $box-shadow-default;
   }
