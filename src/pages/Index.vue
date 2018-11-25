@@ -1,22 +1,25 @@
 <template>
-  <div class="Index">
-    <v-header />
-    <index-canvas />
-    <div class="Index-ContentsBlock">
-      <h1 class="Index-Heading">Tyankatsu<br>Sketch<br>Book</h1>
-      <div class="Index-LinkBox">
-        <g-link 
-          :to="{ name: 'about' }" 
-          class="Index-Link">About</g-link>
-        <g-link 
-          :to="{ name: 'about' }" 
-          class="Index-Link">About</g-link>
-        <g-link 
-          :to="{ name: 'about' }" 
-          class="Index-Link">About</g-link>
+  <transition name="index">
+    <div class="Index">
+      <v-header />
+      <index-canvas />
+      <div class="Index_ContentsBlock">
+        <h1 class="Index_Heading">Tyankatsu<br>Sketch<br>Book</h1>
+        <div class="Index_LinkBox">
+          <g-link 
+            :to="{ name: 'about' }" 
+            class="Index_Link">About</g-link>
+          <g-link 
+            :to="{ name: 'about' }" 
+            class="Index_Link">About</g-link>
+          <g-link 
+            :to="{ name: 'about' }" 
+            class="Index_Link">About</g-link>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
+  
 </template>
 
 <script>
@@ -31,30 +34,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/styles/utility/transition-index.scss";
 .Index {
-  &-ContentsBlock {
+  &_ContentsBlock {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  &-Heading {
+  &_Heading {
     font-size: 3rem;
     text-align: center;
   }
-  &-LinkBox {
+  &_LinkBox {
     display: flex;
     justify-content: space-between;
     margin-top: 24px;
   }
-  &-Link {
+  &_Link {
     padding: 8px 16px;
     font-size: 1.3rem;
     border: 1px solid currentColor;
     border-radius: 4px;
 
     & + & {
-      margin-left: 10px;
+      margin-left: 12px;
     }
   }
 }

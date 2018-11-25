@@ -1,0 +1,10 @@
+.header-enter-active,
+.header-leave-active {
+  transition: $tst-default;
+}
+
+.header-enter,
+.header-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}

@@ -1,0 +1,9 @@
+.index-enter-active,
+.index-leave-active {
+  transition: $tst-default;
+}
+
+.index-enter,
+.index-leave-to {
+  opacity: 0;
+}

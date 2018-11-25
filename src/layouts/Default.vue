@@ -7,7 +7,7 @@
       appear>
       <div 
         key="main" 
-        class="contents"><slot></slot></div>
+        class="Default_Contents"><slot></slot></div>
     </transition-group>
   </div>
 </template>
@@ -40,11 +40,12 @@ export default {
 @import "@/styles/utility/transition-page.scss";
 .Default {
   background-color: #333;
-}
-.contents {
-  max-width: 600px;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin: 0 auto;
+
+  &_Contents {
+    max-width: 600px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+  }
 }
 </style>

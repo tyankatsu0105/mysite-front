@@ -94,6 +94,7 @@ th {
 body {
   text-size-adjust: 100%;
 }
+
 video {
   object-fit: cover;
 }
@@ -113,6 +114,7 @@ textarea {
   /* Browsers have different default form fonts */
   font-size: 100%;
   line-height: 1;
+  color: inherit;
   white-space: normal;
   vertical-align: middle;
   background: none;
