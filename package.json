@@ -39,7 +39,7 @@
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-gridsome": "^0.0.7",
+    "eslint-plugin-gridsome": "^0.1.0",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-vue": "^4.7.1",
     "fixpack": "^2.3.1",

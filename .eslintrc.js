@@ -9,7 +9,7 @@ module.exports = {
   plugins: ["gridsome", "prettier"],
   rules: {
     "prettier/prettier": "error",
-    "gridsome/page-query": "error",
+    "gridsome/format-query-block": "error",
     // Web Componentsと差別化を図るため
     "vue/component-name-in-template-casing": "PascalCase",
     "vue/html-closing-bracket-newline": "error",

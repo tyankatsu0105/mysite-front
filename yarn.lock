@@ -4085,10 +4085,10 @@ eslint-config-prettier@^3.3.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-plugin-gridsome@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-gridsome/-/eslint-plugin-gridsome-0.0.7.tgz#64e2f0586038b2b3137404f7284be29d2d972651"
-  integrity sha512-V4qjcspu4rc9/C/o7z4K32aZKw/NOYoHA7dsJ+00+bC38vFuyN0s+hH2yxqyzxkbKqnrFcKJPl8ZcD84O9YPYA==
+eslint-plugin-gridsome@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-gridsome/-/eslint-plugin-gridsome-0.1.0.tgz#4a0523c87b9b17be6d034bcf7e700dcbf89b8c18"
+  integrity sha512-5d6l2mwpoEJEvmcwbWtbE22UrD5O2Nv5Wu3neB3Hj+G0mK5YOuDWmTdqvaIn/bbagt4hIFhI5zXkCnaS0k7Sbg==
   dependencies:
     prettier "^1.15.3"
 
