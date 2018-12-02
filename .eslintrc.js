@@ -1,12 +1,15 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    es6: true
   },
+  parser: "vue-eslint-parser",
   extends: ["airbnb-base/legacy", "plugin:vue/recommended", "prettier"],
-  plugins: ["prettier"],
+  plugins: ["gridsome", "prettier"],
   rules: {
     "prettier/prettier": "error",
+    "gridsome/page-query": "error",
     // Web Componentsと差別化を図るため
     "vue/component-name-in-template-casing": "PascalCase",
     "vue/html-closing-bracket-newline": "error",
