@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default render 1`] = `
+<div class="Default">
+  <v-header-stub></v-header-stub> <span name="page" tag="main" appear=""><div class="Default_Contents"></div></span>
+</div>
+`;

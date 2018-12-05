@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index render 1`] = `
+<div class="Index" name="index">
+  <v-header-stub></v-header-stub>
+  <index-canvas-stub></index-canvas-stub>
+  <div class="Index_ContentsBlock">
+    <h1 class="Index_Heading">Tyankatsu<br>Sketch<br>Book</h1>
+    <div class="Index_LinkBox">
+      <g-link-stub to="[object Object]" class="Index_Link">About</g-link-stub>
+      <g-link-stub to="[object Object]" class="Index_Link">About</g-link-stub>
+      <g-link-stub to="[object Object]" class="Index_Link">About</g-link-stub>
+    </div>
+  </div>
+</div>
+`;

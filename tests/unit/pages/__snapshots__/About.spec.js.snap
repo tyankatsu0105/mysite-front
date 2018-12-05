@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About render 1`] = `
+<layout-stub>
+  <h1>WIP</h1>
+</layout-stub>
+`;

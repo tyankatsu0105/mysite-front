@@ -27,21 +27,24 @@
     "gsap": "^2.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
     "@fortawesome/free-solid-svg-icons": "^5.5.0",
     "@fortawesome/vue-fontawesome": "^0.1.2",
-    "@vue/test-utils": "^1.0.0-beta.25",
+    "@vue/test-utils": "^1.0.0-beta.26",
     "autoprefixer": "^9.3.1",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "babel-preset-vue": "^2.0.2",
     "commitizen": "^3.0.4",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-gridsome": "^0.1.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-vue": "^4.7.1",
+    "eslint-plugin-vue": "^5.0.0",
     "fixpack": "^2.3.1",
     "hygen": "^1.6.2",
     "jest": "^23.6.0",
@@ -58,7 +61,7 @@
     "stylelint-config-recess-order": "^2.0.0",
     "stylelint-config-sass-guidelines": "^5.2.0",
     "vue-eslint-parser": "^4.0.2",
-    "vue-jest": "^3.0.0"
+    "vue-jest": "^3.0.1"
   },
   "private": true,
   "lint-staged": {
