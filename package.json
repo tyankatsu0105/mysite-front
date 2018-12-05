@@ -13,7 +13,8 @@
     "commit": "git-cz",
     "precommit": "lint-staged",
     "format": "fixpack",
-    "hygen": "hygen generate new"
+    "make:vue": "hygen generate vue",
+    "make:store": "hygen generate store"
   },
   "config": {
     "commitizen": {

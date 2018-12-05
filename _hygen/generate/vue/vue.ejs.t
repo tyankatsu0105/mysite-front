@@ -1,13 +1,13 @@
 ---
 to: src/<%= dir %>/<%= name %>.vue
 ---
-<templates>
+<template>
   <div class="<%= name %>"></div>
-</templates>
+</template>
 
-<scripts>
+<script>
 export default {}
-</scripts>
+</script>
 
 <style scoped lang='scss'>
   .<%= name %> {}

@@ -3,7 +3,14 @@ module.exports = [
     type: "list",
     name: "dir",
     message: "ディレクトリは？",
-    choices: ["components", "layouts", "pages", "templates"]
+    choices: [
+      "basics",
+      "components",
+      "containers",
+      "pages",
+      "layouts",
+      "templates"
+    ]
   },
   {
     type: "input",
