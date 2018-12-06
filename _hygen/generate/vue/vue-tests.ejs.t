@@ -1,8 +1,8 @@
 ---
-to: tests/unit/<%= dir %>/<%= name %>.spec.js
+to: tests/unit/<%= dir %>/<% if(hierarchy){ -%><%= hierarchyName %>/<% } -%><%= name %>.spec.js
 ---
 import { shallowMount } from "@vue/test-utils";
-import <%= name %> from "@/<%= dir %>/<%= name %>.vue";
+import <%= name %> from "@/<%= dir %>/<% if(hierarchy){ -%><%= hierarchyName %>/<% } -%><%= name %>.vue";
 
 describe("<%= name %>", () => {
   it("render", () => {
