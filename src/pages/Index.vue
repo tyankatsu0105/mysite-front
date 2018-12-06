@@ -8,24 +8,11 @@
 					Tyankatsu<br>Sketch<br>Book
 				</h1>
 				<div class="Index_LinkBox">
-					<g-link
-						:to="{ name: 'about' }"
+					<LinkButtonPrimary
+						text="About"
+						to="about"
 						class="Index_Link"
-					>
-						About
-					</g-link>
-					<g-link
-						:to="{ name: 'about' }"
-						class="Index_Link"
-					>
-						About
-					</g-link>
-					<g-link
-						:to="{ name: 'about' }"
-						class="Index_Link"
-					>
-						About
-					</g-link>
+					/>
 				</div>
 			</div>
 		</div>
@@ -35,10 +22,13 @@
 <script>
 import IndexCanvas from "@/containers/IndexCanvas.vue";
 import VHeader from "@/containers/VHeader.vue";
+
+import LinkButtonPrimary from "@/basics/LinkButtonPrimary.vue";
 export default {
   components: {
     IndexCanvas,
-    VHeader
+    VHeader,
+    LinkButtonPrimary
   }
 };
 </script>
@@ -58,15 +48,10 @@ export default {
   }
   &_LinkBox {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 24px;
   }
   &_Link {
-    padding: 8px 16px;
-    font-size: 1.3rem;
-    border: 1px solid currentColor;
-    border-radius: 4px;
-
     & + & {
       margin-left: 12px;
     }

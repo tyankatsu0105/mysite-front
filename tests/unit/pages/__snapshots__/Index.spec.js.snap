@@ -9,15 +9,7 @@ exports[`Index render 1`] = `
       Tyankatsu<br>Sketch<br>Book
     </h1>
     <div class="Index_LinkBox">
-      <g-link-stub to="[object Object]" class="Index_Link">
-        About
-      </g-link-stub>
-      <g-link-stub to="[object Object]" class="Index_Link">
-        About
-      </g-link-stub>
-      <g-link-stub to="[object Object]" class="Index_Link">
-        About
-      </g-link-stub>
+      <linkbuttonprimary-stub text="About" to="about" class="Index_Link"></linkbuttonprimary-stub>
     </div>
   </div>
 </div>

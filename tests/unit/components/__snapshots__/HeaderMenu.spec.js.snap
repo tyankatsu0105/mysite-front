@@ -2,16 +2,16 @@
 
 exports[`HeaderMenu render 1`] = `
 <div class="HeaderMenu">
-  <nav class="HeaderMenu-Nav">
+  <nav class="HeaderMenu_Nav">
     <headerclosebutton-stub></headerclosebutton-stub>
-    <ul class="HeaderMenu-NavList">
-      <li class="HeaderMenu-NavListItem">
-        <g-link-stub to="[object Object]" exact="" class="HeaderMenu-NavListItemLink">
+    <ul class="HeaderMenu_NavList">
+      <li class="HeaderMenu_NavListItem">
+        <g-link-stub to="[object Object]" exact="" class="HeaderMenu_NavListItemLink">
           Home
         </g-link-stub>
       </li>
-      <li class="HeaderMenu-NavListItem">
-        <g-link-stub to="[object Object]" exact="" class="HeaderMenu-NavListItemLink">
+      <li class="HeaderMenu_NavListItem">
+        <g-link-stub to="[object Object]" exact="" class="HeaderMenu_NavListItemLink">
           About
         </g-link-stub>
       </li>

@@ -1,21 +1,21 @@
 <template>
 	<div class="HeaderMenu">
-		<nav class="HeaderMenu-Nav">
+		<nav class="HeaderMenu_Nav">
 			<HeaderCloseButton @close-header="closeHeader" />
-			<ul class="HeaderMenu-NavList">
-				<li class="HeaderMenu-NavListItem">
+			<ul class="HeaderMenu_NavList">
+				<li class="HeaderMenu_NavListItem">
 					<g-link
 						:to="{ name: 'home' }"
-						class="HeaderMenu-NavListItemLink"
+						class="HeaderMenu_NavListItemLink"
 						exact
 					>
 						Home
 					</g-link>
 				</li>
-				<li class="HeaderMenu-NavListItem">
+				<li class="HeaderMenu_NavListItem">
 					<g-link
 						:to="{ name: 'about' }"
-						class="HeaderMenu-NavListItemLink"
+						class="HeaderMenu_NavListItemLink"
 						exact
 					>
 						About
@@ -53,11 +53,11 @@ export default {
   height: 100%;
   color: $color-primary;
   background-color: #fff;
-  &-Nav {
+  &_Nav {
     position: relative;
     padding: 36px 0;
   }
-  &-NavListItemLink {
+  &_NavListItemLink {
     padding: 8px 40px;
 
     &.active {

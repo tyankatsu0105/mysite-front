@@ -43,13 +43,10 @@ export default {
 <style lang="scss" scoped>
 @import "@/styles/utility/transition-page.scss";
 .Default {
-  background-color: #333;
-
   &_Contents {
-    max-width: 600px;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin: 0 auto;
+    max-width: 1280px;
+    padding: 24px;
+    margin: 32px auto;
   }
 }
 </style>
