@@ -1,11 +1,12 @@
 <template>
-  <div class="IndexCanvas">
-    <canvas
-      ref="canvas"
-      :width="canvasSize.width"
-      :height="canvasSize.height"
-      @mousedown="clickAction"></canvas>
-  </div>
+	<div class="IndexCanvas">
+		<canvas
+			ref="canvas"
+			:width="canvasSize.width"
+			:height="canvasSize.height"
+			@mousedown="clickAction"
+		></canvas>
+	</div>
 </template>
 
 <script>

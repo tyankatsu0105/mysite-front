@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderMenu render 1`] = `
+<div class="HeaderMenu">
+  <nav class="HeaderMenu-Nav">
+    <headerclosebutton-stub></headerclosebutton-stub>
+    <ul class="HeaderMenu-NavList">
+      <li class="HeaderMenu-NavListItem">
+        <g-link-stub to="[object Object]" exact="" class="HeaderMenu-NavListItemLink">
+          Home
+        </g-link-stub>
+      </li>
+      <li class="HeaderMenu-NavListItem">
+        <g-link-stub to="[object Object]" exact="" class="HeaderMenu-NavListItemLink">
+          About
+        </g-link-stub>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

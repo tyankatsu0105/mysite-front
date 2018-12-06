@@ -1,19 +1,23 @@
 <template>
-  <div class="Default">
-    <v-header />
-    <transition-group 
-      name="page" 
-      tag="main" 
-      appear>
-      <div 
-        key="main" 
-        class="Default_Contents"><slot></slot></div>
-    </transition-group>
-  </div>
+	<div class="Default">
+		<v-header />
+		<transition-group
+			name="page"
+			tag="main"
+			appear
+		>
+			<div
+				key="main"
+				class="Default_Contents"
+			>
+				<slot></slot>
+			</div>
+		</transition-group>
+	</div>
 </template>
 
 <script>
-import VHeader from "@/components/VHeader";
+import VHeader from "@/containers/VHeader";
 export default {
   components: {
     VHeader

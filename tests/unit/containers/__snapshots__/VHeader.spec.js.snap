@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VHeader render 1`] = `
-<header class="VHeader"><button type="button" class="VHeader_TriggerButton">
-    Menu
-  </button>
+<header class="VHeader">
+  <headeropenbutton-stub></headeropenbutton-stub>
   <!---->
 </header>
 `;

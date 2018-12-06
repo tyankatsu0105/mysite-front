@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import VHeader from "@/components/VHeader.vue";
+import VHeader from "@/containers/VHeader.vue";
 
 describe("VHeader", () => {
   it("render", () => {

@@ -1,30 +1,40 @@
 <template>
-  <transition name="index">
-    <div class="Index">
-      <v-header />
-      <index-canvas />
-      <div class="Index_ContentsBlock">
-        <h1 class="Index_Heading">Tyankatsu<br>Sketch<br>Book</h1>
-        <div class="Index_LinkBox">
-          <g-link 
-            :to="{ name: 'about' }" 
-            class="Index_Link">About</g-link>
-          <g-link 
-            :to="{ name: 'about' }" 
-            class="Index_Link">About</g-link>
-          <g-link 
-            :to="{ name: 'about' }" 
-            class="Index_Link">About</g-link>
-        </div>
-      </div>
-    </div>
-  </transition>
-  
+	<transition name="index">
+		<div class="Index">
+			<v-header />
+			<index-canvas />
+			<div class="Index_ContentsBlock">
+				<h1 class="Index_Heading">
+					Tyankatsu<br>Sketch<br>Book
+				</h1>
+				<div class="Index_LinkBox">
+					<g-link
+						:to="{ name: 'about' }"
+						class="Index_Link"
+					>
+						About
+					</g-link>
+					<g-link
+						:to="{ name: 'about' }"
+						class="Index_Link"
+					>
+						About
+					</g-link>
+					<g-link
+						:to="{ name: 'about' }"
+						class="Index_Link"
+					>
+						About
+					</g-link>
+				</div>
+			</div>
+		</div>
+	</transition>
 </template>
 
 <script>
-import IndexCanvas from "@/components/IndexCanvas.vue";
-import VHeader from "@/components/VHeader.vue";
+import IndexCanvas from "@/containers/IndexCanvas.vue";
+import VHeader from "@/containers/VHeader.vue";
 export default {
   components: {
     IndexCanvas,
