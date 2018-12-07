@@ -26,8 +26,10 @@ export default {
 <style scoped lang='scss'>
 .LinkButtonIcon {
   position: relative;
+  position: relative;
   padding: 8px 24px;
   font-size: 1.3rem;
+  background-color: $color-black;
   background-color: $color-black;
   border-radius: 8px;
   box-shadow: 0 2px 5px 0 #1e1e1e;
