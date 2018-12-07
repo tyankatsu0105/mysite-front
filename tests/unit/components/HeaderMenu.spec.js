@@ -7,4 +7,14 @@ describe("HeaderMenu", () => {
 
     expect(wrapper.html()).toMatchSnapshot();
   });
+
+  describe("methods", () => {
+    describe("closeHeader", () => {
+      it("call emit", () => {
+        const wrapper = shallowMount(HeaderMenu);
+        wrapper.vm.closeHeader();
+        expect(wrapper.emitted("close-header")).toEqual([[false]]);
+      });
+    });
+  });
 });

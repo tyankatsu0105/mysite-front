@@ -55,10 +55,16 @@ export default {
   background-color: #fff;
   &_Nav {
     position: relative;
-    padding: 36px 0;
+    height: 100vh;
+    padding: 44px 0;
+    overflow-y: scroll;
   }
   &_NavListItemLink {
     padding: 8px 40px;
+
+    &:hover {
+      // background-color: $color-black;
+    }
 
     &.active {
       background-color: $color-font;

@@ -7,4 +7,14 @@ describe("HeaderOpenButton", () => {
 
     expect(wrapper.html()).toMatchSnapshot();
   });
+
+  describe("methods", () => {
+    describe("closeHeader", () => {
+      it("call emit", () => {
+        const wrapper = shallowMount(HeaderOpenButton);
+        wrapper.vm.openHeader();
+        expect(wrapper.emitted("open-header")).toEqual([[true]]);
+      });
+    });
+  });
 });

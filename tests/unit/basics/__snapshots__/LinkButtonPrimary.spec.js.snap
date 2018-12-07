@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LinkButtonPrimary render 1`] = `
-<g-link-stub class="LinkButtonPrimary">
-
+<g-link-stub class="LinkButtonPrimary" to="hogehoge.com">
+  リンク
 </g-link-stub>
 `;

@@ -5,12 +5,34 @@
 			<index-canvas />
 			<div class="Index_ContentsBlock">
 				<h1 class="Index_Heading">
-					Tyankatsu<br>Sketch<br>Book
+					Tyankatsu<br>Sketch Book
 				</h1>
 				<div class="Index_LinkBox">
 					<LinkButtonPrimary
 						text="About"
 						to="about"
+						class="Index_Link"
+					/>
+					<LinkButtonPrimary
+						text="Blog"
+						to="/blog/all"
+						class="Index_Link"
+					/>
+				</div>
+				<div class="Index_LinkBox">
+					<LinkButtonIcon
+						:icon="{ prefix: 'fab', iconName: 'twitter' }"
+						href="https://twitter.com/tyankatsu5"
+						class="Index_Link"
+					/>
+					<LinkButtonIcon
+						:icon="{ prefix: 'fab', iconName: 'github' }"
+						href="https://github.com/tyankatsu0105"
+						class="Index_Link"
+					/>
+					<LinkButtonIcon
+						:icon="{ prefix: 'fab', iconName: 'npm' }"
+						href="https://www.npmjs.com/~tyankatsu0105"
 						class="Index_Link"
 					/>
 				</div>
@@ -24,11 +46,13 @@ import IndexCanvas from "@/containers/IndexCanvas.vue";
 import VHeader from "@/containers/VHeader.vue";
 
 import LinkButtonPrimary from "@/basics/LinkButtonPrimary.vue";
+import LinkButtonIcon from "@/basics/LinkButtonIcon.vue";
 export default {
   components: {
     IndexCanvas,
     VHeader,
-    LinkButtonPrimary
+    LinkButtonPrimary,
+    LinkButtonIcon
   }
 };
 </script>

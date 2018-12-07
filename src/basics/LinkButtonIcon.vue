@@ -1,20 +1,21 @@
 <template>
-	<g-link
-		:to="to"
-		class="LinkButtonPrimary"
+	<a
+		:href="href"
+		target="_blank"
+		class="LinkButtonIcon"
 	>
-		{{ text }}
-	</g-link>
+		<font-awesome-icon :icon="icon" />
+	</a>
 </template>
 
 <script>
 export default {
   props: {
-    text: {
-      type: String,
-      requirer: true
+    icon: {
+      type: Object,
+      requirer: false
     },
-    to: {
+    href: {
       type: String,
       requirer: true
     }
@@ -23,7 +24,8 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.LinkButtonPrimary {
+.LinkButtonIcon {
+  position: relative;
   padding: 8px 24px;
   font-size: 1.3rem;
   background-color: $color-black;
