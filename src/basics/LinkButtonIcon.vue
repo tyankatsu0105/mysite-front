@@ -30,14 +30,12 @@ export default {
   padding: 8px 24px;
   font-size: 1.3rem;
   background-color: $color-black;
-  background-color: $color-black;
   border-radius: 8px;
-  box-shadow: 0 2px 5px 0 #1e1e1e;
+  box-shadow: 0 0 16px #292929;
   transition: $tst-default;
 
   &:hover {
-    box-shadow: 0 2px 6px #0e0e0e;
-    transform: translateY(-2px);
+    box-shadow: 0 0 18px #181818;
   }
 }
 </style>
