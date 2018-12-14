@@ -9,7 +9,9 @@
 						class="HeaderMenu_NavListItemLink"
 						exact
 					>
-						Home
+						<span>
+							Home
+						</span>
 					</g-link>
 				</li>
 				<li class="HeaderMenu_NavListItem">
@@ -18,7 +20,18 @@
 						class="HeaderMenu_NavListItemLink"
 						exact
 					>
-						About
+						<span>
+							About
+						</span>
+					</g-link>
+					<g-link
+						to="/blog/all"
+						class="HeaderMenu_NavListItemLink"
+						exact
+					>
+						<span>
+							Blog
+						</span>
 					</g-link>
 				</li>
 			</ul>
@@ -61,13 +74,18 @@ export default {
   }
   &_NavListItemLink {
     padding: 8px 40px;
+    text-transform: uppercase;
 
-    &:hover {
-      // background-color: $color-black;
+    span {
+      padding: 0 5px 5px;
+      border-bottom: 1px solid transparent;
     }
 
     &.active {
-      background-color: $color-font;
+      span {
+        font-weight: bold;
+        border-bottom-color: $color-accent;
+      }
     }
   }
 }

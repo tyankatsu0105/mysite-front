@@ -1,9 +1,13 @@
 <template>
-  <Layout> ... </Layout>
+	<Layout> ... </Layout>
 </template>
 
 <page-query>
-  query Category ($path: String!) { wordPressCategory (path: $path) { title } }
+query Category($path: String!) {
+  wordPressCategory(path: $path) {
+    title
+  }
+}
 </page-query>
 
 <script>

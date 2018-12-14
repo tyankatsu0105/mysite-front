@@ -1,0 +1,10 @@
+.BlogArticle-enter-active,
+.BlogArticle-leave-active {
+  transition: $tst-default;
+}
+
+.BlogArticle-enter,
+.BlogArticle-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}

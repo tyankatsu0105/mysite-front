@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleItem render 1`] = `
+<article class="ArticleItem">
+  <g-image-stub src="http://placehold.jp/150x150.png" width="500"></g-image-stub>
+</article>
+`;
