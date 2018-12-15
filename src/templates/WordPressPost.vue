@@ -51,6 +51,7 @@ export default {
 
 <style lang="scss">
 @import "@/styles/utility/transition-WordPressPost-EyecatchBox.scss";
+@import "@/styles/thirdparty/prism.scss";
 .WordPressPost {
   &-EyecatchBox {
     position: relative;

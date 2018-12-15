@@ -27,6 +27,7 @@
     "dotenv": "^6.1.0",
     "gridsome": "^0.3.6",
     "gsap": "^2.0.2",
+    "vue-prism": "^1.0.5",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
