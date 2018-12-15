@@ -16,14 +16,14 @@
 							<g-image
 								class="BlogArticle-Img"
 								:src="article.featuredMedia.url"
-								width="390"
+								width="100%"
 							/>	
 						</template>
 						<template v-else>
 							<g-image
 								class="BlogArticle-Img"
 								src="http://placehold.jp/1000x600.png"
-								width="390"
+								width="100%"
 							/>	
 						</template>
 						
@@ -168,6 +168,7 @@ export default {
   &-Heading {
     padding: 8px;
     font-size: 1.3rem;
+    font-weight: bold;
   }
   &-Excerpt {
     position: relative;
@@ -197,10 +198,11 @@ export default {
     bottom: 0;
     left: 0;
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
     width: 100%;
     padding: 8px 16px;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
   &-DateText {
     margin-left: 5px;
@@ -217,6 +219,7 @@ export default {
   &-CategoryText {
     display: inline-block;
     margin-left: 5px;
+    font-size: 1rem;
   }
 }
 </style>

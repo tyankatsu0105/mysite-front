@@ -1,0 +1,10 @@
+.pager-enter-active,
+.pager-leave-active {
+  transition: $tst-heavy;
+}
+
+.pager-enter,
+.pager-leave-to {
+  opacity: 0;
+  transform: translateX(-50px);
+}

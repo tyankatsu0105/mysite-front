@@ -29,12 +29,6 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" }
-    ],
-    link: [
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP"
-      }
     ]
   }
 };
@@ -45,7 +39,7 @@ export default {
 .Default {
   &_Contents {
     max-width: 1280px;
-    padding: 24px;
+    padding: 28px;
     margin: 32px auto;
   }
 }

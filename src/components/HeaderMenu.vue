@@ -77,14 +77,29 @@ export default {
     text-transform: uppercase;
 
     span {
+      position: relative;
       padding: 0 5px 5px;
       border-bottom: 1px solid transparent;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        content: "";
+        background-color: $color-accent;
+        transition: $tst-default;
+      }
     }
 
+    &:hover,
     &.active {
       span {
         font-weight: bold;
-        border-bottom-color: $color-accent;
+        &::after {
+          width: 100%;
+        }
       }
     }
   }

@@ -13,6 +13,7 @@ import store from "@/store";
 
 library.add(faTimes, faTwitter, faGithub, faNpm, faReadme, faClock, faFolder);
 
+import "@/styles/core/fonts.scss";
 import "@/styles/core/reset.scss";
 import "@/styles/core/base.scss";
 

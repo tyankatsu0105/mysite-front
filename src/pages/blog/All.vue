@@ -3,13 +3,18 @@
 		<div class="All">
 			<PageHeader text="Blog" />
 			<blog-articles :page="$page" />
-			<div class="All-PagerBlock">
-				<Pager
-					:info="$page.allWordPressPost.pageInfo"
-					class="All-Pager"
-					:show-navigation="false"
-				/>
-			</div>
+			<transition
+				appear
+				name="pager"
+			>
+				<div class="All-PagerBlock">
+					<Pager
+						:info="$page.allWordPressPost.pageInfo"
+						class="All-Pager"
+						:show-navigation="false"
+					/>
+				</div>
+			</transition>
 		</div>
 	</Layout>
 </template>
@@ -26,8 +31,10 @@ export default {
     BlogArticles,
     PageHeader
   },
-  metaInfo: {
-    title: `Blog All`
+  metaInfo() {
+    return {
+      title: `Blog All Page ${this.$page.allWordPressPost.pageInfo.currentPage}`
+    };
   }
 };
 </script>
@@ -63,6 +70,7 @@ query Blog($page: Int) {
 
 
 <style scoped lang='scss'>
+@import "@/styles/utility/transition-pager.scss";
 .All {
   &-PagerBlock {
     position: fixed;
@@ -91,7 +99,8 @@ query Blog($page: Int) {
       margin-top: 10px;
     }
     .active--exact {
-      color: $color-accent;
+      font-weight: bold;
+      transform: translateX(-10px);
     }
   }
 }
