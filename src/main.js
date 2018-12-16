@@ -18,7 +18,6 @@ import "@/styles/core/fonts.scss";
 import "@/styles/core/reset.scss";
 import "@/styles/core/base.scss";
 
-// import "prismjs/themes/prism-okaidia.css";
 import "prismjs/themes/prism-tomorrow.css";
 
 export default function(Vue) {

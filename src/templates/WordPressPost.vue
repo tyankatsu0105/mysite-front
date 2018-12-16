@@ -18,6 +18,17 @@
 			<h1 class="WordPressPost-Heading">
 				{{ $page.post.title }}
 			</h1>
+
+			<div class="WordPressPost-Info">
+				<blog-article-date
+					:text="$page.post.date"
+					:time="$page.post.date"
+				/>
+				<blog-article-category
+					:link="$page.post.categories[0].path"
+					:text="$page.post.categories[0].title"
+				/>
+			</div>
 			
 			<div
 				class="WordPressPost-Contents"
@@ -27,20 +38,14 @@
 	</Layout>
 </template>
 
-<page-query>
-query Post($path: String!) {
-  post: wordPressPost(path: $path) {
-    title
-    content
-    featuredMedia {
-      url
-    }
-  }
-}
-</page-query>
-
 <script>
+import BlogArticleDate from "@/components/BlogArticleDate.vue";
+import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
 export default {
+  components: {
+    BlogArticleDate,
+    BlogArticleCategory
+  },
   metaInfo() {
     return {
       title: this.$page.post.title
@@ -48,6 +53,23 @@ export default {
   }
 };
 </script>
+
+<page-query>
+query Post($path: String!) {
+  post: wordPressPost(path: $path) {
+    title
+    content
+    date(format: "YYYY.MM.DD", locale: "ja")
+    categories {
+      title
+      path
+    }
+    featuredMedia {
+      url
+    }
+  }
+}
+</page-query>
 
 <style lang="scss">
 @import "@/styles/utility/transition-WordPressPost-EyecatchBox.scss";
@@ -78,11 +100,25 @@ export default {
   }
   &-Eyecatch {
     object-fit: cover;
-    height: 450px;
+    height: 370px;
   }
   &-Heading {
     font-size: 2.2rem;
     font-weight: bold;
+  }
+  &-Info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 1rem;
+    margin-top: 10px;
+
+    /deep/ .BlogArticleCategory-CategoryText {
+      font-size: inherit;
+    }
+  }
+  .BlogArticleCategory {
+    margin-left: 10px;
   }
   &-Contents {
     padding-top: 20px;
@@ -95,12 +131,16 @@ export default {
       margin-top: 10px;
       line-height: 1.8;
     }
+    img {
+      margin-top: 10px;
+    }
     a,
     cite {
       display: inline-block;
     }
     a {
       color: lighten($color-accent, 30%);
+      margin: 0 5px;
       text-decoration: underline;
 
       &:hover {
@@ -115,7 +155,7 @@ export default {
     h4,
     h5,
     h6 {
-      margin-top: 20px;
+      margin: 40px 0 20px;
       font-weight: bold;
     }
     h2 {

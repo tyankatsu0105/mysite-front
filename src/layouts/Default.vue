@@ -38,8 +38,8 @@ export default {
 @import "@/styles/utility/transition-page.scss";
 .Default {
   &_Contents {
-    max-width: 1280px;
-    padding: 28px;
+    max-width: 1500px;
+    padding: 28px 80px;
     margin: 32px auto;
   }
 }

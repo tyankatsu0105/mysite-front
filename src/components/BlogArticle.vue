@@ -43,29 +43,19 @@
 						</component>
 						<div
 							class="BlogArticle-Excerpt"
-							v-html="sliceText(article.excerpt,70)"
+							v-html="sliceText(article.excerpt,120)"
 						>
 						</div>
 					</div>
 					<div class="BlogArticle-Foot">
-						<div class="BlogArticle-Date">
-							<font-awesome-icon
-								:icon="{ prefix: 'fa', iconName: 'clock' }"
-							/>
-							<time class="BlogArticle-DateText">
-								{{ article.date }}
-							</time>
-						</div>
-						<div class="BlogArticle-Category">
-							<g-link :to="article.categories[0].path">
-								<font-awesome-icon
-									:icon="{ prefix: 'fa', iconName: 'folder' }"
-								/>
-								<p class="BlogArticle-CategoryText">
-									{{ article.categories[0].title }}
-								</p>
-							</g-link>
-						</div>
+						<blog-article-date
+							:text="article.date"
+							:time="article.date"
+						/>
+						<blog-article-category
+							:link="article.categories[0].path"
+							:text="article.categories[0].title"
+						/>
 					</div>
 				</g-link>
 			</article>
@@ -75,9 +65,13 @@
 
 <script>
 import ArticleCategory from "@/basics/ArticleCategory.vue";
+import BlogArticleDate from "@/components/BlogArticleDate.vue";
+import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
 export default {
   components: {
-    ArticleCategory
+    ArticleCategory,
+    BlogArticleDate,
+    BlogArticleCategory
   },
   props: {
     headingTag: {
@@ -88,11 +82,6 @@ export default {
       type: Object,
       requirer: true
     }
-  },
-  data() {
-    return {
-      isHover: false
-    };
   },
   methods: {
     sliceText(text, end) {
@@ -203,23 +192,6 @@ export default {
     width: 100%;
     padding: 8px 16px;
     font-size: 0.7rem;
-  }
-  &-DateText {
-    margin-left: 5px;
-  }
-  &-Category {
-    a {
-      transition: $tst-default;
-
-      &:hover {
-        color: $color-accent;
-      }
-    }
-  }
-  &-CategoryText {
-    display: inline-block;
-    margin-left: 5px;
-    font-size: 1rem;
   }
 }
 </style>

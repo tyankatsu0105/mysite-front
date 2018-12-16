@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogArticleCategory render 1`] = `
+<div class="BlogArticleCategory">
+  <g-link to="hogehoge.com">
+    <font-awesome-icon icon="[object Object]"></font-awesome-icon>
+    <p class="BlogArticleCategory-CategoryText">
+      カテゴリ
+    </p>
+  </g-link>
+</div>
+`;

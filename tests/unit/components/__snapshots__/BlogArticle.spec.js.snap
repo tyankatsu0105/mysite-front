@@ -3,35 +3,24 @@
 exports[`BlogArticle render 1`] = `
 <div class="BlogArticle" name="BlogArticle" mode="out-in">
   <article class="BlogArticle-Contents">
-    <g-link-stub to="/2018/11/21/%25e3%2583%2586%25e3%2582%25b9%25e3%2583%2588" class="BlogArticle-ContentsWrapLink">
+    <g-link to="/2018/11/21/%25e3%2583%2586%25e3%2582%25b9%25e3%2583%2588" class="BlogArticle-ContentsWrapLink">
       <div class="BlogArticle-Head">
-        <g-image-stub src="[object Object]" width="390" class="BlogArticle-Img"></g-image-stub>
-        <font-awesome-icon-stub icon="[object Object]" size="3x"></font-awesome-icon-stub>
+        <g-image src="[object Object]" width="100%" class="BlogArticle-Img"></g-image>
+        <font-awesome-icon icon="[object Object]" size="3x"></font-awesome-icon>
       </div>
       <div class="BlogArticle-Body">
         <h3 class="BlogArticle-Heading">
           マークダウン全パターンテスト
         </h3>
         <div class="BlogArticle-Excerpt">
-          <p>One morning, when Gregor Samsa woke from troubled dreams. One morni</p>
+          <p>One morning, when Gregor Samsa woke from troubled dreams. One morning, when Gregor Samsa woke from troubled dr [&amp;hell</p>
         </div>
       </div>
       <div class="BlogArticle-Foot">
-        <div class="BlogArticle-Date">
-          <font-awesome-icon-stub icon="[object Object]"></font-awesome-icon-stub> <time class="BlogArticle-DateText">
-            2018.11.21
-          </time>
-        </div>
-        <div class="BlogArticle-Category">
-          <g-link-stub to="/category/%25e6%258a%2580%25e8%25a1%2593%25e8%25a8%2598%25e4%25ba%258b">
-            <font-awesome-icon-stub icon="[object Object]"></font-awesome-icon-stub>
-            <p class="BlogArticle-CategoryText">
-              技術記事
-            </p>
-          </g-link-stub>
-        </div>
+        <blog-article-date-stub text="2018.11.21" time="2018.11.21"></blog-article-date-stub>
+        <blog-article-category-stub text="技術記事" link="/category/%25e6%258a%2580%25e8%25a1%2593%25e8%25a8%2598%25e4%25ba%258b"></blog-article-category-stub>
       </div>
-    </g-link-stub>
+    </g-link>
   </article>
 </div>
 `;

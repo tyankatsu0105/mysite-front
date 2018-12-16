@@ -2,8 +2,8 @@
 
 # env
 
-dotenv を使用して  環境変数を作成している。  
-.env を参照する 。
+dotenv を使用して環境変数を作成している。  
+.env を参照する。
 
 ## config/.env.develop
 

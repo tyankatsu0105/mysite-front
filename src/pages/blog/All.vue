@@ -76,6 +76,7 @@ query Blog($page: Int) {
     position: fixed;
     top: 100px;
     right: 0;
+    font-size: 1.2rem;
   }
   &-Pager {
     display: flex;

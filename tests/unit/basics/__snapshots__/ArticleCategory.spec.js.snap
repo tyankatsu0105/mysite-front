@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ArticleCategory render 1`] = `
-<g-link-stub to="hogehoge.com" class="ArticleCategory">
+<g-link to="hogehoge.com" class="ArticleCategory">
   aaaaa
-</g-link-stub>
+</g-link>
 `;
