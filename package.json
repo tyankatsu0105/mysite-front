@@ -83,7 +83,6 @@
       ],
       "*.vue": [
         "eslint --fix --cache --cache-location '.eslintcache'",
-        "stylelint --fix --cache --cache-location '.stylelintcache'",
         "git add"
       ],
       "*.md": [
