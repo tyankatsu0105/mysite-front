@@ -2,4 +2,9 @@
 pre[class*="language-"] {
   background-color: #000 !important;
   border-radius: 3px;
+  box-shadow: $box-shadow-default;
+}
+
+pre > code[class*="language-"] {
+  padding: 0;
 }

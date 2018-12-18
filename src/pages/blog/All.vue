@@ -77,11 +77,24 @@ query Blog($page: Int) {
     top: 100px;
     right: 0;
     font-size: 1.2rem;
+
+    @include mq-xs {
+      position: static;
+    }
   }
   &-Pager {
     display: flex;
     flex-direction: column;
     transition: $tst-default;
+
+    @include mq-xs {
+      margin-top: 20px;
+      display: grid;
+      grid-auto-rows: auto;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: 20px;
+      justify-items: center;
+    }
     a {
       position: relative;
       padding: 4px 16px;
@@ -91,17 +104,31 @@ query Blog($page: Int) {
       box-shadow: $box-shadow-default;
       transition: $tst-default;
 
+      @include mq-xs {
+        padding: 4px 12px;
+      }
+
+      &.active--exact,
       &:hover {
+        font-weight: bold;
         box-shadow: $box-shadow-default-hover;
         transform: translateX(-10px);
+
+        @include mq-xs {
+          transform: none;
+          box-shadow: none;
+        }
+      }
+      &.active--exact {
+        color: $color-accent;
       }
     }
     a + a {
       margin-top: 10px;
-    }
-    .active--exact {
-      font-weight: bold;
-      transform: translateX(-10px);
+
+      @include mq-xs {
+        margin-top: 0;
+      }
     }
   }
 }

@@ -39,8 +39,13 @@ export default {
 .Default {
   &_Contents {
     max-width: 1500px;
-    padding: 28px 80px;
+    padding: 24px 36px;
     margin: 32px auto;
+
+    @include mq-xs {
+      padding: 24px 15px;
+      margin: 88px auto;
+    }
   }
 }
 </style>

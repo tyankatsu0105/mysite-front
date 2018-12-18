@@ -20,7 +20,7 @@ module.exports = {
       }
     }
   ],
-  siteName: "tyankatsu",
+  siteName: "Tyankatsu Sketch Book",
   chainWebpack: config => {
     config.plugin("env").use(DefinePlugin, [env.getEnvs()]);
     const oneOfsMap = config.module.rule("scss").oneOfs.store;
@@ -30,7 +30,8 @@ module.exports = {
         .loader("sass-resources-loader")
         .options({
           resources: [
-            path.resolve(`${__dirname}/src/styles/`, "variables/importer.scss")
+            path.resolve(`${__dirname}/src/styles/`, "variables/importer.scss"),
+            path.resolve(`${__dirname}/src/styles/`, "mixins/importer.scss")
           ]
         })
         .end();

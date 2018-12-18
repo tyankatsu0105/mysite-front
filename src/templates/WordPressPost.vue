@@ -19,6 +19,9 @@
 				{{ $page.post.title }}
 			</h1>
 
+      
+			
+
 			<div class="WordPressPost-Info">
 				<blog-article-date
 					:text="$page.post.date"
@@ -45,6 +48,33 @@ export default {
   components: {
     BlogArticleDate,
     BlogArticleCategory
+  },
+  computed: {
+    textTwitter() {
+      return this.$page.post.title;
+    },
+    pageLink() {
+      return window.location.href;
+    }
+  },
+  mounted() {
+    this.wrap("table", "div", "wrapTable");
+  },
+  methods: {
+    /**
+     * 要素を任意の要素でwrapする
+     * @param {string} elements - wrap元の要素
+     * @param {string} tag - wrapする要素
+     * @param {string} className - wrapのクラス名
+     */
+    wrap(elements, tag, className) {
+      document.querySelectorAll(elements).forEach(element => {
+        let wrapElement = document.createElement(tag);
+        wrapElement.className = className;
+        element.parentElement.insertBefore(wrapElement, element);
+        wrapElement.appendChild(element);
+      });
+    }
   },
   metaInfo() {
     return {
@@ -101,10 +131,18 @@ query Post($path: String!) {
   &-Eyecatch {
     object-fit: cover;
     height: 370px;
+    @include mq-xs {
+      height: 70vw;
+    }
   }
   &-Heading {
     font-size: 2.2rem;
     font-weight: bold;
+
+    @include mq-xs {
+      margin-top: 20px;
+      font-size: 1.4rem;
+    }
   }
   &-Info {
     display: flex;
@@ -162,20 +200,27 @@ query Post($path: String!) {
       padding-bottom: 3px;
       font-size: 2rem;
       border-bottom: 3px solid lighten($color-accent, 20%);
+      font-size: 1.3rem;
     }
     h3 {
       padding-left: 10px;
       font-size: 1.6rem;
       border-left: 5px solid lighten($color-accent, 20%);
+      @include mq-xs {
+        font-size: 1.2rem;
+      }
     }
     h4 {
       font-size: 1.4rem;
+      @include mq-xs {
+        font-size: 1.1rem;
+      }
     }
     h5 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     h6 {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
     // ==============================================
     // list
@@ -190,11 +235,17 @@ query Post($path: String!) {
     ol {
       list-style-position: inside;
     }
+    li {
+      text-indent: -1em;
+      padding-left: 1em;
+    }
     // ==============================================
     // table
     // ==============================================
     table {
       border-collapse: collapse;
+      table-layout: fixed;
+      white-space: nowrap;
     }
     th,
     td {
@@ -207,6 +258,10 @@ query Post($path: String!) {
     tr:nth-child(even) {
       background-color: darken(#ccc, 50%);
     }
+    .wrapTable {
+      width: 100%;
+      overflow: scroll;
+    }
     // ==============================================
     // blockquote
     // ==============================================
@@ -216,12 +271,26 @@ query Post($path: String!) {
       line-height: 1.4;
       background-color: #3a424e;
       border-radius: 5px;
+      box-shadow: $box-shadow-default;
+      p:before {
+        content: "--Note--";
+        display: block;
+        margin-bottom: 5px;
+      }
     }
     // ==============================================
     // hr
     // ==============================================
     hr {
       margin: 32px 0;
+    }
+    // ==============================================
+    // code
+    // ==============================================
+    code {
+      background-color: #000;
+      padding: 8px 12px;
+      border-radius: 4px;
     }
   }
 }

@@ -17,7 +17,8 @@ export default {
   },
   props: {
     page: {
-      type: Object
+      type: Object,
+      default: () => {}
     }
   }
 };
@@ -26,8 +27,13 @@ export default {
 <style scoped lang='scss'>
 .BlogArticles {
   display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
   justify-items: center;
+
+  @include mq-xs {
+    grid-template: 1fr / 1fr;
+  }
 }
 </style>
