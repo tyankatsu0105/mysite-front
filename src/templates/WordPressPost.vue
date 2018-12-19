@@ -18,8 +18,10 @@
 			<h1 class="WordPressPost-Heading">
 				{{ $page.post.title }}
 			</h1>
+			<div class="WordPressPost-SnsLists">
+				<sns-lists :share-text="shareText" />
+			</div>
 
-      
 			
 
 			<div class="WordPressPost-Info">
@@ -44,17 +46,16 @@
 <script>
 import BlogArticleDate from "@/components/BlogArticleDate.vue";
 import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
+import SnsLists from "@/components/SnsLists.vue";
 export default {
   components: {
     BlogArticleDate,
-    BlogArticleCategory
+    BlogArticleCategory,
+    SnsLists
   },
   computed: {
-    textTwitter() {
+    shareText() {
       return this.$page.post.title;
-    },
-    pageLink() {
-      return window.location.href;
     }
   },
   mounted() {
@@ -143,6 +144,9 @@ query Post($path: String!) {
       margin-top: 20px;
       font-size: 1.4rem;
     }
+  }
+  &-SnsLists {
+    margin-top: 10px;
   }
   &-Info {
     display: flex;

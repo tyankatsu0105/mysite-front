@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VIcon render 1`] = `<icon-hatena-stub class="VIcon"></icon-hatena-stub>`;
