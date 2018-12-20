@@ -9,7 +9,7 @@ module.exports = {
     {
       use: "@gridsome/source-wordpress",
       options: {
-        baseUrl: process.env.VUE_APP_BASE_URL,
+        baseUrl: process.env.VUE_API_URL,
         typeName: "WordPress",
         perPage: 100,
         concurrent: 10,

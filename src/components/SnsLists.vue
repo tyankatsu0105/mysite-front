@@ -13,7 +13,7 @@
 			</button>
 			<div class="SnsLists-Item _twitter">
 				<a
-					:href="`https://twitter.com/share?text=${shareText}&url=${pageLink}&hashtags=TyankatsuSB`"
+					:href="`https://twitter.com/share?text=${siteInfo.title}&url=${siteUrl}${siteInfo.path}&hashtags=TyankatsuSB`"
 					onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"
 					rel="nofollow"
 					class="SnsLists-Link"
@@ -23,7 +23,7 @@
 			</div>
 			<div class="SnsLists-Item _hatena">
 				<a
-					:href="`http://b.hatena.ne.jp/entry/${pageLink}`"
+					:href="`http://b.hatena.ne.jp/entry/${siteUrl}${siteInfo.path}`"
 					class="SnsLists-Link "
 					target="_blank"
 					title="このエントリーをはてなブックマークに追加"
@@ -37,7 +37,7 @@
 			<div class="SnsLists-Item _pocket">
 				<a
 					class="SnsLists-Link "
-					:href="`http://getpocket.com/edit?url=${pageLink}&title=${shareText}`"
+					:href="`http://getpocket.com/edit?url=${siteUrl}${siteInfo.path}&title=${siteInfo.title}`"
 					onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
 				>
 					<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'get-pocket' }" />
@@ -55,20 +55,16 @@ export default {
     VIcon
   },
   props: {
-    shareText: {
-      type: String,
+    siteInfo: {
+      type: Object,
       requirer: true
     }
   },
   data() {
     return {
-      isOpenLists: false
+      isOpenLists: false,
+      siteUrl: process.env.VUE_APP_BASE_URL
     };
-  },
-  computed: {
-    pageLink() {
-      return window.location.href;
-    }
   }
 };
 </script>

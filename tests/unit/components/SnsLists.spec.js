@@ -2,26 +2,22 @@ import { shallowMount } from "@vue/test-utils";
 import SnsLists from "@/components/SnsLists.vue";
 
 const propsData = {
-  shareText: "shareするテキスト"
+  siteInfo: {
+    title: "サイトのタイトル",
+    path: "/to/path"
+  }
 };
 
-window.location.href = "aaaaaa";
-
 describe("SnsLists", () => {
-  global.it("render", () => {
+  it("render", () => {
     const wrapper = shallowMount(SnsLists, {
       propsData
     });
+    wrapper.setData({
+      isOpenLists: false,
+      siteUrl: "http://www.hogefuga.com"
+    });
 
     expect(wrapper.html()).toMatchSnapshot();
-  });
-  describe("computed", () => {
-    it("pageLink", () => {
-      const wrapper = shallowMount(SnsLists, {
-        propsData
-      });
-
-      expect(wrapper.vm.pageLink).toEqual("http://localhost/");
-    });
   });
 });

@@ -19,7 +19,7 @@
 				{{ $page.post.title }}
 			</h1>
 			<div class="WordPressPost-SnsLists">
-				<sns-lists :share-text="shareText" />
+				<sns-lists :site-info="siteInfo" />
 			</div>
 
 			
@@ -54,8 +54,11 @@ export default {
     SnsLists
   },
   computed: {
-    shareText() {
-      return this.$page.post.title;
+    siteInfo() {
+      return {
+        title: this.$page.post.title,
+        path: this.$page.post.path
+      };
     }
   },
   mounted() {
@@ -90,6 +93,7 @@ query Post($path: String!) {
   post: wordPressPost(path: $path) {
     title
     content
+    path
     date(format: "YYYY.MM.DD", locale: "ja")
     categories {
       title
