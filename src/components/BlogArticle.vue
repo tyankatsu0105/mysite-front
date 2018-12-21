@@ -20,12 +20,12 @@
 							/>	
 						</template>
 						<template v-else>
-							<g-image
+							<g-image  
 								class="BlogArticle-Img"
-								src="http://placehold.jp/1000x600.png"
-								width="100%"
+								src="@/assets/images/ogp.png"
 							/>	
 						</template>
+
 						
 						<font-awesome-icon
 							:icon="{ prefix: 'fab', iconName: 'readme' }"
@@ -41,10 +41,13 @@
 						>
 							{{ sliceText(article.title,25) }}
 						</component>
+
+						<!-- eslint-disable vue/no-v-html -->
 						<div
 							class="BlogArticle-Excerpt"
 							v-html="sliceText(article.excerpt,120)"
 						>
+							<!--eslint-enable-->
 						</div>
 					</div>
 					<div class="BlogArticle-Foot">
@@ -53,7 +56,6 @@
 							:time="article.date"
 						/>
 						<blog-article-category
-							:link="article.categories[0].path"
 							:text="article.categories[0].title"
 						/>
 					</div>
@@ -64,12 +66,10 @@
 </template>
 
 <script>
-import ArticleCategory from "@/basics/ArticleCategory.vue";
 import BlogArticleDate from "@/components/BlogArticleDate.vue";
 import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
 export default {
   components: {
-    ArticleCategory,
     BlogArticleDate,
     BlogArticleCategory
   },
@@ -83,6 +83,7 @@ export default {
       requirer: true
     }
   },
+
   methods: {
     sliceText(text, end) {
       return text.slice(0, end);

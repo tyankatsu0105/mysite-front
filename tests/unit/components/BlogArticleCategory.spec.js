@@ -2,8 +2,7 @@ import { shallowMount } from "@vue/test-utils";
 import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
 
 const propsData = {
-  text: "カテゴリ",
-  link: "hogehoge.com"
+  text: "カテゴリ"
 };
 
 describe("BlogArticleCategory", () => {

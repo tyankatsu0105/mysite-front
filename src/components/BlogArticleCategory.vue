@@ -1,13 +1,11 @@
 <template>
 	<div class="BlogArticleCategory">
-		<g-link :to="link">
-			<font-awesome-icon
-				:icon="{ prefix: 'fa', iconName: 'folder' }"
-			/>
-			<p class="BlogArticleCategory-CategoryText">
-				{{ text }}
-			</p>
-		</g-link>
+		<font-awesome-icon
+			:icon="{ prefix: 'fa', iconName: 'folder' }"
+		/>
+		<p class="BlogArticleCategory-CategoryText">
+			{{ text }}
+		</p>
 	</div>
 </template>
 
@@ -16,11 +14,8 @@ export default {
   props: {
     text: {
       type: String,
-      requirer: true
-    },
-    link: {
-      type: String,
-      requirer: true
+      requirer: true,
+      default: ""
     }
   }
 };
@@ -28,14 +23,6 @@ export default {
 
 <style scoped lang='scss'>
 .BlogArticleCategory {
-  a {
-    transition: $tst-default;
-
-    &:hover {
-      color: $color-accent;
-    }
-  }
-
   &-CategoryText {
     display: inline-block;
     margin-left: 5px;

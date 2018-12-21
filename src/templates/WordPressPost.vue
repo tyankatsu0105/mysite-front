@@ -1,3 +1,4 @@
+
 <template>
 	<Layout>
 		<div class="WordPressPost">
@@ -30,15 +31,16 @@
 					:time="$page.post.date"
 				/>
 				<blog-article-category
-					:link="$page.post.categories[0].path"
 					:text="$page.post.categories[0].title"
 				/>
 			</div>
 			
+			<!-- eslint-disable vue/no-v-html -->
 			<div
 				class="WordPressPost-Contents"
 				v-html="$page.post.content"
 			></div>
+			<!--eslint-enable-->
 		</div>
 	</Layout>
 </template>

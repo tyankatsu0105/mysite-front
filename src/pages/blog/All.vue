@@ -57,7 +57,6 @@ query Blog($page: Int) {
         date(format: "YYYY.MM.DD", locale: "ja")
         categories {
           title
-          path
         }
         featuredMedia {
           url

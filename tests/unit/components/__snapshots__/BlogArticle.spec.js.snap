@@ -18,7 +18,7 @@ exports[`BlogArticle render 1`] = `
       </div>
       <div class="BlogArticle-Foot">
         <blog-article-date-stub text="2018.11.21" time="2018.11.21"></blog-article-date-stub>
-        <blog-article-category-stub text="技術記事" link="/category/%25e6%258a%2580%25e8%25a1%2593%25e8%25a8%2598%25e4%25ba%258b"></blog-article-category-stub>
+        <blog-article-category-stub text="技術記事"></blog-article-category-stub>
       </div>
     </g-link>
   </article>
