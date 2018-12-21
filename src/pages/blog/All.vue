@@ -33,7 +33,16 @@ export default {
   },
   metaInfo() {
     return {
-      title: `Blog All Page ${this.$page.allWordPressPost.pageInfo.currentPage}`
+      title: `Blog All Page ${
+        this.$page.allWordPressPost.pageInfo.currentPage
+      }`,
+      meta: [
+        {
+          name: "description",
+          content:
+            "フロントエンドに関する情報をメインに投稿するブログ記事の一覧ページです。"
+        }
+      ]
     };
   }
 };

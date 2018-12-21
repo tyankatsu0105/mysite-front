@@ -47,12 +47,26 @@ import VHeader from "@/containers/VHeader.vue";
 
 import LinkButtonPrimary from "@/basics/LinkButtonPrimary.vue";
 import LinkButtonIcon from "@/basics/LinkButtonIcon.vue";
+
+import { DESCRIPTION } from "@/const";
 export default {
   components: {
     IndexCanvas,
     VHeader,
     LinkButtonPrimary,
     LinkButtonIcon
+  },
+  metaInfo() {
+    return {
+      htmlAttrs: {
+        lang: "ja"
+      },
+      meta: [
+        { name: "description", content: DESCRIPTION },
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" }
+      ]
+    };
   }
 };
 </script>

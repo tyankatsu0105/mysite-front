@@ -101,6 +101,14 @@ export default {
       title: this.$page.post.title,
       meta: [
         {
+          name: "description",
+          content: sliceText(
+            this.$page.post.content.replace(/<(?:.|\n)*?>/gm, ""),
+            0,
+            100
+          )
+        },
+        {
           vmid: "og:title",
           property: "og:title",
           content: this.$page.post.title
