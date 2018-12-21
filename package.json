@@ -14,7 +14,8 @@
     "precommit": "lint-staged",
     "format": "fixpack",
     "make:vue": "hygen generate vue",
-    "make:store": "hygen generate store"
+    "make:store": "hygen generate store",
+    "make:util": "hygen generate util"
   },
   "config": {
     "commitizen": {

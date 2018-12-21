@@ -22,7 +22,7 @@
 						<template v-else>
 							<g-image  
 								class="BlogArticle-Img"
-								src="@/assets/images/ogp.png"
+								src="@/assets/images/default-thumbnail.png"
 							/>	
 						</template>
 
@@ -39,13 +39,13 @@
 							:is="headingTag"
 							class="BlogArticle-Heading"
 						>
-							{{ sliceText(article.title,25) }}
+							{{ sliceText(article.title,0,25) }}
 						</component>
 
 						<!-- eslint-disable vue/no-v-html -->
 						<div
 							class="BlogArticle-Excerpt"
-							v-html="sliceText(article.excerpt,120)"
+							v-html="sliceText(article.excerpt,0,120)"
 						>
 							<!--eslint-enable-->
 						</div>
@@ -68,6 +68,7 @@
 <script>
 import BlogArticleDate from "@/components/BlogArticleDate.vue";
 import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
+import sliceText from "@/util/sliceText.js";
 export default {
   components: {
     BlogArticleDate,
@@ -85,9 +86,7 @@ export default {
   },
 
   methods: {
-    sliceText(text, end) {
-      return text.slice(0, end);
-    }
+    sliceText
   }
 };
 </script>

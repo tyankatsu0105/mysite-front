@@ -19,6 +19,7 @@
 			<h1 class="WordPressPost-Heading">
 				{{ $page.post.title }}
 			</h1>
+
 			<div class="WordPressPost-SnsLists">
 				<sns-lists :site-info="siteInfo" />
 			</div>
@@ -49,6 +50,10 @@
 import BlogArticleDate from "@/components/BlogArticleDate.vue";
 import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
 import SnsLists from "@/components/SnsLists.vue";
+
+import sliceText from "@/util/sliceText.js";
+
+import { SITE_NAME } from "@/const";
 export default {
   components: {
     BlogArticleDate,
@@ -61,12 +66,21 @@ export default {
         title: this.$page.post.title,
         path: this.$page.post.path
       };
+    },
+    ogpImage() {
+      if (this.$page.post.featuredMedia) {
+        return this.$page.post.featuredMedia.url.src;
+      }
+      return `${
+        process.env.VUE_APP_BASE_URL
+      }/assets/static/src/assets/images/default-thumbnail.png?width=1024`;
     }
   },
   mounted() {
     this.wrap("table", "div", "wrapTable");
   },
   methods: {
+    sliceText,
     /**
      * 要素を任意の要素でwrapする
      * @param {string} elements - wrap元の要素
@@ -84,7 +98,82 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.post.title
+      title: this.$page.post.title,
+      meta: [
+        {
+          vmid: "og:title",
+          property: "og:title",
+          content: this.$page.post.title
+        },
+        {
+          vmid: "og:type",
+          property: "og:type",
+          content: "artcle"
+        },
+        {
+          vmid: "og:url",
+          property: "og:url",
+          content: `${process.env.VUE_APP_BASE_URL}${this.$page.post.path}`
+        },
+        {
+          vmid: "og:image",
+          property: "og:image",
+          content: this.ogpImage
+        },
+        {
+          vmid: "og:site_name",
+          property: "og:site_name",
+          content: SITE_NAME
+        },
+        {
+          vmid: "og:description",
+          property: "og:description",
+          content: sliceText(
+            this.$page.post.content.replace(/<(?:.|\n)*?>/gm, ""),
+            0,
+            100
+          )
+        },
+        {
+          vmid: "twitter:card",
+          name: "twitter:card",
+          content: "summary"
+        },
+        {
+          vmid: "twitter:site",
+          name: "twitter:site",
+          content: "@tyankatsu5"
+        },
+        {
+          vmid: "twitter:creator",
+          name: "twitter:creator",
+          content: "tyankatsu"
+        },
+        {
+          vmid: "twitter:title",
+          name: "twitter:title",
+          content: this.$page.post.title
+        },
+        {
+          vmid: "twitter:url",
+          name: "twitter:url",
+          content: `${process.env.VUE_APP_BASE_URL}${this.$page.post.path}`
+        },
+        {
+          vmid: "twitter:description",
+          name: "twitter:description",
+          content: sliceText(
+            this.$page.post.content.replace(/<(?:.|\n)*?>/gm, ""),
+            0,
+            100
+          )
+        },
+        {
+          vmid: "twitter:image",
+          name: "twitter:image",
+          content: this.ogpImage
+        }
+      ]
     };
   }
 };

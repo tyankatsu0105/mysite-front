@@ -1,5 +1,5 @@
 ---
-to: tests/unit/store/<%= name %>.js
+to: tests/unit/store/<%= name %>.spec.js
 ---
 import <%= name %> from "@/store/modules/<%= name %>.js";
 const state: {}
