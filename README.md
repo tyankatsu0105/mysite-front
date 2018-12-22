@@ -1,4 +1,4 @@
-**`config/*`と`.env`は gitignore に必ず入れる**
+**`.env`は gitignore に必ず入れる**
 
 # env
 
@@ -7,7 +7,7 @@ dotenv を使用して環境変数を作成している。
 
 ## config/.env.develop
 
-ロ ー カル開発の環境情報を入れる
+ローカル開発の環境情報を入れる
 
 ## config/.env.production
 
@@ -37,7 +37,7 @@ graphiql みたいな画面を起動する
 
 ## env-develop,env-production
 
-config 以下の env 情報をプロジェクト直下の`.env`にコピ ー する
+config 以下の env 情報をプロジェクト直下の`.env`にコピーする
 
 ## commit
 
@@ -45,4 +45,8 @@ config 以下の env 情報をプロジェクト直下の`.env`にコピ ー す
 
 ## format
 
-`package.json`のフォ ー マット
+`package.json`のフォーマット
+
+## make:vue,make:store,make:util
+
+Hygen をもとにファイルを作成する
