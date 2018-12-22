@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VFooter render 1`] = `
+<div class="VFooter">
+  <div class="VFooter-Copyright"><small>© 2018 Tyankatsu Sketch Book</small></div>
+</div>
+`;

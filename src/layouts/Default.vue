@@ -13,14 +13,17 @@
 				<slot></slot>
 			</div>
 		</transition-group>
+		<v-footer />
 	</div>
 </template>
 
 <script>
 import VHeader from "@/containers/VHeader";
+import VFooter from "@/containers/VFooter";
 export default {
   components: {
-    VHeader
+    VHeader,
+    VFooter
   },
   metaInfo: {
     htmlAttrs: {

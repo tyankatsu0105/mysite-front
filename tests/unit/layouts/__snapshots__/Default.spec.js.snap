@@ -3,5 +3,6 @@
 exports[`Default render 1`] = `
 <div class="Default">
   <v-header-stub></v-header-stub> <span name="page" tag="main" appear=""><div class="Default_Contents"></div></span>
+  <v-footer-stub></v-footer-stub>
 </div>
 `;

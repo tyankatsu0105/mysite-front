@@ -37,6 +37,7 @@
 					/>
 				</div>
 			</div>
+			<v-footer />
 		</div>
 	</transition>
 </template>
@@ -44,6 +45,7 @@
 <script>
 import IndexCanvas from "@/containers/IndexCanvas.vue";
 import VHeader from "@/containers/VHeader.vue";
+import VFooter from "@/containers/VFooter.vue";
 
 import LinkButtonPrimary from "@/basics/LinkButtonPrimary.vue";
 import LinkButtonIcon from "@/basics/LinkButtonIcon.vue";
@@ -54,7 +56,8 @@ export default {
     IndexCanvas,
     VHeader,
     LinkButtonPrimary,
-    LinkButtonIcon
+    LinkButtonIcon,
+    VFooter
   },
   metaInfo() {
     return {
@@ -93,6 +96,10 @@ export default {
     & + & {
       margin-left: 12px;
     }
+  }
+  .VFooter {
+    position: absolute;
+    bottom: 0;
   }
 }
 </style>
