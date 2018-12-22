@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 10
+  - 10
 
 dist: trusty
 sudo: false
@@ -8,13 +8,13 @@ cache: yarn
 
 branches:
   only:
-  - release
+    - release
 
 script:
   - yarn test
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_09f96960bb2d_key -iv $encrypted_09f96960bb2d_iv -in env.tar.enc -out env.tar -d
+  - openssl aes-256-cbc -K $encrypted_4f66e85e9eb1_key -iv $encrypted_4f66e85e9eb1_iv -in env.tar.enc -out env.tar -d
   - tar xvf env.tar
 
 before_deploy:
