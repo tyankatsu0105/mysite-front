@@ -18,5 +18,6 @@ exports[`Index render 1`] = `
       <linkbuttonicon-stub icon="[object Object]" href="https://www.npmjs.com/~tyankatsu0105" class="Index_Link"></linkbuttonicon-stub>
     </div>
   </div>
+  <v-footer-stub></v-footer-stub>
 </div>
 `;
