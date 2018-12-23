@@ -71,9 +71,7 @@ export default {
       if (this.$page.post.featuredMedia) {
         return this.$page.post.featuredMedia.url.src;
       }
-      return `${
-        process.env.VUE_APP_BASE_URL
-      }/assets/static/src/assets/images/default-thumbnail.png?width=1024`;
+      return `${process.env.VUE_APP_STATIC_SRC_URL}/assets/images/ogp.png`;
     }
   },
   mounted() {
@@ -257,6 +255,10 @@ query Post($path: String!) {
     justify-content: flex-end;
     font-size: 1rem;
     margin-top: 10px;
+
+    @include mq-xs {
+      justify-content: flex-start;
+    }
 
     /deep/ .BlogArticleCategory-CategoryText {
       font-size: inherit;
