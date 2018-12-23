@@ -25,6 +25,8 @@ import { Pager } from "gridsome";
 import BlogArticles from "@/containers/BlogArticles";
 import PageHeader from "@/basics/PageHeader";
 
+import { SITE_NAME } from "@/const";
+
 export default {
   components: {
     Pager,
@@ -39,8 +41,86 @@ export default {
       meta: [
         {
           name: "description",
-          content:
-            "フロントエンドに関する情報をメインに投稿するブログ記事の一覧ページです。"
+          content: `${SITE_NAME}の記事一覧ページです。フロントエンドに関する情報を中心に投稿します。${
+            this.$page.allWordPressPost.pageInfo.currentPage
+          }ページ目です。`
+        },
+        {
+          vmid: "og:title",
+          property: "og:title",
+          content: `Blog All Page ${
+            this.$page.allWordPressPost.pageInfo.currentPage
+          } - ${SITE_NAME}`
+        },
+        {
+          vmid: "og:type",
+          property: "og:type",
+          content: "website"
+        },
+        {
+          vmid: "og:url",
+          property: "og:url",
+          content: `${process.env.VUE_APP_BASE_URL}/blog/all/${
+            this.$page.allWordPressPost.pageInfo.currentPage
+          }`
+        },
+        {
+          vmid: "og:image",
+          property: "og:image",
+          content: `${process.env.VUE_APP_STATIC_SRC_URL}/assets/images/ogp.png`
+        },
+        {
+          vmid: "og:site_name",
+          property: "og:site_name",
+          content: SITE_NAME
+        },
+        {
+          vmid: "og:description",
+          property: "og:description",
+          content: `${SITE_NAME}の記事一覧ページです。フロントエンドに関する情報を中心に投稿します。${
+            this.$page.allWordPressPost.pageInfo.currentPage
+          }ページ目です。`
+        },
+        {
+          vmid: "twitter:card",
+          name: "twitter:card",
+          content: "summary"
+        },
+        {
+          vmid: "twitter:site",
+          name: "twitter:site",
+          content: "@tyankatsu5"
+        },
+        {
+          vmid: "twitter:creator",
+          name: "twitter:creator",
+          content: "tyankatsu"
+        },
+        {
+          vmid: "twitter:title",
+          name: "twitter:title",
+          content: `Blog All Page ${
+            this.$page.allWordPressPost.pageInfo.currentPage
+          } - ${SITE_NAME}`
+        },
+        {
+          vmid: "twitter:url",
+          name: "twitter:url",
+          content: `${process.env.VUE_APP_BASE_URL}/blog/all/${
+            this.$page.allWordPressPost.pageInfo.currentPage
+          }`
+        },
+        {
+          vmid: "twitter:description",
+          name: "twitter:description",
+          content: `${SITE_NAME}の記事一覧ページです。フロントエンドに関する情報を中心に投稿します。${
+            this.$page.allWordPressPost.pageInfo.currentPage
+          }ページ目です。`
+        },
+        {
+          vmid: "twitter:image",
+          name: "twitter:image",
+          content: `${process.env.VUE_APP_STATIC_SRC_URL}/assets/images/ogp.png`
         }
       ]
     };

@@ -86,7 +86,7 @@
 
 <script>
 import PageHeader from "@/basics/PageHeader";
-import { DESCRIPTION } from "@/const";
+import { SITE_NAME } from "@/const";
 export default {
   components: {
     PageHeader
@@ -95,7 +95,75 @@ export default {
     return {
       title: "About",
       meta: [
-        { name: "description", content: `${DESCRIPTION}の著者紹介ページです。` }
+        {
+          name: "description",
+          content: `${SITE_NAME}の著者紹介ページです。`
+        },
+        {
+          vmid: "og:title",
+          property: "og:title",
+          content: `About - ${SITE_NAME}`
+        },
+        {
+          vmid: "og:type",
+          property: "og:type",
+          content: "article"
+        },
+        {
+          vmid: "og:url",
+          property: "og:url",
+          content: `${process.env.VUE_APP_BASE_URL}/about`
+        },
+        {
+          vmid: "og:image",
+          property: "og:image",
+          content: `${process.env.VUE_APP_STATIC_SRC_URL}/assets/images/ogp.png`
+        },
+        {
+          vmid: "og:site_name",
+          property: "og:site_name",
+          content: SITE_NAME
+        },
+        {
+          vmid: "og:description",
+          property: "og:description",
+          content: `${SITE_NAME}の著者紹介ページです。`
+        },
+        {
+          vmid: "twitter:card",
+          name: "twitter:card",
+          content: "summary"
+        },
+        {
+          vmid: "twitter:site",
+          name: "twitter:site",
+          content: "@tyankatsu5"
+        },
+        {
+          vmid: "twitter:creator",
+          name: "twitter:creator",
+          content: "tyankatsu"
+        },
+        {
+          vmid: "twitter:title",
+          name: "twitter:title",
+          content: `About - ${SITE_NAME}`
+        },
+        {
+          vmid: "twitter:url",
+          name: "twitter:url",
+          content: `${process.env.VUE_APP_BASE_URL}/about`
+        },
+        {
+          vmid: "twitter:description",
+          name: "twitter:description",
+          content: `${SITE_NAME}の著者紹介ページです。`
+        },
+        {
+          vmid: "twitter:image",
+          name: "twitter:image",
+          content: `${process.env.VUE_APP_STATIC_SRC_URL}/assets/images/ogp.png`
+        }
       ]
     };
   }

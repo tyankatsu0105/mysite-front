@@ -50,7 +50,8 @@ import VFooter from "@/containers/VFooter.vue";
 import LinkButtonPrimary from "@/basics/LinkButtonPrimary.vue";
 import LinkButtonIcon from "@/basics/LinkButtonIcon.vue";
 
-import { DESCRIPTION } from "@/const";
+import { DESCRIPTION, SITE_NAME } from "@/const";
+
 export default {
   components: {
     IndexCanvas,
@@ -61,13 +62,80 @@ export default {
   },
   metaInfo() {
     return {
+      title: SITE_NAME,
       htmlAttrs: {
         lang: "ja"
       },
       meta: [
-        { name: "description", content: DESCRIPTION },
-        { charset: "utf-8" },
-        { name: "viewport", content: "width=device-width, initial-scale=1" }
+        {
+          name: "description",
+          content: DESCRIPTION
+        },
+        {
+          vmid: "og:title",
+          property: "og:title",
+          content: SITE_NAME
+        },
+        {
+          vmid: "og:type",
+          property: "og:type",
+          content: "website"
+        },
+        {
+          vmid: "og:url",
+          property: "og:url",
+          content: `${process.env.VUE_APP_BASE_URL}`
+        },
+        {
+          vmid: "og:image",
+          property: "og:image",
+          content: `${process.env.VUE_APP_STATIC_SRC_URL}/assets/images/ogp.png`
+        },
+        {
+          vmid: "og:site_name",
+          property: "og:site_name",
+          content: SITE_NAME
+        },
+        {
+          vmid: "og:description",
+          property: "og:description",
+          content: DESCRIPTION
+        },
+        {
+          vmid: "twitter:card",
+          name: "twitter:card",
+          content: "summary"
+        },
+        {
+          vmid: "twitter:site",
+          name: "twitter:site",
+          content: "@tyankatsu5"
+        },
+        {
+          vmid: "twitter:creator",
+          name: "twitter:creator",
+          content: "tyankatsu"
+        },
+        {
+          vmid: "twitter:title",
+          name: "twitter:title",
+          content: SITE_NAME
+        },
+        {
+          vmid: "twitter:url",
+          name: "twitter:url",
+          content: `${process.env.VUE_APP_BASE_URL}`
+        },
+        {
+          vmid: "twitter:description",
+          name: "twitter:description",
+          content: DESCRIPTION
+        },
+        {
+          vmid: "twitter:image",
+          name: "twitter:image",
+          content: `${process.env.VUE_APP_STATIC_SRC_URL}/assets/images/ogp.png`
+        }
       ]
     };
   }
