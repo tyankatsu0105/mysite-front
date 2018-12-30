@@ -2,6 +2,6 @@
 
 exports[`PageHeader render 1`] = `
 <h1 class="PageHeader">
-  aaaaaaaa
+  Page
 </h1>
 `;

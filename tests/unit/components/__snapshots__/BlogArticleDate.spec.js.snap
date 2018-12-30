@@ -2,7 +2,7 @@
 
 exports[`BlogArticleDate render 1`] = `
 <div class="BlogArticleDate">
-  <font-awesome-icon icon="[object Object]"></font-awesome-icon> <time datetime="2018.12.15" class="BlogArticleDate-DateText">
+  <font-awesome-icon-stub icon="[object Object]"></font-awesome-icon-stub> <time datetime="2018.12.15" class="BlogArticleDate-DateText">
     2018.12.15
   </time>
 </div>

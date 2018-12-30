@@ -3,10 +3,10 @@
 exports[`BlogArticle render 1`] = `
 <div class="BlogArticle" name="BlogArticle" mode="out-in">
   <article class="BlogArticle-Contents">
-    <g-link to="/2018/11/21/%25e3%2583%2586%25e3%2582%25b9%25e3%2583%2588" class="BlogArticle-ContentsWrapLink">
+    <g-link-stub to="/2018/11/21/%25e3%2583%2586%25e3%2582%25b9%25e3%2583%2588" class="BlogArticle-ContentsWrapLink">
       <div class="BlogArticle-Head">
-        <g-image src="[object Object]" width="100%" class="BlogArticle-Img"></g-image>
-        <font-awesome-icon icon="[object Object]" size="3x"></font-awesome-icon>
+        <g-image-stub src="[object Object]" width="100%" class="BlogArticle-Img"></g-image-stub>
+        <font-awesome-icon-stub icon="[object Object]" size="3x"></font-awesome-icon-stub>
       </div>
       <div class="BlogArticle-Body">
         <h3 class="BlogArticle-Heading">
@@ -20,7 +20,7 @@ exports[`BlogArticle render 1`] = `
         <blog-article-date-stub text="2018.11.21" time="2018.11.21"></blog-article-date-stub>
         <blog-article-category-stub text="技術記事"></blog-article-category-stub>
       </div>
-    </g-link>
+    </g-link-stub>
   </article>
 </div>
 `;

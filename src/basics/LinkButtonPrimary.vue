@@ -12,11 +12,13 @@ export default {
   props: {
     text: {
       type: String,
-      requirer: true
+      requirer: true,
+      default: ""
     },
     to: {
       type: String,
-      requirer: true
+      requirer: true,
+      default: "/"
     }
   }
 };

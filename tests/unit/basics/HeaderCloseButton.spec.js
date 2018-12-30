@@ -3,7 +3,9 @@ import HeaderCloseButton from "@/basics/HeaderCloseButton.vue";
 
 describe("HeaderCloseButton", () => {
   it("render", () => {
-    const wrapper = shallowMount(HeaderCloseButton);
+    const wrapper = shallowMount(HeaderCloseButton, {
+      stubs: ["font-awesome-icon"]
+    });
 
     expect(wrapper.html()).toMatchSnapshot();
   });

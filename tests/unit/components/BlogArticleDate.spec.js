@@ -9,7 +9,8 @@ const propsData = {
 describe("BlogArticleDate", () => {
   it("render", () => {
     const wrapper = shallowMount(BlogArticleDate, {
-      propsData
+      propsData,
+      stubs: ["font-awesome-icon"]
     });
 
     expect(wrapper.html()).toMatchSnapshot();

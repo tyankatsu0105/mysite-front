@@ -77,11 +77,13 @@ export default {
   props: {
     headingTag: {
       type: String,
-      requirer: true
+      requirer: true,
+      default: "h2"
     },
     article: {
       type: Object,
-      requirer: true
+      requirer: true,
+      default: () => {}
     }
   },
 

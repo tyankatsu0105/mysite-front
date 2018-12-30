@@ -12,7 +12,8 @@ const setProps = {
 describe("LinkButtonIcon", () => {
   it("render", () => {
     const wrapper = shallowMount(LinkButtonIcon, {
-      setProps
+      setProps,
+      stubs: ["font-awesome-icon"]
     });
 
     expect(wrapper.html()).toMatchSnapshot();

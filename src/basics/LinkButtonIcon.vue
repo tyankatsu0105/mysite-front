@@ -13,11 +13,12 @@ export default {
   props: {
     icon: {
       type: Object,
-      requirer: false
+      default: () => {}
     },
     href: {
       type: String,
-      requirer: true
+      requirer: true,
+      default: "/"
     }
   }
 };

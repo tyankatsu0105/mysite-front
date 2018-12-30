@@ -17,11 +17,13 @@ export default {
   props: {
     text: {
       type: String,
-      requirer: true
+      requirer: true,
+      default: ""
     },
     time: {
       type: String,
-      requirer: false
+      requirer: false,
+      default: ""
     }
   }
 };

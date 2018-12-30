@@ -11,7 +11,8 @@ const propsData = {
 describe("SnsLists", () => {
   it("render", () => {
     const wrapper = shallowMount(SnsLists, {
-      propsData
+      propsData,
+      stubs: ["font-awesome-icon"]
     });
     wrapper.setData({
       isOpenLists: false,

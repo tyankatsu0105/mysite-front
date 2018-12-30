@@ -2,7 +2,7 @@
 
 exports[`BlogArticleCategory render 1`] = `
 <div class="BlogArticleCategory">
-  <font-awesome-icon icon="[object Object]"></font-awesome-icon>
+  <font-awesome-icon-stub icon="[object Object]"></font-awesome-icon-stub>
   <p class="BlogArticleCategory-CategoryText">
     カテゴリ
   </p>

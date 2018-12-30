@@ -5,7 +5,7 @@
 			<ul class="HeaderMenu_NavList">
 				<li class="HeaderMenu_NavListItem">
 					<g-link
-						:to="{ name: 'home' }"
+						to="/"
 						class="HeaderMenu_NavListItemLink"
 						exact
 					>
@@ -16,7 +16,7 @@
 				</li>
 				<li class="HeaderMenu_NavListItem">
 					<g-link
-						:to="{ name: 'about' }"
+						to="/about"
 						class="HeaderMenu_NavListItemLink"
 						exact
 					>
@@ -47,7 +47,9 @@ export default {
   },
   props: {
     isOpenHeader: {
-      type: Boolean
+      type: Boolean,
+      requirer: true,
+      default: false
     }
   },
   methods: {

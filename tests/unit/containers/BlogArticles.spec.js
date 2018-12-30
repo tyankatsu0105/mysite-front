@@ -61,7 +61,8 @@ const propsData = {
 describe("BlogArticles", () => {
   it("render", () => {
     const wrapper = shallowMount(BlogArticles, {
-      propsData
+      propsData,
+      stubs: ["g-link", "g-image", "font-awesome-icon"]
     });
 
     expect(wrapper.html()).toMatchSnapshot();

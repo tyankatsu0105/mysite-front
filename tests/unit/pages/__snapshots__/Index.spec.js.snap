@@ -10,7 +10,7 @@ exports[`Index render 1`] = `
     </h1>
     <div class="Index_LinkBox">
       <linkbuttonprimary-stub text="About" to="about" class="Index_Link"></linkbuttonprimary-stub>
-      <linkbuttonprimary-stub text="Blog" to="/blog/all" class="Index_Link"></linkbuttonprimary-stub>
+      <linkbuttonprimary-stub text="Blog" to="blog/all" class="Index_Link"></linkbuttonprimary-stub>
     </div>
     <div class="Index_LinkBox">
       <linkbuttonicon-stub icon="[object Object]" href="https://twitter.com/tyankatsu5" class="Index_Link"></linkbuttonicon-stub>

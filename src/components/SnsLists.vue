@@ -57,7 +57,8 @@ export default {
   props: {
     siteInfo: {
       type: Object,
-      requirer: true
+      requirer: true,
+      default: () => {}
     }
   },
   data() {

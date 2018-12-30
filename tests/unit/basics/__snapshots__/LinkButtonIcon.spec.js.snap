@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LinkButtonIcon render 1`] = `
-<a target="_blank" class="LinkButtonIcon">
-  <font-awesome-icon></font-awesome-icon>
+<a href="/" target="_blank" class="LinkButtonIcon">
+  <font-awesome-icon-stub></font-awesome-icon-stub>
 </a>
 `;

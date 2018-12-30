@@ -2,7 +2,7 @@ import { shallowMount } from "@vue/test-utils";
 import PageHeader from "@/basics/PageHeader.vue";
 
 const propsData = {
-  text: "aaaaaaaa"
+  text: "Page"
 };
 
 describe("PageHeader", () => {

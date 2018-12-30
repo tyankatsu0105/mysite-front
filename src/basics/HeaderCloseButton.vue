@@ -9,11 +9,6 @@
 
 <script>
 export default {
-  props: {
-    isOpenHeader: {
-      type: Boolean
-    }
-  },
   methods: {
     closeHeader() {
       this.$emit("close-header", false);

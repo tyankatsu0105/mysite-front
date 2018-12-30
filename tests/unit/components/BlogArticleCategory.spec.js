@@ -8,7 +8,8 @@ const propsData = {
 describe("BlogArticleCategory", () => {
   it("render", () => {
     const wrapper = shallowMount(BlogArticleCategory, {
-      propsData
+      propsData,
+      stubs: ["font-awesome-icon"]
     });
 
     expect(wrapper.html()).toMatchSnapshot();

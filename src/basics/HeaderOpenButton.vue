@@ -10,11 +10,6 @@
 
 <script>
 export default {
-  props: {
-    isOpenHeader: {
-      type: Boolean
-    }
-  },
   methods: {
     openHeader() {
       this.$emit("open-header", true);

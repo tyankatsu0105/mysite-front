@@ -1,15 +1,16 @@
 import { shallowMount } from "@vue/test-utils";
 import LinkButtonPrimary from "@/basics/LinkButtonPrimary.vue";
 
-const setProps = {
+const propsData = {
   text: "リンク",
-  to: "hogehoge.com"
+  to: "about"
 };
 
 describe("LinkButtonPrimary", () => {
   it("render", () => {
     const wrapper = shallowMount(LinkButtonPrimary, {
-      setProps
+      propsData,
+      stubs: ["g-link"]
     });
 
     expect(wrapper.html()).toMatchSnapshot();

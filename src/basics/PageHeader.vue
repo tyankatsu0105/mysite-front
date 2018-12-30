@@ -9,7 +9,8 @@ export default {
   props: {
     text: {
       type: String,
-      requirer: true
+      requirer: true,
+      default: ""
     }
   }
 };

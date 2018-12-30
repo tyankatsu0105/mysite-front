@@ -15,7 +15,7 @@
 					/>
 					<LinkButtonPrimary
 						text="Blog"
-						to="/blog/all"
+						to="blog/all"
 						class="Index_Link"
 					/>
 				</div>
