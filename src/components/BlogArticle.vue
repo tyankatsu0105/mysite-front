@@ -91,7 +91,7 @@ export default {
       default: () => {}
     }
   },
-  created() {
+  mounted() {
     library.add(faReadme);
   },
 

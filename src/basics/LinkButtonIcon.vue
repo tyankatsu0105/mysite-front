@@ -27,7 +27,7 @@ export default {
       default: "/"
     }
   },
-  created() {
+  mounted() {
     library.add(faTwitter, faGithub, faNpm);
   }
 };
