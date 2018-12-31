@@ -27,8 +27,8 @@ export default {
 <style scoped lang='scss'>
 .BlogArticles {
   display: grid;
-  grid-auto-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
   grid-gap: 30px;
   justify-items: center;
 

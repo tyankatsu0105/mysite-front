@@ -159,6 +159,7 @@ query Blog($page: Int) {
 
 <style scoped lang='scss'>
 @import "@/styles/utility/transition-pager.scss";
+/* stylelint-disable selector-no-qualifying-type  */
 .All {
   &-PagerBlock {
     position: fixed;
@@ -176,12 +177,12 @@ query Blog($page: Int) {
     transition: $tst-default;
 
     @include mq-xs {
-      margin-top: 20px;
       display: grid;
-      grid-auto-rows: auto;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-auto-rows: auto;
       grid-gap: 20px;
       justify-items: center;
+      margin-top: 20px;
     }
     a {
       position: relative;
@@ -203,8 +204,8 @@ query Blog($page: Int) {
         transform: translateX(-10px);
 
         @include mq-xs {
-          transform: none;
           box-shadow: none;
+          transform: none;
         }
       }
       &.active--exact {

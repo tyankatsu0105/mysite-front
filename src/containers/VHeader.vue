@@ -42,17 +42,17 @@ export default {
   z-index: 1;
 
   &::after {
-    z-index: -1;
-    content: "";
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
+    z-index: -1;
     width: 0;
     height: 0;
-    border-style: solid;
-    border-width: 120px 120px 0 0;
+    content: "";
     border-color: transparentize($color-primary, 0.1) transparent transparent
       transparent;
+    border-style: solid;
+    border-width: 120px 120px 0 0;
   }
 }
 </style>

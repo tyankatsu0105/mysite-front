@@ -255,9 +255,9 @@ query Post($path: String!) {
     }
   }
   &-Heading {
+    margin-top: 16px;
     font-size: 2.2rem;
     font-weight: bold;
-    margin-top: 16px;
 
     @include mq-xs {
       margin-top: 20px;
@@ -271,8 +271,8 @@ query Post($path: String!) {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    font-size: 1rem;
     margin-top: 10px;
+    font-size: 1rem;
 
     @include mq-xs {
       justify-content: flex-start;
@@ -304,8 +304,8 @@ query Post($path: String!) {
       display: inline-block;
     }
     a {
-      color: lighten($color-accent, 30%);
       margin: 0 5px;
+      color: lighten($color-accent, 30%);
       text-decoration: underline;
 
       &:hover {
@@ -326,8 +326,8 @@ query Post($path: String!) {
     h2 {
       padding-bottom: 3px;
       font-size: 2rem;
-      border-bottom: 3px solid lighten($color-accent, 20%);
       font-size: 1.3rem;
+      border-bottom: 3px solid lighten($color-accent, 20%);
     }
     h3 {
       padding-left: 10px;
@@ -366,16 +366,16 @@ query Post($path: String!) {
       list-style-position: inside;
     }
     li {
-      text-indent: -1em;
       padding-left: 1em;
+      text-indent: -1em;
     }
     // ==============================================
     // table
     // ==============================================
     table {
-      border-collapse: collapse;
-      table-layout: fixed;
       white-space: nowrap;
+      table-layout: fixed;
+      border-collapse: collapse;
     }
     th,
     td {
@@ -402,10 +402,10 @@ query Post($path: String!) {
       background-color: #3a424e;
       border-radius: 5px;
       box-shadow: $box-shadow-default;
-      p:before {
-        content: "--Note--";
+      p::before {
         display: block;
         margin-bottom: 5px;
+        content: "--Note--";
       }
     }
     // ==============================================
@@ -427,16 +427,16 @@ query Post($path: String!) {
         padding: 1em;
       }
       .codeTitle {
-        background-color: #333;
-        padding: 0.3em 0.5em;
         position: absolute;
         top: 0;
         left: 0;
+        padding: 0.3em 0.5em;
+        background-color: #333;
       }
     }
     code {
-      background-color: #000;
       padding: 8px 12px;
+      background-color: #000;
       border-radius: 4px;
     }
   }

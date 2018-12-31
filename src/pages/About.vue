@@ -195,19 +195,17 @@ export default {
     }
   }
   &-ProfileHeading {
-    font-weight: bold;
-    font-size: 2.5rem;
-    line-height: 1;
     margin-bottom: 32px;
-  }
-  &-ProfileList {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
   }
   &-ProfileListItem {
     font-size: 1.3rem;
 
     & + & {
-      margin-top: 12px;
       padding-top: 12px;
+      margin-top: 12px;
       border-top: 2px solid #5e5e5e;
     }
   }
@@ -216,9 +214,9 @@ export default {
   }
   &-ProfileListItemData {
     a {
+      display: inline-block;
       color: lighten($color-accent, 30%);
       text-decoration: underline;
-      display: inline-block;
 
       &:hover {
         opacity: $opc-default;

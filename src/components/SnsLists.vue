@@ -81,10 +81,10 @@ export default {
     height: 40px;
   }
   &-Button {
-    z-index: 1;
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
     color: #fff;
@@ -98,14 +98,15 @@ export default {
     }
   }
   &-Item {
-    box-shadow: $box-shadow-default;
-    transition: $tst-default;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    visibility: hidden;
     border-radius: 50%;
+    box-shadow: $box-shadow-default;
+    transition: $tst-default;
 
     &._twitter {
       background-color: #0c7abf;
@@ -121,24 +122,25 @@ export default {
     }
 
     &:hover {
-      box-shadow: $box-shadow-default-hover;
       width: 110%;
       height: 110%;
+      box-shadow: $box-shadow-default-hover;
     }
   }
   &-Link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     font-size: 20px;
 
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   &._isOpen {
     .SnsLists-Item {
+      visibility: visible;
       &._twitter {
         transform: translateY(calc(-100% - 20px));
       }
