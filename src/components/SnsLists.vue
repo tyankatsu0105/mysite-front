@@ -72,7 +72,7 @@ export default {
       siteUrl: process.env.VUE_APP_BASE_URL
     };
   },
-  mounted() {
+  created() {
     library.add(faTwitter, faGetPocket, faShareAlt);
   }
 };

@@ -15,7 +15,7 @@ export default {
   components: {
     FontAwesomeIcon
   },
-  mounted() {
+  created() {
     library.add(faTimes);
   },
   methods: {
