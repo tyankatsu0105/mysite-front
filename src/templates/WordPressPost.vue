@@ -173,7 +173,7 @@ export default {
         {
           vmid: "twitter:card",
           name: "twitter:card",
-          content: "summary"
+          content: "summary_large_image"
         },
         {
           vmid: "twitter:site",
