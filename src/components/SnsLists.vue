@@ -91,10 +91,10 @@ export default {
     background-color: lighten($color-primary, 10%);
     border-radius: 50%;
     box-shadow: $box-shadow-default;
+    transition: $tst-default;
 
     &:hover {
       transform: scale(1.2);
-      transition: $tst-default;
     }
   }
   &-Item {
@@ -122,6 +122,8 @@ export default {
 
     &:hover {
       box-shadow: $box-shadow-default-hover;
+      width: 110%;
+      height: 110%;
     }
   }
   &-Link {

@@ -20,12 +20,6 @@
 				{{ $page.post.title }}
 			</h1>
 
-			<div class="WordPressPost-SnsLists">
-				<sns-lists :site-info="siteInfo" />
-			</div>
-
-			
-
 			<div class="WordPressPost-Info">
 				<blog-article-date
 					:text="$page.post.date"
@@ -42,6 +36,9 @@
 				v-html="$page.post.content"
 			></div>
 			<!--eslint-enable-->
+			<div class="WordPressPost-SnsLists">
+				<sns-lists :site-info="siteInfo" />
+			</div>
 		</div>
 	</Layout>
 </template>
@@ -76,6 +73,12 @@ export default {
   },
   mounted() {
     this.wrap("table", "div", "wrapTable");
+    this.wrap("pre", "div", "preWrap");
+    this.setIncludeCodeTitleClass();
+    this.setCodeTitle();
+  },
+  beforeDestroy() {
+    this.wrap();
   },
   methods: {
     sliceText,
@@ -91,6 +94,33 @@ export default {
         wrapElement.className = className;
         element.parentElement.insertBefore(wrapElement, element);
         wrapElement.appendChild(element);
+      });
+    },
+    /**
+     * codeにタイトル見出しを付与する
+     */
+    setCodeTitle() {
+      document.querySelectorAll("code").forEach(element => {
+        if (
+          element.className.match(/language-/) &&
+          element.className.match(/^:/)
+        ) {
+          let codeTitle = element.className.split(" ")[0];
+          codeTitle = codeTitle.substr(1);
+
+          let createTitleElement = document.createElement("code");
+          createTitleElement.classList.add("codeTitle");
+          createTitleElement.append(codeTitle);
+
+          element.parentNode.insertBefore(createTitleElement, element);
+        }
+      });
+    },
+    setIncludeCodeTitleClass() {
+      document.querySelectorAll("code").forEach(element => {
+        if (element.className.match(/^:/)) {
+          element.parentNode.classList.add("includeCodeTitle");
+        }
       });
     }
   },
@@ -205,7 +235,6 @@ query Post($path: String!) {
 
 <style lang="scss">
 @import "@/styles/utility/transition-WordPressPost-EyecatchBox.scss";
-@import "@/styles/thirdparty/prism.scss";
 .WordPressPost {
   &-EyecatchBox {
     position: relative;
@@ -216,18 +245,6 @@ query Post($path: String!) {
       width: 100%;
       height: 100%;
       content: "";
-      background: linear-gradient(
-          to bottom,
-          $color-primary 0%,
-          transparentize($color-primary, 1) 50%,
-          $color-primary 100%
-        ),
-        linear-gradient(
-          to right,
-          $color-primary 0%,
-          transparentize($color-primary, 1) 50%,
-          $color-primary 100%
-        );
     }
   }
   &-Eyecatch {
@@ -240,6 +257,7 @@ query Post($path: String!) {
   &-Heading {
     font-size: 2.2rem;
     font-weight: bold;
+    margin-top: 16px;
 
     @include mq-xs {
       margin-top: 20px;
@@ -334,9 +352,12 @@ query Post($path: String!) {
     // ==============================================
     // list
     // ==============================================
-    ul,
-    ol {
+    ul {
       list-style-type: disc;
+    }
+
+    ol {
+      list-style-type: decimal;
     }
     ul {
       list-style-position: inside;
@@ -396,6 +417,23 @@ query Post($path: String!) {
     // ==============================================
     // code
     // ==============================================
+    @import "@/styles/thirdparty/prism.scss";
+    .preWrap {
+      position: relative;
+      .includeCodeTitle {
+        padding: 3em 1em 1em;
+      }
+      .includeCode {
+        padding: 1em;
+      }
+      .codeTitle {
+        background-color: #333;
+        padding: 0.3em 0.5em;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
     code {
       background-color: #000;
       padding: 8px 12px;
