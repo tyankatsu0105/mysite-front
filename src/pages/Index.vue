@@ -20,6 +20,9 @@
 					/>
 				</div>
 				<div class="Index_LinkBox">
+					<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }" />
+					<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }" />
+					<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'npm' }" />
 					<LinkButtonIcon
 						:icon="{ prefix: 'fab', iconName: 'twitter' }"
 						href="https://twitter.com/tyankatsu5"
