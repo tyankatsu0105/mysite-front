@@ -9,9 +9,14 @@
 
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 export default {
   components: {
     FontAwesomeIcon
+  },
+  created() {
+    library.add(faTimes);
   },
   methods: {
     closeHeader() {

@@ -11,6 +11,9 @@
 
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faFolder } from "@fortawesome/free-solid-svg-icons";
+
 export default {
   components: {
     FontAwesomeIcon
@@ -21,6 +24,9 @@ export default {
       requirer: true,
       default: ""
     }
+  },
+  created() {
+    library.add(faFolder);
   }
 };
 </script>

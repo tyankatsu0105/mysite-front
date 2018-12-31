@@ -50,6 +50,9 @@
 <script>
 import VIcon from "@/basics/VIcon.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
+import { faTwitter, faGetPocket } from "@fortawesome/free-brands-svg-icons";
 
 export default {
   components: {
@@ -68,6 +71,9 @@ export default {
       isOpenLists: false,
       siteUrl: process.env.VUE_APP_BASE_URL
     };
+  },
+  created() {
+    library.add(faTwitter, faGetPocket, faShareAlt);
   }
 };
 </script>

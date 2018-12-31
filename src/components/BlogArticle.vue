@@ -69,6 +69,8 @@
 import BlogArticleDate from "@/components/BlogArticleDate.vue";
 import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faReadme } from "@fortawesome/free-brands-svg-icons";
 
 import sliceText from "@/util/sliceText.js";
 export default {
@@ -88,6 +90,9 @@ export default {
       requirer: true,
       default: () => {}
     }
+  },
+  created() {
+    library.add(faReadme);
   },
 
   methods: {
