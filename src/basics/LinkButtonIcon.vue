@@ -10,6 +10,20 @@
 
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faTimes,
+  faClock,
+  faFolder,
+  faShareAlt
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faTwitter,
+  faGithub,
+  faNpm,
+  faReadme,
+  faGetPocket
+} from "@fortawesome/free-brands-svg-icons";
 export default {
   components: {
     FontAwesomeIcon
@@ -24,6 +38,19 @@ export default {
       requirer: true,
       default: "/"
     }
+  },
+  created() {
+    library.add(
+      faTimes,
+      faTwitter,
+      faGithub,
+      faNpm,
+      faReadme,
+      faClock,
+      faFolder,
+      faGetPocket,
+      faShareAlt
+    );
   }
 };
 </script>

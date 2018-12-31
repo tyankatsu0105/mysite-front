@@ -1,32 +1,5 @@
 import VuePrism from "vue-prism";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faTimes,
-  faClock,
-  faFolder,
-  faShareAlt
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faTwitter,
-  faGithub,
-  faNpm,
-  faReadme,
-  faGetPocket
-} from "@fortawesome/free-brands-svg-icons";
-
 import store from "@/store";
-
-library.add(
-  faTimes,
-  faTwitter,
-  faGithub,
-  faNpm,
-  faReadme,
-  faClock,
-  faFolder,
-  faGetPocket,
-  faShareAlt
-);
 
 import "@/styles/core/fonts.scss";
 import "@/styles/core/reset.scss";
