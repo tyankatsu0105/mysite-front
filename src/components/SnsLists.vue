@@ -49,10 +49,12 @@
 
 <script>
 import VIcon from "@/basics/VIcon.vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 export default {
   components: {
-    VIcon
+    VIcon,
+    FontAwesomeIcon
   },
   props: {
     siteInfo: {

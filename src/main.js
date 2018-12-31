@@ -13,7 +13,6 @@ import {
   faReadme,
   faGetPocket
 } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import store from "@/store";
 
@@ -42,5 +41,4 @@ export default function(Vue, { head }) {
   });
   Vue.use(VuePrism);
   Vue.use(store);
-  Vue.component("font-awesome-icon", FontAwesomeIcon);
 }

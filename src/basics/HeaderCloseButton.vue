@@ -8,7 +8,11 @@
 </template>
 
 <script>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 export default {
+  components: {
+    FontAwesomeIcon
+  },
   methods: {
     closeHeader() {
       this.$emit("close-header", false);

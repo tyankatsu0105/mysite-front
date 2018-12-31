@@ -68,11 +68,14 @@
 <script>
 import BlogArticleDate from "@/components/BlogArticleDate.vue";
 import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 import sliceText from "@/util/sliceText.js";
 export default {
   components: {
     BlogArticleDate,
-    BlogArticleCategory
+    BlogArticleCategory,
+    FontAwesomeIcon
   },
   props: {
     headingTag: {
