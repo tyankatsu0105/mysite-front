@@ -13,6 +13,9 @@ exports[`Index render 1`] = `
       <linkbuttonprimary-stub text="Blog" to="blog/all" class="Index_Link"></linkbuttonprimary-stub>
     </div>
     <div class="Index_LinkBox">
+      <font-awesome-icon icon="[object Object]"></font-awesome-icon>
+      <font-awesome-icon icon="[object Object]"></font-awesome-icon>
+      <font-awesome-icon icon="[object Object]"></font-awesome-icon>
       <linkbuttonicon-stub icon="[object Object]" href="https://twitter.com/tyankatsu5" class="Index_Link"></linkbuttonicon-stub>
       <linkbuttonicon-stub icon="[object Object]" href="https://github.com/tyankatsu0105" class="Index_Link"></linkbuttonicon-stub>
       <linkbuttonicon-stub icon="[object Object]" href="https://www.npmjs.com/~tyankatsu0105" class="Index_Link"></linkbuttonicon-stub>
