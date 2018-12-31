@@ -1,5 +1,4 @@
 import VuePrism from "vue-prism";
-import DefaultLayout from "@/layouts/Default.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faTimes,
@@ -43,6 +42,5 @@ export default function(Vue, { head }) {
   });
   Vue.use(VuePrism);
   Vue.use(store);
-  Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome-icon", FontAwesomeIcon);
 }

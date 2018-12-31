@@ -24,6 +24,7 @@ import { Pager } from "gridsome";
 
 import BlogArticles from "@/containers/BlogArticles";
 import PageHeader from "@/basics/PageHeader";
+import Layout from "@/layouts/Default";
 
 import { SITE_NAME } from "@/const";
 
@@ -31,7 +32,8 @@ export default {
   components: {
     Pager,
     BlogArticles,
-    PageHeader
+    PageHeader,
+    Layout
   },
   metaInfo() {
     return {

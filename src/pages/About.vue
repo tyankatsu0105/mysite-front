@@ -87,9 +87,11 @@
 <script>
 import PageHeader from "@/basics/PageHeader";
 import { SITE_NAME } from "@/const";
+import Layout from "@/layouts/Default";
 export default {
   components: {
-    PageHeader
+    PageHeader,
+    Layout
   },
   metaInfo() {
     return {

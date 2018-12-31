@@ -47,6 +47,7 @@
 import BlogArticleDate from "@/components/BlogArticleDate.vue";
 import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
 import SnsLists from "@/components/SnsLists.vue";
+import Layout from "@/layouts/Default";
 
 import sliceText from "@/util/sliceText.js";
 
@@ -55,7 +56,8 @@ export default {
   components: {
     BlogArticleDate,
     BlogArticleCategory,
-    SnsLists
+    SnsLists,
+    Layout
   },
   computed: {
     siteInfo() {
