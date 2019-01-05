@@ -119,7 +119,7 @@ export default {
         {
           vmid: "og:image",
           property: "og:image",
-          content: `${process.env.VUE_APP_STATIC_SRC_URL}/assets/images/ogp.png`
+          content: `${process.env.VUE_APP_STATIC_SRC_URL}/ogp.png`
         },
         {
           vmid: "og:site_name",
@@ -164,7 +164,7 @@ export default {
         {
           vmid: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.VUE_APP_STATIC_SRC_URL}/assets/images/ogp.png`
+          content: `${process.env.VUE_APP_STATIC_SRC_URL}/ogp.png`
         }
       ]
     };
