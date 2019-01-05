@@ -14,8 +14,8 @@
 						class="Index_Link"
 					/>
 					<LinkButtonPrimary
-						text="Blog"
-						to="blog/all"
+						text="Posts"
+						to="posts"
 						class="Index_Link"
 					/>
 				</div>

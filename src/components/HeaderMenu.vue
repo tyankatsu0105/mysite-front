@@ -25,12 +25,12 @@
 						</span>
 					</g-link>
 					<g-link
-						to="/blog/all"
+						to="/posts"
 						class="HeaderMenu_NavListItemLink"
 						exact
 					>
 						<span>
-							Blog
+							Posts
 						</span>
 					</g-link>
 				</li>

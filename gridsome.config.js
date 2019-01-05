@@ -7,16 +7,13 @@ require("dotenv").config();
 module.exports = {
   plugins: [
     {
-      use: "@gridsome/source-wordpress",
+      use: "@gridsome/source-contentful",
       options: {
-        baseUrl: process.env.VUE_API_URL,
-        typeName: "WordPress",
-        perPage: 100,
-        concurrent: 10,
-        routes: {
-          post: "/:year/:month/:day/:slug",
-          post_tag: "/tag/:slug"
-        }
+        space: process.env.VUE_CONTENTFUL_SPACE,
+        accessToken: process.env.VUE_CONTENTFUL_ACCESS_TOKEN,
+        host: "cdn.contentful.com",
+        environment: process.env.VUE_CONTENTFUL_ENVIRONMENT,
+        typeName: "Contentful"
       }
     }
   ],

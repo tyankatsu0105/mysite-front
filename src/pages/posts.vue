@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<div class="All">
-			<PageHeader text="Blog" />
+			<PageHeader text="Posts" />
 			<blog-articles :page="$page" />
 			<transition
 				appear
@@ -9,7 +9,7 @@
 			>
 				<div class="All-PagerBlock">
 					<Pager
-						:info="$page.allWordPressPost.pageInfo"
+						:info="$page.allContentfulPosts.pageInfo"
 						class="All-Pager"
 						:show-navigation="false"
 					/>
@@ -37,21 +37,21 @@ export default {
   },
   metaInfo() {
     return {
-      title: `Blog All Page ${
-        this.$page.allWordPressPost.pageInfo.currentPage
+      title: `Posts All Page ${
+        this.$page.allContentfulPosts.pageInfo.currentPage
       }`,
       meta: [
         {
           name: "description",
           content: `${SITE_NAME}の記事一覧ページです。フロントエンドに関する情報を中心に投稿します。${
-            this.$page.allWordPressPost.pageInfo.currentPage
+            this.$page.allContentfulPosts.pageInfo.currentPage
           }ページ目です。`
         },
         {
           vmid: "og:title",
           property: "og:title",
-          content: `Blog All Page ${
-            this.$page.allWordPressPost.pageInfo.currentPage
+          content: `Posts All Page ${
+            this.$page.allContentfulPosts.pageInfo.currentPage
           } - ${SITE_NAME}`
         },
         {
@@ -62,8 +62,8 @@ export default {
         {
           vmid: "og:url",
           property: "og:url",
-          content: `${process.env.VUE_APP_BASE_URL}/blog/all/${
-            this.$page.allWordPressPost.pageInfo.currentPage
+          content: `${process.env.VUE_APP_BASE_URL}/posts/${
+            this.$page.allContentfulPosts.pageInfo.currentPage
           }`
         },
         {
@@ -80,7 +80,7 @@ export default {
           vmid: "og:description",
           property: "og:description",
           content: `${SITE_NAME}の記事一覧ページです。フロントエンドに関する情報を中心に投稿します。${
-            this.$page.allWordPressPost.pageInfo.currentPage
+            this.$page.allContentfulPosts.pageInfo.currentPage
           }ページ目です。`
         },
         {
@@ -101,22 +101,22 @@ export default {
         {
           vmid: "twitter:title",
           name: "twitter:title",
-          content: `Blog All Page ${
-            this.$page.allWordPressPost.pageInfo.currentPage
+          content: `Posts All Page ${
+            this.$page.allContentfulPosts.pageInfo.currentPage
           } - ${SITE_NAME}`
         },
         {
           vmid: "twitter:url",
           name: "twitter:url",
-          content: `${process.env.VUE_APP_BASE_URL}/blog/all/${
-            this.$page.allWordPressPost.pageInfo.currentPage
+          content: `${process.env.VUE_APP_BASE_URL}/posts/${
+            this.$page.allContentfulPosts.pageInfo.currentPage
           }`
         },
         {
           vmid: "twitter:description",
           name: "twitter:description",
           content: `${SITE_NAME}の記事一覧ページです。フロントエンドに関する情報を中心に投稿します。${
-            this.$page.allWordPressPost.pageInfo.currentPage
+            this.$page.allContentfulPosts.pageInfo.currentPage
           }ページ目です。`
         },
         {
@@ -130,28 +130,24 @@ export default {
 };
 </script>
 
-
 <page-query>
-query Blog($page: Int) {
-  allWordPressPost(perPage: 12, page: $page) @paginate {
+query Post($page: Int) {
+  allContentfulPosts(perPage: 12, page: $page) @paginate {
     pageInfo {
       totalPages
       currentPage
     }
+    totalCount
     edges {
       node {
         id
+        name
+        eyecatch
+        contents
         title
-        path
         slug
-        excerpt
+        path
         date(format: "YYYY.MM.DD", locale: "ja")
-        categories {
-          title
-        }
-        featuredMedia {
-          url
-        }
       }
     }
   }

@@ -6,14 +6,14 @@
 				appear
 				name="WordPressPost-EyecatchBox"
 			>
-				<div class="WordPressPost-EyecatchBox">
+				<!-- <div class="WordPressPost-EyecatchBox">
 					<g-image
 						v-if="$page.post.featuredMedia"
 						class="WordPressPost-Eyecatch"
 						:src="$page.post.featuredMedia.url.src"
 						width="100%"
-					/>	
-				</div>
+					/>
+				</div> -->
 			</transition>
 		
 			<h1 class="WordPressPost-Heading">
@@ -25,16 +25,17 @@
 					:text="$page.post.date"
 					:time="$page.post.date"
 				/>
-				<blog-article-category
+				<!-- <blog-article-category
 					:text="$page.post.categories[0].title"
-				/>
+				/> -->
 			</div>
 			
+			
 			<!-- eslint-disable vue/no-v-html -->
-			<div
+			<vue-markdown
 				class="WordPressPost-Contents"
-				v-html="$page.post.content"
-			></div>
+				:source="$page.post.contents"
+			/>
 			<!--eslint-enable-->
 			<div class="WordPressPost-SnsLists">
 				<sns-lists :site-info="siteInfo" />
@@ -45,9 +46,11 @@
 
 <script>
 import BlogArticleDate from "@/components/BlogArticleDate.vue";
-import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
+// import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
 import SnsLists from "@/components/SnsLists.vue";
 import Layout from "@/layouts/Default";
+
+import VueMarkdown from "vue-markdown";
 
 import sliceText from "@/util/sliceText.js";
 
@@ -55,9 +58,10 @@ import { SITE_NAME } from "@/const";
 export default {
   components: {
     BlogArticleDate,
-    BlogArticleCategory,
+    // BlogArticleCategory,
     SnsLists,
-    Layout
+    Layout,
+    VueMarkdown
   },
   computed: {
     siteInfo() {
@@ -132,11 +136,7 @@ export default {
       meta: [
         {
           name: "description",
-          content: sliceText(
-            this.$page.post.content.replace(/<(?:.|\n)*?>/gm, ""),
-            0,
-            100
-          )
+          content: sliceText(this.$page.post.contents, 0, 100)
         },
         {
           vmid: "og:title",
@@ -166,11 +166,7 @@ export default {
         {
           vmid: "og:description",
           property: "og:description",
-          content: sliceText(
-            this.$page.post.content.replace(/<(?:.|\n)*?>/gm, ""),
-            0,
-            100
-          )
+          content: sliceText(this.$page.post.contents, 0, 100)
         },
         {
           vmid: "twitter:card",
@@ -200,11 +196,7 @@ export default {
         {
           vmid: "twitter:description",
           name: "twitter:description",
-          content: sliceText(
-            this.$page.post.content.replace(/<(?:.|\n)*?>/gm, ""),
-            0,
-            100
-          )
+          content: sliceText(this.$page.post.contents, 0, 100)
         },
         {
           vmid: "twitter:image",
@@ -219,18 +211,15 @@ export default {
 
 <page-query>
 query Post($path: String!) {
-  post: wordPressPost(path: $path) {
+  post: contentfulPosts(path: $path) {
+    id
+    name
+    eyecatch
+    contents
     title
-    content
+    slug
     path
     date(format: "YYYY.MM.DD", locale: "ja")
-    categories {
-      title
-      path
-    }
-    featuredMedia {
-      url
-    }
   }
 }
 </page-query>

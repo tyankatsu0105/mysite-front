@@ -12,19 +12,20 @@
 					class="BlogArticle-ContentsWrapLink"
 				>
 					<div class="BlogArticle-Head">
-						<template v-if="article.featuredMedia">
+						<!-- @todo mediaがfileで取得できるようになったら変更する -->
+						<!-- <template v-if="article.featuredMedia">
 							<g-image
 								class="BlogArticle-Img"
 								:src="article.featuredMedia.url"
 								width="100%"
 							/>	
-						</template>
-						<template v-else>
-							<g-image  
-								class="BlogArticle-Img"
-								src="@/assets/images/default-thumbnail.png"
-							/>	
-						</template>
+						</template> -->
+						<!-- <template v-else> -->
+						<g-image  
+							class="BlogArticle-Img"
+							src="@/assets/images/default-thumbnail.png"
+						/>	
+						<!-- </template> -->
 
 						
 						<font-awesome-icon
@@ -43,21 +44,21 @@
 						</component>
 
 						<!-- eslint-disable vue/no-v-html -->
-						<div
+						<vue-markdown
 							class="BlogArticle-Excerpt"
-							v-html="sliceText(article.excerpt,0,120)"
-						>
-							<!--eslint-enable-->
-						</div>
+							:source="sliceText(article.contents,0,120)"
+						/>
+						<!--eslint-enable-->
 					</div>
 					<div class="BlogArticle-Foot">
 						<blog-article-date
 							:text="article.date"
 							:time="article.date"
 						/>
-						<blog-article-category
+						<!-- @todo referencesが取得できるようになったら変更する -->
+						<!-- <blog-article-category
 							:text="article.categories[0].title"
-						/>
+						/> -->
 					</div>
 				</g-link>
 			</article>
@@ -66,18 +67,21 @@
 </template>
 
 <script>
-import BlogArticleDate from "@/components/BlogArticleDate.vue";
-import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faReadme } from "@fortawesome/free-brands-svg-icons";
+import VueMarkdown from "vue-markdown";
+
+import BlogArticleDate from "@/components/BlogArticleDate.vue";
+// import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
 
 import sliceText from "@/util/sliceText.js";
 export default {
   components: {
     BlogArticleDate,
-    BlogArticleCategory,
-    FontAwesomeIcon
+    // BlogArticleCategory,
+    FontAwesomeIcon,
+    VueMarkdown
   },
   props: {
     headingTag: {

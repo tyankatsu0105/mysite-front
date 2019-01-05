@@ -1,7 +1,7 @@
 <template>
 	<div class="BlogArticles">
 		<blog-article
-			v-for="edge in page.allWordPressPost.edges"
+			v-for="edge in page.allContentfulPosts.edges"
 			:key="edge.node.id"
 			heading-tag="h2"
 			:article="edge.node"
