@@ -1,9 +1,9 @@
 <template>
-	<div class="BlogArticleCategory">
+	<div class="PostsArticleCategory">
 		<font-awesome-icon
 			:icon="{ prefix: 'fa', iconName: 'folder' }"
 		/>
-		<p class="BlogArticleCategory-CategoryText">
+		<p class="PostsArticleCategory-CategoryText">
 			{{ text }}
 		</p>
 	</div>
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.BlogArticleCategory {
+.PostsArticleCategory {
   &-CategoryText {
     display: inline-block;
     margin-left: 5px;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsArticleDate render 1`] = `
+<div class="PostsArticleDate">
+  <font-awesome-icon-stub icon="[object Object]"></font-awesome-icon-stub> <time datetime="2018.12.15" class="PostsArticleDate-DateText">
+    2018.12.15
+  </time>
+</div>
+`;

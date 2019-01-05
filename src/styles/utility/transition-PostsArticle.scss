@@ -1,0 +1,10 @@
+.PostsArticle-enter-active,
+.PostsArticle-leave-active {
+  transition: $tst-default;
+}
+
+.PostsArticle-enter,
+.PostsArticle-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}

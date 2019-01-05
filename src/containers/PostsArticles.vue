@@ -1,6 +1,6 @@
 <template>
-	<div class="BlogArticles">
-		<blog-article
+	<div class="PostsArticles">
+		<posts-article
 			v-for="edge in page.allContentfulPosts.edges"
 			:key="edge.node.id"
 			heading-tag="h2"
@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import BlogArticle from "@/components/BlogArticle";
+import PostsArticle from "@/components/PostsArticle";
 export default {
   components: {
-    BlogArticle
+    PostsArticle
   },
   props: {
     page: {
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.BlogArticles {
+.PostsArticles {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: auto;

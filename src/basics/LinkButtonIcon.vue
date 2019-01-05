@@ -2,6 +2,7 @@
 	<a
 		:href="href"
 		target="_blank"
+		rel="noopener"
 		class="LinkButtonIcon"
 	>
 		<font-awesome-icon :icon="icon" />

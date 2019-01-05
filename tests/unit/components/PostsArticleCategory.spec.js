@@ -1,14 +1,13 @@
 import { shallowMount } from "@vue/test-utils";
-import BlogArticleDate from "@/components/BlogArticleDate.vue";
+import PostsArticleCategory from "@/components/PostsArticleCategory.vue";
 
 const propsData = {
-  time: `2018.12.15`,
-  text: `2018.12.15`
+  text: "カテゴリ"
 };
 
-describe("BlogArticleDate", () => {
+describe("PostsArticleCategory", () => {
   it("render", () => {
-    const wrapper = shallowMount(BlogArticleDate, {
+    const wrapper = shallowMount(PostsArticleCategory, {
       propsData,
       stubs: ["font-awesome-icon"]
     });

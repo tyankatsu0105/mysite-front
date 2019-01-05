@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsArticle render 1`] = `
+<div class="PostsArticle" name="PostsArticle" mode="out-in">
+  <article class="PostsArticle-Contents">
+    <g-link-stub to="/posts/fuga" class="PostsArticle-ContentsWrapLink">
+      <div class="PostsArticle-Head">
+        <g-image-stub src="@/assets/images/default-thumbnail.png" class="PostsArticle-Img"></g-image-stub>
+        <font-awesome-icon-stub icon="[object Object]" size="3x"></font-awesome-icon-stub>
+      </div>
+      <div class="PostsArticle-Body">
+        <h3 class="PostsArticle-Heading">
+          タイトル２
+        </h3>
+        <vue-markdown-stub watches="source,show,toc" source="contents" show="true" highlight="true" html="true" xhtmlout="true" breaks="true" linkify="true" emoji="true" typographer="true" langprefix="language-" quotes="“”‘’" tableclass="table" tasklists="true" tocclass="table-of-contents" tocfirstlevel="2" tocanchorlink="true" tocanchorclass="toc-anchor" tocanchorlinksymbol="#" tocanchorlinkspace="true" tocanchorlinkclass="toc-anchor-link" anchorattributes="[object Object]" prerender="function _default(sourceData) {
+	        return sourceData;
+	      }" postrender="function _default(htmlData) {
+	        return htmlData;
+	      }" class="PostsArticle-Excerpt"></vue-markdown-stub>
+      </div>
+      <div class="PostsArticle-Foot">
+        <posts-article-date-stub text="2019.01.05" time="2019.01.05"></posts-article-date-stub>
+      </div>
+    </g-link-stub>
+  </article>
+</div>
+`;

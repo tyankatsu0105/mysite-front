@@ -2,7 +2,7 @@
 	<Layout>
 		<div class="All">
 			<PageHeader text="Posts" />
-			<blog-articles :page="$page" />
+			<posts-articles :page="$page" />
 			<transition
 				appear
 				name="pager"
@@ -22,7 +22,7 @@
 <script>
 import { Pager } from "gridsome";
 
-import BlogArticles from "@/containers/BlogArticles";
+import PostsArticles from "@/containers/PostsArticles";
 import PageHeader from "@/basics/PageHeader";
 import Layout from "@/layouts/Default";
 
@@ -31,7 +31,7 @@ import { SITE_NAME } from "@/const";
 export default {
   components: {
     Pager,
-    BlogArticles,
+    PostsArticles,
     PageHeader,
     Layout
   },

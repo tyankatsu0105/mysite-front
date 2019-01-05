@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlogArticleCategory render 1`] = `
-<div class="BlogArticleCategory">
+exports[`PostsArticleCategory render 1`] = `
+<div class="PostsArticleCategory">
   <font-awesome-icon-stub icon="[object Object]"></font-awesome-icon-stub>
-  <p class="BlogArticleCategory-CategoryText">
+  <p class="PostsArticleCategory-CategoryText">
     カテゴリ
   </p>
 </div>

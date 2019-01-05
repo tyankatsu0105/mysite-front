@@ -1,11 +1,11 @@
 <template>
-	<div class="BlogArticleDate">
+	<div class="PostsArticleDate">
 		<font-awesome-icon
 			:icon="{ prefix: 'fa', iconName: 'clock' }"
 		/>
 		<time
 			:datetime="time"
-			class="BlogArticleDate-DateText"
+			class="PostsArticleDate-DateText"
 		>
 			{{ text }}
 		</time>
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.BlogArticleDate {
+.PostsArticleDate {
   &-DateText {
     margin-left: 5px;
   }

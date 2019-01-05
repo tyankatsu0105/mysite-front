@@ -1,7 +1,7 @@
 import { shallowMount } from "@vue/test-utils";
 import LinkButtonIcon from "@/basics/LinkButtonIcon.vue";
 
-const setProps = {
+const propsData = {
   icon: {
     prefix: "fab",
     iconName: "twitter"
@@ -12,7 +12,7 @@ const setProps = {
 describe("LinkButtonIcon", () => {
   it("render", () => {
     const wrapper = shallowMount(LinkButtonIcon, {
-      setProps,
+      propsData,
       stubs: ["font-awesome-icon"]
     });
 

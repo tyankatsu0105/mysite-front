@@ -11,7 +11,7 @@ exports[`HeaderMenu render 1`] = `
       <li class="HeaderMenu_NavListItem"><a class="HeaderMenu_NavListItemLink"><span>
 						About
 					</span></a> <a class="HeaderMenu_NavListItemLink"><span>
-						Blog
+						Posts
 					</span></a></li>
     </ul>
   </nav>

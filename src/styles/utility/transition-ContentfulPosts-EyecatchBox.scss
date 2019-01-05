@@ -1,0 +1,10 @@
+.ContentfulPosts-EyecatchBox-enter-active,
+.ContentfulPosts-EyecatchBox-leave-active {
+  transition: $tst-heavy;
+}
+
+.ContentfulPosts-EyecatchBox-enter,
+.ContentfulPosts-EyecatchBox-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}

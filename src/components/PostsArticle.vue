@@ -1,28 +1,28 @@
 <template>
 	<transition
-		name="BlogArticle"
+		name="PostsArticle"
 		mode="out-in"
 	>
-		<div class="BlogArticle">
+		<div class="PostsArticle">
 			<article
-				class="BlogArticle-Contents"
+				class="PostsArticle-Contents"
 			>
 				<g-link
 					:to="article.path"
-					class="BlogArticle-ContentsWrapLink"
+					class="PostsArticle-ContentsWrapLink"
 				>
-					<div class="BlogArticle-Head">
+					<div class="PostsArticle-Head">
 						<!-- @todo mediaがfileで取得できるようになったら変更する -->
 						<!-- <template v-if="article.featuredMedia">
 							<g-image
-								class="BlogArticle-Img"
+								class="PostsArticle-Img"
 								:src="article.featuredMedia.url"
 								width="100%"
 							/>	
 						</template> -->
 						<!-- <template v-else> -->
 						<g-image  
-							class="BlogArticle-Img"
+							class="PostsArticle-Img"
 							src="@/assets/images/default-thumbnail.png"
 						/>	
 						<!-- </template> -->
@@ -35,28 +35,28 @@
 					</div>
 		
 		
-					<div class="BlogArticle-Body">
+					<div class="PostsArticle-Body">
 						<component
 							:is="headingTag"
-							class="BlogArticle-Heading"
+							class="PostsArticle-Heading"
 						>
 							{{ sliceText(article.title,0,25) }}
 						</component>
 
 						<!-- eslint-disable vue/no-v-html -->
 						<vue-markdown
-							class="BlogArticle-Excerpt"
+							class="PostsArticle-Excerpt"
 							:source="sliceText(article.contents,0,120)"
 						/>
 						<!--eslint-enable-->
 					</div>
-					<div class="BlogArticle-Foot">
-						<blog-article-date
+					<div class="PostsArticle-Foot">
+						<posts-article-date
 							:text="article.date"
 							:time="article.date"
 						/>
 						<!-- @todo referencesが取得できるようになったら変更する -->
-						<!-- <blog-article-category
+						<!-- <posts-article-category
 							:text="article.categories[0].title"
 						/> -->
 					</div>
@@ -72,14 +72,14 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faReadme } from "@fortawesome/free-brands-svg-icons";
 import VueMarkdown from "vue-markdown";
 
-import BlogArticleDate from "@/components/BlogArticleDate.vue";
-// import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
+import PostsArticleDate from "@/components/PostsArticleDate.vue";
+// import PostsArticleCategory from "@/components/PostsArticleCategory.vue";
 
 import sliceText from "@/util/sliceText.js";
 export default {
   components: {
-    BlogArticleDate,
-    // BlogArticleCategory,
+    PostsArticleDate,
+    // PostsArticleCategory,
     FontAwesomeIcon,
     VueMarkdown
   },
@@ -106,18 +106,18 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-@import "@/styles/utility/transition-BlogArticle.scss";
-.BlogArticle {
+@import "@/styles/utility/transition-PostsArticle.scss";
+.PostsArticle {
   &-Contents {
     height: 100%;
-    background-color: $color-blog-article;
+    background-color: $color-posts-article;
     border-radius: 5px;
     box-shadow: $box-shadow-default;
     transition: $tst-default;
     &:hover {
       box-shadow: $box-shadow-default-hover;
       transform: translateY(-5px);
-      .BlogArticle-Head {
+      .PostsArticle-Head {
         &::after {
           background-color: transparentize($color-primary, 0.3);
         }
@@ -190,8 +190,8 @@ export default {
       background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0) 0%,
-        $color-blog-article 75%,
-        $color-blog-article 100%
+        $color-posts-article 75%,
+        $color-posts-article 100%
       );
       border-radius: 0 0 5px 5px;
     }

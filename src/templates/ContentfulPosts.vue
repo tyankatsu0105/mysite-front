@@ -1,31 +1,31 @@
 
 <template>
 	<Layout>
-		<div class="WordPressPost">
+		<div class="ContentfulPosts">
 			<transition
 				appear
-				name="WordPressPost-EyecatchBox"
+				name="ContentfulPosts-EyecatchBox"
 			>
-				<!-- <div class="WordPressPost-EyecatchBox">
+				<!-- <div class="ContentfulPosts-EyecatchBox">
 					<g-image
 						v-if="$page.post.featuredMedia"
-						class="WordPressPost-Eyecatch"
+						class="ContentfulPosts-Eyecatch"
 						:src="$page.post.featuredMedia.url.src"
 						width="100%"
 					/>
 				</div> -->
 			</transition>
 		
-			<h1 class="WordPressPost-Heading">
+			<h1 class="ContentfulPosts-Heading">
 				{{ $page.post.title }}
 			</h1>
 
-			<div class="WordPressPost-Info">
-				<blog-article-date
+			<div class="ContentfulPosts-Info">
+				<posts-article-date
 					:text="$page.post.date"
 					:time="$page.post.date"
 				/>
-				<!-- <blog-article-category
+				<!-- <posts-article-category
 					:text="$page.post.categories[0].title"
 				/> -->
 			</div>
@@ -33,11 +33,11 @@
 			
 			<!-- eslint-disable vue/no-v-html -->
 			<vue-markdown
-				class="WordPressPost-Contents"
+				class="ContentfulPosts-Contents"
 				:source="$page.post.contents"
 			/>
 			<!--eslint-enable-->
-			<div class="WordPressPost-SnsLists">
+			<div class="ContentfulPosts-SnsLists">
 				<sns-lists :site-info="siteInfo" />
 			</div>
 		</div>
@@ -45,8 +45,8 @@
 </template>
 
 <script>
-import BlogArticleDate from "@/components/BlogArticleDate.vue";
-// import BlogArticleCategory from "@/components/BlogArticleCategory.vue";
+import PostsArticleDate from "@/components/PostsArticleDate.vue";
+// import PostsArticleCategory from "@/components/PostsArticleCategory.vue";
 import SnsLists from "@/components/SnsLists.vue";
 import Layout from "@/layouts/Default";
 
@@ -57,8 +57,8 @@ import sliceText from "@/util/sliceText.js";
 import { SITE_NAME } from "@/const";
 export default {
   components: {
-    BlogArticleDate,
-    // BlogArticleCategory,
+    PostsArticleDate,
+    // PostsArticleCategory,
     SnsLists,
     Layout,
     VueMarkdown
@@ -225,8 +225,8 @@ query Post($path: String!) {
 </page-query>
 
 <style lang="scss">
-@import "@/styles/utility/transition-WordPressPost-EyecatchBox.scss";
-.WordPressPost {
+@import "@/styles/utility/transition-ContentfulPosts-EyecatchBox.scss";
+.ContentfulPosts {
   &-EyecatchBox {
     position: relative;
     &::after {
@@ -269,11 +269,11 @@ query Post($path: String!) {
       justify-content: flex-start;
     }
 
-    /deep/ .BlogArticleCategory-CategoryText {
+    /deep/ .PostsArticleCategory-CategoryText {
       font-size: inherit;
     }
   }
-  .BlogArticleCategory {
+  .PostsArticleCategory {
     margin-left: 10px;
   }
   &-Contents {
