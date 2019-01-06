@@ -132,7 +132,7 @@ export default {
 
 <page-query>
 query Post($page: Int) {
-  allContentfulPosts(perPage: 12, page: $page) @paginate {
+  allContentfulPosts(perPage: 12, order: DESC, page: $page) @paginate {
     pageInfo {
       totalPages
       currentPage
@@ -146,6 +146,13 @@ query Post($page: Int) {
         title
         slug
         path
+        categories {
+          title
+        }
+        tags {
+          title
+          id
+        }
         date(format: "YYYY.MM.DD", locale: "ja")
       }
     }

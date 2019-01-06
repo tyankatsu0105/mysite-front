@@ -4,14 +4,28 @@ import PostsArticle from "@/components/PostsArticle.vue";
 const propsData = {
   headingTag: "h3",
   article: {
-    id: "56X3zCipcA2Gw8WOGgSico",
+    id: "NVcaE83kWYECOGcs2GkYC",
     name: "Title",
-    eyecatch: ["4bRUr9soZOiy6QwukMsqeg"],
-    contents: "contents",
-    title: "タイトル２",
-    slug: "fuga",
-    path: "/posts/fuga",
-    date: "2019.01.05"
+    contents: "コンテンツ",
+    title: "title",
+    slug: "try-gridsome",
+    path: "/posts/try-gridsome",
+    categories: [
+      {
+        title: "技術記事"
+      }
+    ],
+    tags: [
+      {
+        title: "Gridsome",
+        id: "5HQR4kLzgc0IAeKoM0EwgI"
+      },
+      {
+        title: "FrontEnd",
+        id: "3uo6xqFMfuOaosgiOemwCa"
+      }
+    ],
+    date: "2019.01.07"
   }
 };
 

@@ -32,8 +32,12 @@ export default {
   grid-gap: 30px;
   justify-items: center;
 
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
   @include mq-xs {
-    grid-template: 1fr / 1fr;
+    grid-template: 1fr / 100%;
   }
 }
 </style>

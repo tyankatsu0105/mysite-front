@@ -19,15 +19,19 @@
 			<h1 class="ContentfulPosts-Heading">
 				{{ $page.post.title }}
 			</h1>
+			<PostsArticleTag
+				:node="$page.post.tags"
+				class="ContentfulPosts-Tags"
+			/>
 
 			<div class="ContentfulPosts-Info">
 				<posts-article-date
 					:text="$page.post.date"
 					:time="$page.post.date"
 				/>
-				<!-- <posts-article-category
+				<posts-article-category
 					:text="$page.post.categories[0].title"
-				/> -->
+				/>
 			</div>
 			
 			
@@ -46,7 +50,8 @@
 
 <script>
 import PostsArticleDate from "@/components/PostsArticleDate.vue";
-// import PostsArticleCategory from "@/components/PostsArticleCategory.vue";
+import PostsArticleCategory from "@/components/PostsArticleCategory.vue";
+import PostsArticleTag from "@/components/PostsArticleTag.vue";
 import SnsLists from "@/components/SnsLists.vue";
 import Layout from "@/layouts/Default";
 
@@ -58,7 +63,8 @@ import { SITE_NAME } from "@/const";
 export default {
   components: {
     PostsArticleDate,
-    // PostsArticleCategory,
+    PostsArticleCategory,
+    PostsArticleTag,
     SnsLists,
     Layout,
     VueMarkdown
@@ -219,6 +225,13 @@ query Post($path: String!) {
     slug
     path
     date(format: "YYYY.MM.DD", locale: "ja")
+    categories {
+      title
+    }
+    tags {
+      title
+      id
+    }
   }
 }
 </page-query>
@@ -253,6 +266,9 @@ query Post($path: String!) {
       margin-top: 20px;
       font-size: 1.4rem;
     }
+  }
+  &-Tags {
+    margin: 8px 0;
   }
   &-SnsLists {
     margin-top: 10px;

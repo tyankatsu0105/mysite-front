@@ -40,8 +40,14 @@
 							:is="headingTag"
 							class="PostsArticle-Heading"
 						>
-							{{ sliceText(article.title,0,25) }}
+							{{ article.title }}
 						</component>
+
+						<PostsArticleTag
+							:node="article.tags"
+							class="PostsArticle-Tags"
+						/>
+						
 
 						<!-- eslint-disable vue/no-v-html -->
 						<vue-markdown
@@ -55,10 +61,9 @@
 							:text="article.date"
 							:time="article.date"
 						/>
-						<!-- @todo referencesが取得できるようになったら変更する -->
-						<!-- <posts-article-category
+						<posts-article-category
 							:text="article.categories[0].title"
-						/> -->
+						/>
 					</div>
 				</g-link>
 			</article>
@@ -73,13 +78,15 @@ import { faReadme } from "@fortawesome/free-brands-svg-icons";
 import VueMarkdown from "vue-markdown";
 
 import PostsArticleDate from "@/components/PostsArticleDate.vue";
-// import PostsArticleCategory from "@/components/PostsArticleCategory.vue";
+import PostsArticleCategory from "@/components/PostsArticleCategory.vue";
+import PostsArticleTag from "@/components/PostsArticleTag.vue";
 
 import sliceText from "@/util/sliceText.js";
 export default {
   components: {
     PostsArticleDate,
-    // PostsArticleCategory,
+    PostsArticleCategory,
+    PostsArticleTag,
     FontAwesomeIcon,
     VueMarkdown
   },
@@ -172,6 +179,9 @@ export default {
     padding: 8px;
     font-size: 1.3rem;
     font-weight: bold;
+  }
+  &-Tags {
+    padding: 8px;
   }
   &-Excerpt {
     position: relative;

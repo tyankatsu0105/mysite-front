@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsArticleTag render 1`] = `
+<div class="PostsArticleTag">
+  <ul class="PostsArticleTag-List">
+    <li class="PostsArticleTag-Item">
+      #Gridsome
+    </li>
+    <li class="PostsArticleTag-Item">
+      #FrontEnd
+    </li>
+  </ul>
+</div>
+`;
