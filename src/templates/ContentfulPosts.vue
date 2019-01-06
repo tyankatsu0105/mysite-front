@@ -448,7 +448,7 @@ query Post($path: String!) {
         transition: $tst-default;
 
         &:hover {
-          transform: translateX(10px);
+          transform: translateY(-5px);
         }
       }
     }
