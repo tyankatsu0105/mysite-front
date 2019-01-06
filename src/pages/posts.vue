@@ -142,7 +142,6 @@ query Post($page: Int) {
       node {
         id
         name
-        eyecatch
         contents
         title
         slug

@@ -214,7 +214,6 @@ query Post($path: String!) {
   post: contentfulPosts(path: $path) {
     id
     name
-    eyecatch
     contents
     title
     slug
@@ -300,7 +299,8 @@ query Post($path: String!) {
       text-decoration: underline;
 
       &:hover {
-        transform: scale(1.1);
+        font-weight: bold;
+        color: lighten($color-accent, 50%);
       }
     }
     // ==============================================
@@ -430,6 +430,29 @@ query Post($path: String!) {
       background-color: #000;
       border-radius: 4px;
     }
+    // ==============================================
+    // embedly
+    // ==============================================
+    /* stylelint-disable selector-no-qualifying-type  */
+    div.embedly-card {
+      width: 40%;
+      min-width: 500px;
+      @include mq-xs {
+        width: 100%;
+        min-width: auto;
+      }
+
+      iframe {
+        background-color: #fff;
+        border-radius: 5px;
+        transition: $tst-default;
+
+        &:hover {
+          transform: translateX(10px);
+        }
+      }
+    }
+    /* stylelint-enable  */
   }
 }
 </style>

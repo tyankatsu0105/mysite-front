@@ -11,6 +11,10 @@ import "prismjs/themes/prism-tomorrow.css";
 TagManager();
 
 export default function(Vue, { head }) {
+  head.script.push({
+    charset: "UTF-8",
+    src: "//cdn.embedly.com/widgets/platform.js"
+  });
   head.meta.push({
     name: "viewport",
     content: "width=device-width, initial-scale=1"
