@@ -291,7 +291,7 @@ query Post($path: String!) {
     }
     a,
     cite {
-      display: inline-block;
+      display: inline;
     }
     a {
       margin: 0 5px;
