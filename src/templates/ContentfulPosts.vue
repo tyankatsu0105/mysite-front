@@ -441,8 +441,11 @@ query Post($path: String!) {
         background-color: #333;
       }
     }
+
     code {
-      padding: 8px 12px;
+      display: inline-block;
+      padding: 2px 8px;
+      margin: 0 4px;
       background-color: #000;
       border-radius: 4px;
     }

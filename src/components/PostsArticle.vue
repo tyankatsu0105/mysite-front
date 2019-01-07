@@ -115,6 +115,7 @@ export default {
 <style scoped lang='scss'>
 @import "@/styles/utility/transition-PostsArticle.scss";
 .PostsArticle {
+  width: 100%;
   &-Contents {
     height: 100%;
     background-color: $color-posts-article;
