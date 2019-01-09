@@ -18,6 +18,7 @@ module.exports = {
     }
   ],
   siteName: "Tyankatsu Sketch Book",
+  siteUrl: process.env.VUE_APP_BASE_URL,
   chainWebpack: config => {
     config.plugin("env").use(DefinePlugin, [env.getEnvs()]);
     const oneOfsMap = config.module.rule("scss").oneOfs.store;
