@@ -48,79 +48,79 @@ export default {
           }ページ目です。`
         },
         {
-          vmid: "og:title",
+          key: "og:title",
           property: "og:title",
           content: `Posts All Page ${
             this.$page.allContentfulPosts.pageInfo.currentPage
           } - ${SITE_NAME}`
         },
         {
-          vmid: "og:type",
+          key: "og:type",
           property: "og:type",
           content: "website"
         },
         {
-          vmid: "og:url",
+          key: "og:url",
           property: "og:url",
           content: `${process.env.VUE_APP_BASE_URL}/posts/${
             this.$page.allContentfulPosts.pageInfo.currentPage
           }`
         },
         {
-          vmid: "og:image",
+          key: "og:image",
           property: "og:image",
           content: `${process.env.VUE_APP_STATIC_SRC_URL}/ogp.png`
         },
         {
-          vmid: "og:site_name",
+          key: "og:site_name",
           property: "og:site_name",
           content: SITE_NAME
         },
         {
-          vmid: "og:description",
+          key: "og:description",
           property: "og:description",
           content: `${SITE_NAME}の記事一覧ページです。フロントエンドに関する情報を中心に投稿します。${
             this.$page.allContentfulPosts.pageInfo.currentPage
           }ページ目です。`
         },
         {
-          vmid: "twitter:card",
+          key: "twitter:card",
           name: "twitter:card",
           content: "summary_large_image"
         },
         {
-          vmid: "twitter:site",
+          key: "twitter:site",
           name: "twitter:site",
           content: "@tyankatsu5"
         },
         {
-          vmid: "twitter:creator",
+          key: "twitter:creator",
           name: "twitter:creator",
           content: "tyankatsu"
         },
         {
-          vmid: "twitter:title",
+          key: "twitter:title",
           name: "twitter:title",
           content: `Posts All Page ${
             this.$page.allContentfulPosts.pageInfo.currentPage
           } - ${SITE_NAME}`
         },
         {
-          vmid: "twitter:url",
+          key: "twitter:url",
           name: "twitter:url",
           content: `${process.env.VUE_APP_BASE_URL}/posts/${
             this.$page.allContentfulPosts.pageInfo.currentPage
           }`
         },
         {
-          vmid: "twitter:description",
+          key: "twitter:description",
           name: "twitter:description",
           content: `${SITE_NAME}の記事一覧ページです。フロントエンドに関する情報を中心に投稿します。${
             this.$page.allContentfulPosts.pageInfo.currentPage
           }ページ目です。`
         },
         {
-          vmid: "twitter:image",
+          key: "twitter:image",
           name: "twitter:image",
           content: `${process.env.VUE_APP_STATIC_SRC_URL}/ogp.png`
         }

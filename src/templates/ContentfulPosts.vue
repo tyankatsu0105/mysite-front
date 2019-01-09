@@ -145,67 +145,67 @@ export default {
           content: sliceText(this.$page.post.contents, 0, 100)
         },
         {
-          vmid: "og:title",
+          key: "og:title",
           property: "og:title",
           content: this.$page.post.title
         },
         {
-          vmid: "og:type",
+          key: "og:type",
           property: "og:type",
           content: "artcle"
         },
         {
-          vmid: "og:url",
+          key: "og:url",
           property: "og:url",
           content: `${process.env.VUE_APP_BASE_URL}${this.$page.post.path}`
         },
         {
-          vmid: "og:image",
+          key: "og:image",
           property: "og:image",
           content: this.ogpImage
         },
         {
-          vmid: "og:site_name",
+          key: "og:site_name",
           property: "og:site_name",
           content: SITE_NAME
         },
         {
-          vmid: "og:description",
+          key: "og:description",
           property: "og:description",
           content: sliceText(this.$page.post.contents, 0, 100)
         },
         {
-          vmid: "twitter:card",
+          key: "twitter:card",
           name: "twitter:card",
           content: "summary_large_image"
         },
         {
-          vmid: "twitter:site",
+          key: "twitter:site",
           name: "twitter:site",
           content: "@tyankatsu5"
         },
         {
-          vmid: "twitter:creator",
+          key: "twitter:creator",
           name: "twitter:creator",
           content: "tyankatsu"
         },
         {
-          vmid: "twitter:title",
+          key: "twitter:title",
           name: "twitter:title",
           content: this.$page.post.title
         },
         {
-          vmid: "twitter:url",
+          key: "twitter:url",
           name: "twitter:url",
           content: `${process.env.VUE_APP_BASE_URL}${this.$page.post.path}`
         },
         {
-          vmid: "twitter:description",
+          key: "twitter:description",
           name: "twitter:description",
           content: sliceText(this.$page.post.contents, 0, 100)
         },
         {
-          vmid: "twitter:image",
+          key: "twitter:image",
           name: "twitter:image",
           content: this.ogpImage
         }

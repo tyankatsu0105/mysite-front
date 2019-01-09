@@ -102,67 +102,67 @@ export default {
           content: `${SITE_NAME}の著者紹介ページです。`
         },
         {
-          vmid: "og:title",
+          key: "og:title",
           property: "og:title",
           content: `About - ${SITE_NAME}`
         },
         {
-          vmid: "og:type",
+          key: "og:type",
           property: "og:type",
           content: "article"
         },
         {
-          vmid: "og:url",
+          key: "og:url",
           property: "og:url",
           content: `${process.env.VUE_APP_BASE_URL}/about`
         },
         {
-          vmid: "og:image",
+          key: "og:image",
           property: "og:image",
           content: `${process.env.VUE_APP_STATIC_SRC_URL}/ogp.png`
         },
         {
-          vmid: "og:site_name",
+          key: "og:site_name",
           property: "og:site_name",
           content: SITE_NAME
         },
         {
-          vmid: "og:description",
+          key: "og:description",
           property: "og:description",
           content: `${SITE_NAME}の著者紹介ページです。`
         },
         {
-          vmid: "twitter:card",
+          key: "twitter:card",
           name: "twitter:card",
           content: "summary_large_image"
         },
         {
-          vmid: "twitter:site",
+          key: "twitter:site",
           name: "twitter:site",
           content: "@tyankatsu5"
         },
         {
-          vmid: "twitter:creator",
+          key: "twitter:creator",
           name: "twitter:creator",
           content: "tyankatsu"
         },
         {
-          vmid: "twitter:title",
+          key: "twitter:title",
           name: "twitter:title",
           content: `About - ${SITE_NAME}`
         },
         {
-          vmid: "twitter:url",
+          key: "twitter:url",
           name: "twitter:url",
           content: `${process.env.VUE_APP_BASE_URL}/about`
         },
         {
-          vmid: "twitter:description",
+          key: "twitter:description",
           name: "twitter:description",
           content: `${SITE_NAME}の著者紹介ページです。`
         },
         {
-          vmid: "twitter:image",
+          key: "twitter:image",
           name: "twitter:image",
           content: `${process.env.VUE_APP_STATIC_SRC_URL}/ogp.png`
         }
