@@ -57,13 +57,13 @@
 						<!--eslint-enable-->
 					</div>
 					<div class="PostsArticle-Foot">
-						<!-- <posts-article-date
+						<posts-article-date
 							:text="article.date"
 							:time="article.date"
 						/>
 						<posts-article-category
 							:text="article.categories[0].title"
-						/> -->
+						/>
 					</div>
 				</g-link>
 			</article>
