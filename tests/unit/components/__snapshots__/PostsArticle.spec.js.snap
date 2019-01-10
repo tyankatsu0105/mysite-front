@@ -19,10 +19,7 @@ exports[`PostsArticle render 1`] = `
 	        return htmlData;
 	      }" class="PostsArticle-Excerpt"></vue-markdown-stub>
       </div>
-      <div class="PostsArticle-Foot">
-        <posts-article-date-stub text="2019.01.07" time="2019.01.07"></posts-article-date-stub>
-        <posts-article-category-stub text="技術記事"></posts-article-category-stub>
-      </div>
+      <div class="PostsArticle-Foot"></div>
     </g-link-stub>
   </article>
 </div>
