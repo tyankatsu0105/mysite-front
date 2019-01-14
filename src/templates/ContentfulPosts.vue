@@ -6,14 +6,16 @@
 				appear
 				name="ContentfulPosts-EyecatchBox"
 			>
-				<!-- <div class="ContentfulPosts-EyecatchBox">
+				<div
+					v-if="$page.post.eyecatch"
+					class="ContentfulPosts-EyecatchBox"
+				>
 					<g-image
-						v-if="$page.post.featuredMedia"
 						class="ContentfulPosts-Eyecatch"
-						:src="$page.post.featuredMedia.url.src"
+						:src="$page.post.eyecatch.file.url.src"
 						width="100%"
 					/>
-				</div> -->
+				</div>
 			</transition>
 		
 			<h1 class="ContentfulPosts-Heading">
@@ -219,12 +221,15 @@ export default {
 query Post($path: String!) {
   post: contentfulPosts(path: $path) {
     id
-    name
     contents
     title
-    slug
     path
     date(format: "YYYY.MM.DD", locale: "ja")
+    eyecatch {
+      file {
+        url
+      }
+    }
     categories {
       title
     }
@@ -443,7 +448,7 @@ query Post($path: String!) {
     }
 
     code {
-      display: inline-block;
+      display: inline;
       padding: 2px 8px;
       margin: 0 4px;
       background-color: #000;

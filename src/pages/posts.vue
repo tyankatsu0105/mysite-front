@@ -141,9 +141,13 @@ query Post($page: Int) {
     edges {
       node {
         id
-        name
         title
         path
+        eyecatch {
+          file {
+            url
+          }
+        }
         categories {
           title
         }

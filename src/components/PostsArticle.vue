@@ -11,42 +11,43 @@
 					:to="article.path"
 					class="PostsArticle-ContentsWrapLink"
 				>
-					<div class="PostsArticle-Head">
-						<!-- @todo mediaがfileで取得できるようになったら変更する -->
-						<!-- <template v-if="article.featuredMedia">
-							<g-image
-								class="PostsArticle-Img"
-								:src="article.featuredMedia.url"
-								width="100%"
-							/>	
-						</template> -->
-						<!-- <template v-else> -->
-						<g-image  
-							class="PostsArticle-Img"
-							src="@/assets/images/default-thumbnail.png"
-						/>	
-						<!-- </template> -->
+					<div class="PostsArticle-WrapHeadBody">
+						<div class="PostsArticle-Head">
+							<template v-if="article.eyecatch">
+								<g-image
+									class="PostsArticle-Img"
+									:src="article.eyecatch.file.url.src"
+									width="100%"
+								/>	
+							</template>
+							<template v-else>
+								<g-image  
+									class="PostsArticle-Img"
+									src="@/assets/images/default-thumbnail.png"
+								/>	
+							</template>
 
 						
-						<font-awesome-icon
-							:icon="{ prefix: 'fab', iconName: 'readme' }"
-							size="3x"
-						/>
-					</div>
+							<font-awesome-icon
+								:icon="{ prefix: 'fab', iconName: 'readme' }"
+								size="3x"
+							/>
+						</div>
 		
 		
-					<div class="PostsArticle-Body">
-						<component
-							:is="headingTag"
-							class="PostsArticle-Heading"
-						>
-							{{ article.title }}
-						</component>
+						<div class="PostsArticle-Body">
+							<component
+								:is="headingTag"
+								class="PostsArticle-Heading"
+							>
+								{{ article.title }}
+							</component>
 
-						<PostsArticleTag
-							:node="article.tags"
-							class="PostsArticle-Tags"
-						/>
+							<PostsArticleTag
+								:node="article.tags"
+								class="PostsArticle-Tags"
+							/>
+						</div>
 					</div>
 					<div class="PostsArticle-Foot">
 						<posts-article-date
@@ -124,7 +125,9 @@ export default {
     }
   }
   &-ContentsWrapLink {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
   }
   &-Head {

@@ -10,6 +10,15 @@ const propsData = {
     title: "title",
     slug: "try-gridsome",
     path: "/posts/try-gridsome",
+    eyecatch: {
+      file: {
+        url: {
+          type: "image",
+          mimeType: "image/png",
+          src: "hogehoge.png"
+        }
+      }
+    },
     categories: [
       {
         title: "技術記事"

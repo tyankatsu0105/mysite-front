@@ -641,10 +641,10 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.12"
 
-"@fortawesome/vue-fontawesome@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.1.4.tgz#610a6d419311d400d24e162f7cb3a30082706a12"
-  integrity sha512-FRdY+VXpMFHY1jD508rwn3k/7Cd0nYK8reksaC2jAEIF3/mwAKx7GrefbV1apb81Lz36bT8iYus9Q/ZvP+AuCA==
+"@fortawesome/vue-fontawesome@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.1.5.tgz#ea70a4d4ad0d6d617048a5b2a2ff33e21fe47d61"
+  integrity sha512-tiNZCgh+ZkUsyFfm2MQMMdHKRrKj82M7g0XFPSNNY+s5nRB82soy0US+xj0jGRy433b0c4WpylCOhgle3294Uw==
 
 "@gridsome/cli@^0.0.7":
   version "0.0.7"
@@ -661,10 +661,10 @@
     semver "^5.6.0"
     sort-package-json "^1.15.0"
 
-"@gridsome/source-contentful@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@gridsome/source-contentful/-/source-contentful-0.1.2.tgz#e7175d2498c23fe7fb7050fa91f84b6d7b460029"
-  integrity sha512-E1qSF6/BSW8NhHIQdOa/8PcgOBBrn/6BHfoWPyMDdy1EwCOWZPaiJPiothHGodtfDnLj1qSJVaGLYDkRCkFOMw==
+"@gridsome/source-contentful@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@gridsome/source-contentful/-/source-contentful-0.2.0.tgz#113d86aebbd7f3027ef5822e8bdf3ddd13f38150"
+  integrity sha512-P4Ttk1Ifnz5XID6l71wZ4aczJyD55b585ZL4mXleV5+N8CtxIA9R3sMMWg1ejqc4JAc0B6SaetnmEovscIvJ3A==
   dependencies:
     contentful "^6.1.1"
 
@@ -5229,10 +5229,10 @@ graphql@^0.13.2:
   dependencies:
     iterall "^1.2.1"
 
-gridsome@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.4.1.tgz#d647d0df5df0f0f1a54733b3d62bb68cbdb0616e"
-  integrity sha512-0B/QGGLeR4VZU0kXwPoq3kVjMcxTkjdE9R3nj1ujFynqgdZpI7v2WB7J2jKDQm70Qry9hxdO8G2v3Jlb8dN8uQ==
+gridsome@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.4.3.tgz#2804edc465cc968ac420f9cb2473b6004d402371"
+  integrity sha512-qpuNqVcle2/EHyC1jYnIttbPusN8emebFoP2PyeL9aNwv030ma7ac/tXt555Sd1zp1GDY1qWwAmLSHB8mF2jdw==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-syntax-dynamic-import" "^7.0.0"
