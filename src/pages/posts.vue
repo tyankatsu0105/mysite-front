@@ -142,9 +142,7 @@ query Post($page: Int) {
       node {
         id
         name
-        contents
         title
-        slug
         path
         categories {
           title

@@ -13,11 +13,6 @@ exports[`PostsArticle render 1`] = `
           title
         </h3>
         <postsarticletag-stub node="[object Object],[object Object]" class="PostsArticle-Tags"></postsarticletag-stub>
-        <vue-markdown-stub watches="source,show,toc" source="コンテンツ" show="true" highlight="true" html="true" xhtmlout="true" breaks="true" linkify="true" emoji="true" typographer="true" langprefix="language-" quotes="“”‘’" tableclass="table" tasklists="true" tocclass="table-of-contents" tocfirstlevel="2" tocanchorlink="true" tocanchorclass="toc-anchor" tocanchorlinksymbol="#" tocanchorlinkspace="true" tocanchorlinkclass="toc-anchor-link" anchorattributes="[object Object]" prerender="function _default(sourceData) {
-	        return sourceData;
-	      }" postrender="function _default(htmlData) {
-	        return htmlData;
-	      }" class="PostsArticle-Excerpt"></vue-markdown-stub>
       </div>
       <div class="PostsArticle-Foot">
         <posts-article-date-stub text="2019.01.07" time="2019.01.07"></posts-article-date-stub>

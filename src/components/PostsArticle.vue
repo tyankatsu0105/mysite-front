@@ -47,14 +47,6 @@
 							:node="article.tags"
 							class="PostsArticle-Tags"
 						/>
-						
-
-						<!-- eslint-disable vue/no-v-html -->
-						<vue-markdown
-							class="PostsArticle-Excerpt"
-							:source="sliceText(article.contents,0,120)"
-						/>
-						<!--eslint-enable-->
 					</div>
 					<div class="PostsArticle-Foot">
 						<posts-article-date
@@ -81,7 +73,6 @@ import PostsArticleDate from "@/components/PostsArticleDate.vue";
 import PostsArticleCategory from "@/components/PostsArticleCategory.vue";
 import PostsArticleTag from "@/components/PostsArticleTag.vue";
 
-import sliceText from "@/util/sliceText.js";
 export default {
   components: {
     PostsArticleDate,
@@ -104,10 +95,6 @@ export default {
   },
   created() {
     library.add(faReadme);
-  },
-
-  methods: {
-    sliceText
   }
 };
 </script>
