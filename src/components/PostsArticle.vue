@@ -160,7 +160,6 @@ export default {
   }
 
   &-Body {
-    padding-bottom: 20px;
     border-radius: 0 0 5px 5px;
   }
   &-Heading {
@@ -171,38 +170,13 @@ export default {
   &-Tags {
     padding: 8px;
   }
-  &-Excerpt {
-    position: relative;
-    height: 100px;
-    padding: 8px 8px 40px;
-    overflow: hidden;
-    border-top: 1px solid #5e5e5e;
-    &::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: "";
-
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        $color-posts-article 75%,
-        $color-posts-article 100%
-      );
-      border-radius: 0 0 5px 5px;
-    }
-  }
   &-Foot {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
     padding: 8px 16px;
+    margin-top: 8px;
     font-size: 0.7rem;
   }
 }
