@@ -13,7 +13,7 @@ TagManager();
 export default function(Vue, { head }) {
   head.script.push({
     charset: "UTF-8",
-    src: "//cdn.embedly.com/widgets/platform.js"
+    src: "//cdn.iframe.ly/embed.js"
   });
   head.meta.push({
     name: "viewport",

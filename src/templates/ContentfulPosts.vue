@@ -455,28 +455,19 @@ query Post($path: String!) {
       border-radius: 4px;
     }
     // ==============================================
-    // embedly
+    // Iframely
     // ==============================================
-    /* stylelint-disable selector-no-qualifying-type  */
-    div.embedly-card {
-      width: 40%;
-      min-width: 500px;
+    .iframely-embed {
+      width: 600px;
+      transition: $tst-default;
+
       @include mq-xs {
         width: 100%;
-        min-width: auto;
       }
-
-      iframe {
-        background-color: #fff;
-        border-radius: 5px;
-        transition: $tst-default;
-
-        &:hover {
-          transform: translateY(-5px);
-        }
+      &:hover {
+        transform: translateY(-5px);
       }
     }
-    /* stylelint-enable  */
   }
 }
 </style>
