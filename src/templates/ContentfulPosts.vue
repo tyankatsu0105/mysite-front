@@ -141,6 +141,16 @@ export default {
   metaInfo() {
     return {
       title: this.$page.post.title,
+      script: [
+        {
+          charset: "UTF-8",
+          src: "//cdn.iframe.ly/embed.js"
+        },
+        {
+          charset: "UTF-8",
+          src: "https://platform.twitter.com/widgets.js"
+        }
+      ],
       meta: [
         {
           name: "description",
