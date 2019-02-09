@@ -15,6 +15,14 @@ module.exports = {
         environment: process.env.VUE_CONTENTFUL_ENVIRONMENT,
         typeName: "Contentful"
       }
+    },
+    {
+      use: "@gridsome/plugin-critical",
+      options: {
+        paths: ["/"],
+        width: 1300,
+        height: 900
+      }
     }
   ],
   siteName: "Tyankatsu Sketch Book",
