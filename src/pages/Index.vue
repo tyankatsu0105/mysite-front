@@ -68,6 +68,10 @@ export default {
       },
       meta: [
         {
+          name: "google-site-verification",
+          content: "DcneOuaFfensAf9vHJG_AE21c0W8CKhZIqKlYwxnzvo"
+        },
+        {
           name: "description",
           content: DESCRIPTION
         },

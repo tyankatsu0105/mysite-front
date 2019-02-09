@@ -10,11 +10,7 @@ import "prismjs/themes/prism-tomorrow.css";
 
 TagManager();
 
-export default function(Vue, { head }) {
-  head.meta.push({
-    name: "google-site-verification",
-    content: "DcneOuaFfensAf9vHJG_AE21c0W8CKhZIqKlYwxnzvo"
-  });
+export default function(Vue) {
   Vue.use(VuePrism);
   Vue.use(store);
 }
