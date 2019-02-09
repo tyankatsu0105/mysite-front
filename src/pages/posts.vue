@@ -10,8 +10,8 @@
 				<div class="All-PagerBlock">
 					<Pager
 						:info="$page.allContentfulPosts.pageInfo"
-						class="All-Pager"
 						:show-navigation="false"
+						class="All-Pager"
 					/>
 				</div>
 			</transition>
@@ -148,12 +148,16 @@ query Post($page: Int) {
             url
           }
         }
-        categories {
+        category {
           title
         }
         tags {
-          title
-          id
+          sys {
+            id
+          }
+          fields {
+            title
+          }
         }
         date(format: "YYYY.MM.DD", locale: "ja")
       }

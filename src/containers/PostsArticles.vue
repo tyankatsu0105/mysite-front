@@ -3,7 +3,6 @@
 		<posts-article
 			v-for="edge in page.allContentfulPosts.edges"
 			:key="edge.node.id"
-			heading-tag="h2"
 			:article="edge.node"
 		/>
 	</div>

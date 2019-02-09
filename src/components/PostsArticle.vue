@@ -15,8 +15,8 @@
 						<div class="PostsArticle-Head">
 							<template v-if="article.eyecatch">
 								<g-image
-									class="PostsArticle-Img"
 									:src="article.eyecatch.file.url.src"
+									class="PostsArticle-Img"
 									width="100%"
 								/>	
 							</template>
@@ -36,13 +36,9 @@
 		
 		
 						<div class="PostsArticle-Body">
-							<component
-								:is="headingTag"
-								class="PostsArticle-Heading"
-							>
+							<h2 class="PostsArticle-Heading">
 								{{ article.title }}
-							</component>
-
+							</h2>
 							<PostsArticleTag
 								:node="article.tags"
 								class="PostsArticle-Tags"
@@ -55,7 +51,7 @@
 							:time="article.date"
 						/>
 						<posts-article-category
-							:text="article.categories[0].title"
+							:text="article.category.title"
 						/>
 					</div>
 				</g-link>
@@ -68,7 +64,6 @@
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faReadme } from "@fortawesome/free-brands-svg-icons";
-import VueMarkdown from "vue-markdown";
 
 import PostsArticleDate from "@/components/PostsArticleDate.vue";
 import PostsArticleCategory from "@/components/PostsArticleCategory.vue";
@@ -79,15 +74,9 @@ export default {
     PostsArticleDate,
     PostsArticleCategory,
     PostsArticleTag,
-    FontAwesomeIcon,
-    VueMarkdown
+    FontAwesomeIcon
   },
   props: {
-    headingTag: {
-      type: String,
-      requirer: true,
-      default: "h2"
-    },
     article: {
       type: Object,
       requirer: true,

@@ -2,7 +2,6 @@ import { shallowMount } from "@vue/test-utils";
 import PostsArticle from "@/components/PostsArticle.vue";
 
 const propsData = {
-  headingTag: "h3",
   article: {
     id: "NVcaE83kWYECOGcs2GkYC",
     name: "Title",
@@ -19,19 +18,25 @@ const propsData = {
         }
       }
     },
-    categories: [
-      {
-        title: "技術記事"
-      }
-    ],
+    category: {
+      title: "技術記事"
+    },
     tags: [
       {
-        title: "Gridsome",
-        id: "5HQR4kLzgc0IAeKoM0EwgI"
+        sys: {
+          id: "5HQR4kLzgc0IAeKoM0EwgI"
+        },
+        fields: {
+          title: "Gridsome"
+        }
       },
       {
-        title: "FrontEnd",
-        id: "3uo6xqFMfuOaosgiOemwCa"
+        sys: {
+          id: "5HQR4kLzgc0IAeKoM0EwgI"
+        },
+        fields: {
+          title: "Frontend"
+        }
       }
     ],
     date: "2019.01.07"

@@ -11,8 +11,8 @@
 					class="ContentfulPosts-EyecatchBox"
 				>
 					<g-image
-						class="ContentfulPosts-Eyecatch"
 						:src="$page.post.eyecatch.file.url.src"
+						class="ContentfulPosts-Eyecatch"
 						width="100%"
 					/>
 				</div>
@@ -32,15 +32,15 @@
 					:time="$page.post.date"
 				/>
 				<posts-article-category
-					:text="$page.post.categories[0].title"
+					:text="$page.post.category.title"
 				/>
 			</div>
 			
 			
 			<!-- eslint-disable vue/no-v-html -->
 			<vue-markdown
-				class="ContentfulPosts-Contents"
 				:source="$page.post.contents"
+				class="ContentfulPosts-Contents"
 			/>
 			<!--eslint-enable-->
 			<div class="ContentfulPosts-SnsLists">
@@ -240,12 +240,16 @@ query Post($path: String!) {
         url
       }
     }
-    categories {
+    category {
       title
     }
     tags {
-      title
-      id
+      sys {
+        id
+      }
+      fields {
+        title
+      }
     }
   }
 }

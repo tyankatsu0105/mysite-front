@@ -7,7 +7,7 @@ exports[`PostsArticleTag render 1`] = `
       #Gridsome
     </li>
     <li class="PostsArticleTag-Item">
-      #FrontEnd
+      #Frontend
     </li>
   </ul>
 </div>

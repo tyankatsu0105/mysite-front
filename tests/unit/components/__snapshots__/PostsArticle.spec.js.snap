@@ -10,9 +10,9 @@ exports[`PostsArticle render 1`] = `
           <font-awesome-icon-stub icon="[object Object]" size="3x"></font-awesome-icon-stub>
         </div>
         <div class="PostsArticle-Body">
-          <h3 class="PostsArticle-Heading">
+          <h2 class="PostsArticle-Heading">
             title
-          </h3>
+          </h2>
           <postsarticletag-stub node="[object Object],[object Object]" class="PostsArticle-Tags"></postsarticletag-stub>
         </div>
       </div>

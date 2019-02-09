@@ -7,10 +7,10 @@
 		>
 			<li
 				v-for="tag in node"
-				:key="tag.id"
+				:key="tag.sys.id"
 				class="PostsArticleTag-Item"
 			>
-				#{{ tag.title }}
+				#{{ tag.fields.title }}
 			</li>
 		</ul>
 	</div>
