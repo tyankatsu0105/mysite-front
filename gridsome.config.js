@@ -23,6 +23,23 @@ module.exports = {
         width: 1300,
         height: 900
       }
+    },
+    {
+      use: "@gridsome/plugin-sitemap",
+      options: {
+        cacheTime: 600000,
+        exclude: ["/exclude-me"],
+        config: {
+          "/posts/*": {
+            changefreq: "weekly",
+            priority: 0.5
+          },
+          "/about": {
+            changefreq: "monthly",
+            priority: 0.7
+          }
+        }
+      }
     }
   ],
   siteName: "Tyankatsu Sketch Book",
