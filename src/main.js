@@ -11,16 +11,10 @@ import "prismjs/themes/prism-tomorrow.css";
 TagManager();
 
 export default function(Vue, { head }) {
-  head.meta.push([
-    {
-      name: "viewport",
-      content: "width=device-width, initial-scale=1"
-    },
-    {
-      name: "google-site-verification",
-      content: "DcneOuaFfensAf9vHJG_AE21c0W8CKhZIqKlYwxnzvo"
-    }
-  ]);
+  head.meta.push({
+    name: "google-site-verification",
+    content: "DcneOuaFfensAf9vHJG_AE21c0W8CKhZIqKlYwxnzvo"
+  });
   Vue.use(VuePrism);
   Vue.use(store);
 }
