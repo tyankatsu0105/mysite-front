@@ -82,7 +82,7 @@ export default {
       if (this.$page.post.featuredMedia) {
         return this.$page.post.featuredMedia.url.src;
       }
-      return `${process.env.VUE_APP_STATIC_SRC_URL}/ogp.png`;
+      return `${process.env.VUE_APP_BASE_URL}/ogp.png`;
     }
   },
   mounted() {

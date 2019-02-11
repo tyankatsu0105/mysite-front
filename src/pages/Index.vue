@@ -93,7 +93,7 @@ export default {
         {
           key: "og:image",
           property: "og:image",
-          content: `${process.env.VUE_APP_STATIC_SRC_URL}/ogp.png`
+          content: `${process.env.VUE_APP_BASE_URL}/ogp.png`
         },
         {
           key: "og:site_name",
@@ -138,7 +138,7 @@ export default {
         {
           key: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.VUE_APP_STATIC_SRC_URL}/ogp.png`
+          content: `${process.env.VUE_APP_BASE_URL}/ogp.png`
         }
       ]
     };
