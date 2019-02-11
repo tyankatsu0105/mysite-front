@@ -79,8 +79,8 @@ export default {
       };
     },
     ogpImage() {
-      if (this.$page.post.featuredMedia) {
-        return this.$page.post.featuredMedia.url.src;
+      if (this.$page.post.eyecatch) {
+        return this.$page.post.eyecatch.file.url.src;
       }
       return `${process.env.VUE_APP_BASE_URL}/ogp.png`;
     }
