@@ -1,8 +1,6 @@
 const path = require("path");
 const { DefinePlugin } = require("webpack");
 const env = require(path.join(__dirname, "/config/env.js"));
-// use dotenv
-require("dotenv").config();
 
 module.exports = {
   plugins: [
