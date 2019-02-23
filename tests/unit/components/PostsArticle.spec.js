@@ -11,7 +11,11 @@ const propsData = {
     path: "/posts/try-gridsome",
     eyecatch: {
       file: {
-        url: "hogehoge.png"
+        url: {
+          type: "image",
+          mimeType: "image/png",
+          src: "hogehoge.png"
+        }
       }
     },
     category: {
