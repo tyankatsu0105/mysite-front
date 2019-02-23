@@ -2,7 +2,7 @@
 
 exports[`PostsArticles render 1`] = `
 <div class="PostsArticles">
-  <posts-article-stub article="[object Object]"></posts-article-stub>
-  <posts-article-stub article="[object Object]"></posts-article-stub>
+  <postsarticle-stub article="[object Object]"></postsarticle-stub>
+  <postsarticle-stub article="[object Object]"></postsarticle-stub>
 </div>
 `;

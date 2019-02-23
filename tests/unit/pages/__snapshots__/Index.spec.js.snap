@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Index render 1`] = `
-<div class="Index" name="index">
-  <v-header-stub></v-header-stub>
-  <index-canvas-stub></index-canvas-stub>
+<div class="Index">
+  <vheader-stub></vheader-stub>
+  <indexcanvas-stub></indexcanvas-stub>
   <div class="Index_ContentsBlock">
     <h1 class="Index_Heading">
       Tyankatsu<br>Sketch Book
@@ -18,6 +18,6 @@ exports[`Index render 1`] = `
       <linkbuttonicon-stub icon="[object Object]" href="https://www.npmjs.com/~tyankatsu0105" class="Index_Link"></linkbuttonicon-stub>
     </div>
   </div>
-  <v-footer-stub></v-footer-stub>
+  <vfooter-stub></vfooter-stub>
 </div>
 `;

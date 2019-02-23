@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PostsArticle render 1`] = `
-<div class="PostsArticle" name="PostsArticle" mode="out-in">
+<div class="PostsArticle">
   <article class="PostsArticle-Contents">
     <g-link-stub to="/posts/try-gridsome" class="PostsArticle-ContentsWrapLink">
       <div class="PostsArticle-WrapHeadBody">
         <div class="PostsArticle-Head">
           <g-image-stub src="hogehoge.png" width="100%" class="PostsArticle-Img"></g-image-stub>
-          <font-awesome-icon-stub icon="[object Object]" size="3x"></font-awesome-icon-stub>
+          <fontawesomeicon-stub icon="[object Object]" size="3x"></fontawesomeicon-stub>
         </div>
         <div class="PostsArticle-Body">
           <h2 class="PostsArticle-Heading">
@@ -17,8 +17,8 @@ exports[`PostsArticle render 1`] = `
         </div>
       </div>
       <div class="PostsArticle-Foot">
-        <posts-article-date-stub text="2019.01.07" time="2019.01.07"></posts-article-date-stub>
-        <posts-article-category-stub text="技術記事"></posts-article-category-stub>
+        <postsarticledate-stub text="2019.01.07" time="2019.01.07"></postsarticledate-stub>
+        <postsarticlecategory-stub text="技術記事"></postsarticlecategory-stub>
       </div>
     </g-link-stub>
   </article>

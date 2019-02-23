@@ -2,6 +2,6 @@
 
 exports[`HeaderCloseButton render 1`] = `
 <button class="HeaderCloseButton">
-  <font-awesome-icon-stub icon="times"></font-awesome-icon-stub>
+  <fontawesomeicon-stub icon="times"></fontawesomeicon-stub>
 </button>
 `;
