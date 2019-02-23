@@ -15,7 +15,7 @@
 						<div class="PostsArticle-Head">
 							<template v-if="article.eyecatch">
 								<g-image
-									:src="article.eyecatch.file.url"
+									:src="article.eyecatch.file.url.src"
 									class="PostsArticle-Img"
 									width="100%"
 								/>	
