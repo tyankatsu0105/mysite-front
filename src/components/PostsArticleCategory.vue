@@ -1,6 +1,6 @@
 <template>
 	<div class="PostsArticleCategory">
-		<font-awesome-icon
+		<FontAwesomeIcon
 			:icon="{ prefix: 'fa', iconName: 'folder' }"
 		/>
 		<p class="PostsArticleCategory-CategoryText">

@@ -5,7 +5,7 @@
 		rel="noopener"
 		class="LinkButtonIcon"
 	>
-		<font-awesome-icon :icon="icon" />
+		<FontAwesomeIcon :icon="icon" />
 	</a>
 </template>
 

@@ -1,15 +1,15 @@
 <template>
 	<div
-		class="SnsLists"
 		:class="{'_isOpen': isOpenLists}"
+		class="SnsLists"
 	>
 		<div class="SnsLists-ContentsBox">
 			<button
+				@click="isOpenLists = !isOpenLists"
 				type="button"
 				class="SnsLists-Button"
-				@click="isOpenLists = !isOpenLists"
 			>
-				<font-awesome-icon :icon="{ prefix: 'fa', iconName: 'share-alt' }" />
+				<FontAwesomeIcon :icon="{ prefix: 'fa', iconName: 'share-alt' }" />
 			</button>
 			<div class="SnsLists-Item _twitter">
 				<a
@@ -18,7 +18,7 @@
 					rel="nofollow"
 					class="SnsLists-Link"
 				>
-					<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }" />
+					<FontAwesomeIcon :icon="{ prefix: 'fab', iconName: 'twitter' }" />
 				</a>
 			</div>
 			<div class="SnsLists-Item _hatena">
@@ -28,19 +28,20 @@
 					target="_blank"
 					title="このエントリーをはてなブックマークに追加"
 				>
-					<v-icon
-						name="hatena"
+					<VIcon
 						class="SnsLists-LinkIcon"
-					/>
+					>
+						<IconHatena />
+					</VIcon>
 				</a>
 			</div>
 			<div class="SnsLists-Item _pocket">
 				<a
-					class="SnsLists-Link "
 					:href="`http://getpocket.com/edit?url=${siteUrl}${siteInfo.path}&title=${siteInfo.title}`"
+					class="SnsLists-Link "
 					onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
 				>
-					<font-awesome-icon :icon="{ prefix: 'fab', iconName: 'get-pocket' }" />
+					<FontAwesomeIcon :icon="{ prefix: 'fab', iconName: 'get-pocket' }" />
 				</a>
 			</div>
 		</div>
@@ -54,10 +55,13 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faGetPocket } from "@fortawesome/free-brands-svg-icons";
 
+import IconHatena from "@/basics/VIcon/IconHatena.vue";
+
 export default {
   components: {
     VIcon,
-    FontAwesomeIcon
+    FontAwesomeIcon,
+    IconHatena
   },
   props: {
     siteInfo: {
@@ -123,6 +127,7 @@ export default {
       background-color: #00a4de;
       .VIcon {
         width: 30px;
+        height: 30px;
       }
     }
     &._pocket {

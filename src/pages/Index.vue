@@ -1,8 +1,8 @@
 <template>
-	<transition name="index">
+	<Transition name="index">
 		<div class="Index">
-			<v-header />
-			<index-canvas />
+			<VHeader />
+			<IndexCanvas />
 			<div class="Index_ContentsBlock">
 				<h1 class="Index_Heading">
 					Tyankatsu<br>Sketch Book
@@ -37,9 +37,9 @@
 					/>
 				</div>
 			</div>
-			<v-footer />
+			<VFooter />
 		</div>
-	</transition>
+	</Transition>
 </template>
 
 <script>

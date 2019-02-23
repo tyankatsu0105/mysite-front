@@ -1,14 +1,14 @@
 <template>
 	<header class="VHeader">
 		<HeaderOpenButton @open-header="changeHeaderStatus" />
-		<transition
+		<Transition
 			name="header"
 		>
 			<HeaderMenu
 				v-if="isOpenHeader"
 				@close-header="changeHeaderStatus"
 			/>
-		</transition>
+		</Transition>
 	</header>
 </template>
 

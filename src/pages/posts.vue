@@ -2,8 +2,8 @@
 	<Layout>
 		<div class="All">
 			<PageHeader text="Posts" />
-			<posts-articles :page="$page" />
-			<transition
+			<PostsArticles :page="$page" />
+			<Transition
 				appear
 				name="pager"
 			>
@@ -14,7 +14,7 @@
 						class="All-Pager"
 					/>
 				</div>
-			</transition>
+			</Transition>
 		</div>
 	</Layout>
 </template>

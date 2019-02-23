@@ -1,6 +1,6 @@
 <template>
 	<div class="PostsArticleDate">
-		<font-awesome-icon
+		<FontAwesomeIcon
 			:icon="{ prefix: 'fa', iconName: 'clock' }"
 		/>
 		<time

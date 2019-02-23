@@ -1,6 +1,6 @@
 <template>
 	<div class="PostsArticles">
-		<posts-article
+		<PostsArticle
 			v-for="edge in page.allContentfulPosts.edges"
 			:key="edge.node.id"
 			:article="edge.node"

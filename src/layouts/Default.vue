@@ -1,7 +1,7 @@
 <template>
 	<div class="Default">
-		<v-header />
-		<transition-group
+		<VHeader />
+		<TransitionGroup
 			name="page"
 			tag="main"
 			appear
@@ -12,8 +12,8 @@
 			>
 				<slot></slot>
 			</div>
-		</transition-group>
-		<v-footer />
+		</TransitionGroup>
+		<VFooter />
 	</div>
 </template>
 

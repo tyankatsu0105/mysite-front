@@ -1,5 +1,5 @@
 <template>
-	<transition
+	<Transition
 		name="PostsArticle"
 		mode="out-in"
 	>
@@ -28,7 +28,7 @@
 							</template>
 
 						
-							<font-awesome-icon
+							<FontAwesomeIcon
 								:icon="{ prefix: 'fab', iconName: 'readme' }"
 								size="3x"
 							/>
@@ -46,18 +46,18 @@
 						</div>
 					</div>
 					<div class="PostsArticle-Foot">
-						<posts-article-date
+						<PostsArticleDate
 							:text="article.date"
 							:time="article.date"
 						/>
-						<posts-article-category
+						<PostsArticleCategory
 							:text="article.category.title"
 						/>
 					</div>
 				</g-link>
 			</article>
 		</div>
-	</transition>
+	</Transition>
 </template>
 
 <script>

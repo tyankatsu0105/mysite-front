@@ -2,7 +2,7 @@
 <template>
 	<Layout>
 		<div class="ContentfulPosts">
-			<transition
+			<Transition
 				appear
 				name="ContentfulPosts-EyecatchBox"
 			>
@@ -16,7 +16,7 @@
 						width="100%"
 					/>
 				</div>
-			</transition>
+			</Transition>
 		
 			<h1 class="ContentfulPosts-Heading">
 				{{ $page.post.title }}
@@ -27,24 +27,24 @@
 			/>
 
 			<div class="ContentfulPosts-Info">
-				<posts-article-date
+				<PostsArticleDate
 					:text="$page.post.date"
 					:time="$page.post.date"
 				/>
-				<posts-article-category
+				<PostsArticleCategory
 					:text="$page.post.category.title"
 				/>
 			</div>
 			
 			
 			<!-- eslint-disable vue/no-v-html -->
-			<vue-markdown
+			<VueMarkdown
 				:source="$page.post.contents"
 				class="ContentfulPosts-Contents"
 			/>
 			<!--eslint-enable-->
 			<div class="ContentfulPosts-SnsLists">
-				<sns-lists :site-info="siteInfo" />
+				<SnsLists :site-info="siteInfo" />
 			</div>
 		</div>
 	</Layout>

@@ -1,9 +1,9 @@
 <template>
 	<button
-		class="HeaderCloseButton"
 		@click="closeHeader"
+		class="HeaderCloseButton"
 	>
-		<font-awesome-icon icon="times" />
+		<FontAwesomeIcon icon="times" />
 	</button>
 </template>
 

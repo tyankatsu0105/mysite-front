@@ -1,29 +1,11 @@
 <template>
-	<component
-		:is="icon"
-		class="VIcon"
-	/>
+	<div class="VIcon">
+		<slot></slot>
+	</div>
 </template>
 
 <script>
-import IconHatena from "@/basics/VIcon/IconHatena.vue";
-export default {
-  components: {
-    "icon-hatena": IconHatena
-  },
-  props: {
-    name: {
-      type: String,
-      requirer: true,
-      default: ""
-    }
-  },
-  computed: {
-    icon() {
-      return "icon-" + this.name.toLowerCase();
-    }
-  }
-};
+export default {};
 </script>
 
 <style scoped lang='scss'>
