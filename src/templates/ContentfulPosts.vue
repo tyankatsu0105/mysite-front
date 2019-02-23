@@ -11,7 +11,7 @@
 					class="ContentfulPosts-EyecatchBox"
 				>
 					<g-image
-						:src="$page.post.eyecatch.file.url.src"
+						:src="$page.post.eyecatch.file.url"
 						class="ContentfulPosts-Eyecatch"
 						width="100%"
 					/>
