@@ -457,7 +457,9 @@ query Post($path: String!) {
         top: 0;
         left: 0;
         padding: 0.3em 0.5em;
+        margin: 0;
         background-color: #333;
+        border-radius: 4px 0;
       }
     }
 
