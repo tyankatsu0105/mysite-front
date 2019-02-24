@@ -59,20 +59,14 @@
 							<dd class="About-ProfileListItemData">
 								<ul>
 									<li>
-										<a
-											href="https://github.com/tyankatsu0105/cz-format-extension"
-											target="_blank"
-										>
+										<g-link href="https://github.com/tyankatsu0105/cz-format-extension">
 											cz-format-extension
-										</a>
+										</g-link>
 									</li>
 									<li>
-										<a
-											href="https://github.com/gridsome/eslint-plugin-gridsome"
-											target="_blank"
-										>
+										<g-link href="https://github.com/gridsome/eslint-plugin-gridsome">
 											eslint-plugin-gridsome
-										</a>
+										</g-link>
 									</li>
 								</ul>
 							</dd>

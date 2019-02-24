@@ -1,12 +1,10 @@
 <template>
-	<a
+	<g-link
 		:href="href"
-		target="_blank"
-		rel="noopener"
 		class="LinkButtonIcon"
 	>
 		<FontAwesomeIcon :icon="icon" />
-	</a>
+	</g-link>
 </template>
 
 <script>
