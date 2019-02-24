@@ -1,4 +1,3 @@
-import VuePrism from "vue-prism";
 import store from "@/store";
 import TagManager from "@/thirdparty/TagManager";
 
@@ -8,9 +7,10 @@ import "@/styles/core/base.scss";
 
 import "prismjs/themes/prism-tomorrow.css";
 
-TagManager();
+if (process.browser) {
+  TagManager();
+}
 
 export default function(Vue) {
-  Vue.use(VuePrism);
   Vue.use(store);
 }
