@@ -52,10 +52,14 @@ exports[`About render 1`] = `
             <dd class="About-ProfileListItemData">
               <ul>
                 <li>
-                  <g-link href="https://github.com/tyankatsu0105/cz-format-extension">cz-format-extension</g-link>
+                  <g-link href="https://github.com/tyankatsu0105/cz-format-extension">
+                    cz-format-extension
+                  </g-link>
                 </li>
                 <li>
-                  <g-link href="https://github.com/gridsome/eslint-plugin-gridsome">eslint-plugin-gridsome</g-link>
+                  <g-link href="https://github.com/gridsome/eslint-plugin-gridsome">
+                    eslint-plugin-gridsome
+                  </g-link>
                 </li>
               </ul>
             </dd>
