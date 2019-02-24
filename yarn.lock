@@ -9712,7 +9712,7 @@ pretty@2.0.0:
     extend-shallow "^2.0.1"
     js-beautify "^1.6.12"
 
-prismjs@^1.6.0:
+prismjs@^1.15.0:
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.15.0.tgz#8801d332e472091ba8def94976c8877ad60398d9"
   integrity sha512-Lf2JrFYx8FanHrjoV5oL8YHCclLQgbJcVZR+gikGGMqz6ub5QVWDTM6YIwm3BuPxM/LOV+rKns3LssXNLIf+DA==
@@ -12453,13 +12453,6 @@ vue-meta@^1.5.8:
     lodash.isplainobject "^4.0.6"
     lodash.uniqueid "^4.0.1"
     object-assign "^4.1.1"
-
-vue-prism@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/vue-prism/-/vue-prism-1.0.5.tgz#6e7777adb2fa11c0a8cb99e0265112a105549550"
-  integrity sha1-bnd3rbL6EcCoy5ngJlESoQVUlVA=
-  dependencies:
-    prismjs "^1.6.0"
 
 vue-router@^3.0.2:
   version "3.0.2"

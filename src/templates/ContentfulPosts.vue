@@ -36,13 +36,14 @@
 				/>
 			</div>
 			
-			
 			<!-- eslint-disable vue/no-v-html -->
 			<VueMarkdown
 				:source="$page.post.contents"
 				class="ContentfulPosts-Contents"
 			/>
 			<!--eslint-enable-->
+      
+      
 			<div class="ContentfulPosts-SnsLists">
 				<SnsLists :site-info="siteInfo" />
 			</div>
@@ -58,6 +59,7 @@ import SnsLists from "@/components/SnsLists.vue";
 import Layout from "@/layouts/Default";
 
 import VueMarkdown from "vue-markdown";
+import Prism from "prismjs";
 
 import sliceText from "@/util/sliceText.js";
 
@@ -88,11 +90,11 @@ export default {
   mounted() {
     this.wrap("table", "div", "wrapTable");
     this.wrap("pre", "div", "preWrap");
-    this.setIncludeCodeTitleClass();
-    this.setCodeTitle();
+    this.codeHighlight();
   },
   beforeDestroy() {
     this.wrap();
+    this.codeHighlight();
   },
   methods: {
     sliceText,
@@ -111,31 +113,52 @@ export default {
       });
     },
     /**
-     * codeにタイトル見出しを付与する
+     * prismjsを適用
      */
-    setCodeTitle() {
+    codeHighlight() {
       document.querySelectorAll("code").forEach(element => {
-        if (
-          element.className.match(/language-/) &&
-          element.className.match(/^:/)
-        ) {
-          let codeTitle = element.className.split(" ")[0];
-          codeTitle = codeTitle.substr(1);
+        this.setLanguageName(element);
 
-          let createTitleElement = document.createElement("code");
-          createTitleElement.classList.add("codeTitle");
-          createTitleElement.append(codeTitle);
+        const getTextInCode = element.innerText;
+        const getLanguageName = element.className.match(/language-[a-z]+/);
 
-          element.parentNode.insertBefore(createTitleElement, element);
-        }
+        // eslint-disable-next-line no-param-reassign
+        element.innerHTML = Prism.highlight(
+          getTextInCode,
+          Prism.languages.javascript,
+          getLanguageName
+        );
+
+        if (element.className.search(/:/) === -1) return;
+        this.setCodeTitle(element);
+        this.setIncludeCodeTitleClass(element);
       });
     },
-    setIncludeCodeTitleClass() {
-      document.querySelectorAll("code").forEach(element => {
-        if (element.className.match(/^:/)) {
-          element.parentNode.classList.add("includeCodeTitle");
-        }
-      });
+    /**
+     * 言語名をcodeの親のpreにセットする
+     */
+    setLanguageName(element) {
+      const elementParentClass = element.parentNode;
+      elementParentClass.classList = element.className.match(/language-[a-z]+/);
+    },
+    /**
+     * codeにタイトル見出しを付与する
+     */
+    setCodeTitle(element) {
+      let codeTitle = element.className.match(/(?<=:)(.*)/)[0];
+
+      let createTitleElement = document.createElement("code");
+      createTitleElement.classList.add("codeTitle");
+      createTitleElement.append(codeTitle);
+
+      element.parentNode.insertBefore(createTitleElement, element);
+    },
+
+    /**
+     * codeにタイトルが付いていればclassを付与する
+     */
+    setIncludeCodeTitleClass(element) {
+      return element.parentNode.classList.add("includeCodeTitle");
     }
   },
   metaInfo() {
