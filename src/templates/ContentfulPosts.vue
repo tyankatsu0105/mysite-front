@@ -82,7 +82,7 @@ export default {
     },
     ogpImage() {
       if (this.$page.post.eyecatch) {
-        return `https:${this.$page.post.eyecatch.file.url.src}`;
+        return `https:${this.$page.post.eyecatch.file.url}`;
       }
       return `${process.env.VUE_APP_BASE_URL}/ogp.png`;
     }
