@@ -11,12 +11,7 @@ module.exports = {
     "prettier/prettier": "error",
     "gridsome/format-query-block": "error",
     // Web Componentsと差別化を図るため
-    "vue/component-name-in-template-casing": ["error",
-      "PascalCase", {
-        ignores: ['g-image', 'g-link', 'Pager'],
-        registeredComponentsOnly: false
-      }
-    ],
+    "vue/component-name-in-template-casing": "error",
     "vue/html-closing-bracket-newline": "error",
     "vue/html-closing-bracket-spacing": "error",
     "vue/html-indent": ["error", "tab"],
