@@ -1,5 +1,5 @@
 <template>
-	<Transition
+	<transition
 		name="PostsArticle"
 		mode="out-in"
 	>

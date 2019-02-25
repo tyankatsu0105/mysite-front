@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PostsArticle render 1`] = `
-<div class="PostsArticle">
+<div class="PostsArticle" name="PostsArticle" mode="out-in">
   <article class="PostsArticle-Contents">
     <g-link-stub to="/posts/try-gridsome" class="PostsArticle-ContentsWrapLink">
       <div class="PostsArticle-WrapHeadBody">

@@ -1,5 +1,5 @@
 <template>
-	<Transition name="index">
+	<transition name="index">
 		<div class="Index">
 			<VHeader />
 			<IndexCanvas />

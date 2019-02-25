@@ -2,10 +2,7 @@
 
 exports[`Default render 1`] = `
 <div class="Default">
-  <vheader-stub></vheader-stub>
-  <transitiongroup-stub tag="main" name="page" appear="true">
-    <div class="Default_Contents"></div>
-  </transitiongroup-stub>
+  <vheader-stub></vheader-stub> <span name="page" tag="main" appear=""><div class="Default_Contents"></div></span>
   <vfooter-stub></vfooter-stub>
 </div>
 `;

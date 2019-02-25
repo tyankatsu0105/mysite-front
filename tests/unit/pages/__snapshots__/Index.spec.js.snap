@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Index render 1`] = `
-<div class="Index">
+<div class="Index" name="index">
   <vheader-stub></vheader-stub>
   <indexcanvas-stub></indexcanvas-stub>
   <div class="Index_ContentsBlock">

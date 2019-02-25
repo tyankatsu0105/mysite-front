@@ -3,7 +3,7 @@
 		<div class="All">
 			<PageHeader text="Posts" />
 			<PostsArticles :page="$page" />
-			<Transition
+			<transition
 				appear
 				name="pager"
 			>

@@ -1,7 +1,7 @@
 <template>
 	<header class="VHeader">
 		<HeaderOpenButton @open-header="changeHeaderStatus" />
-		<Transition
+		<transition
 			name="header"
 		>
 			<HeaderMenu

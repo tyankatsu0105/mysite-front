@@ -2,7 +2,7 @@
 <template>
 	<Layout>
 		<div class="ContentfulPosts">
-			<Transition
+			<transition
 				appear
 				name="ContentfulPosts-EyecatchBox"
 			>
