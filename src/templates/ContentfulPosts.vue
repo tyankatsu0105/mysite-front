@@ -167,11 +167,13 @@ export default {
       script: [
         {
           charset: "UTF-8",
-          src: "//cdn.iframe.ly/embed.js"
+          src: "https://cdn.iframe.ly/embed.js",
+          defer: true
         },
         {
           charset: "UTF-8",
-          src: "https://platform.twitter.com/widgets.js"
+          src: "https://platform.twitter.com/widgets.js",
+          defer: true
         }
       ],
       meta: [

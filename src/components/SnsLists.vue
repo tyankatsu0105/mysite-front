@@ -87,6 +87,7 @@ export default {
   position: fixed;
   bottom: 20px;
   left: 20px;
+  z-index: $sns-links;
   &-ContentsBox {
     position: relative;
     width: 40px;
