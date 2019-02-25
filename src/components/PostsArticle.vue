@@ -149,6 +149,9 @@ export default {
     height: 200px;
     border-radius: 5px 5px 0 0;
     object-fit: cover;
+    @include mq-xs {
+      height: 50vw;
+    }
   }
 
   &-Body {

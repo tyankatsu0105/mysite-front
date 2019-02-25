@@ -296,7 +296,7 @@ query Post($path: String!) {
     object-fit: cover;
     height: 370px;
     @include mq-xs {
-      height: 70vw;
+      height: 50vw;
     }
   }
   &-Heading {
