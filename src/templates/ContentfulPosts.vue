@@ -35,6 +35,8 @@
 					:text="$page.post.category.title"
 				/>
 			</div>
+
+      
 			
 			<!-- eslint-disable vue/no-v-html -->
 			<VueMarkdown
@@ -42,6 +44,21 @@
 				class="ContentfulPosts-Contents"
 			/>
 			<!--eslint-enable-->
+
+			
+			<!-- <script
+					async
+					src="https://cdn.iframe.ly/embed.js"
+					charset="utf-8"
+				></script>
+				<script
+					async
+					src="https://platform.twitter.com/widgets.js"
+					charset="utf-8"
+				></script> -->
+			
+			
+			
       
       
 			<div class="ContentfulPosts-SnsLists">
@@ -87,7 +104,16 @@ export default {
       return `${process.env.VUE_APP_BASE_URL}/ogp.png`;
     }
   },
+
+  // beforeDestroy() {
+
+  //   this.removeScriptInBody("https://cdn.iframe.ly/embed.js");
+  //   this.removeScriptInBody("https://platform.twitter.com/widgets.js");
+  // },
   mounted() {
+    this.appendScriptInBody("https://cdn.iframe.ly/embed.js");
+    this.appendScriptInBody("https://platform.twitter.com/widgets.js");
+
     this.wrap("table", "div", "wrapTable");
     this.wrap("pre", "div", "preWrap");
     this.codeHighlight();
@@ -98,6 +124,16 @@ export default {
   },
   methods: {
     sliceText,
+    appendScriptInBody(src) {
+      const element = document.createElement("script");
+      element.setAttribute("src", src);
+      document.body.appendChild(element);
+    },
+    removeScriptInBody(src) {
+      const nodes = document.body.childNodes;
+      const element = [...nodes].find(node => node.src === src);
+      document.body.removeChild(element);
+    },
     /**
      * 要素を任意の要素でwrapする
      * @param {string} elements - wrap元の要素
@@ -164,18 +200,6 @@ export default {
   metaInfo() {
     return {
       title: this.$page.post.title,
-      script: [
-        {
-          charset: "UTF-8",
-          src: "https://cdn.iframe.ly/embed.js",
-          defer: true
-        },
-        {
-          charset: "UTF-8",
-          src: "https://platform.twitter.com/widgets.js",
-          defer: true
-        }
-      ],
       meta: [
         {
           name: "description",
