@@ -1,6 +1,6 @@
 module.exports = [
   {
-    type: "list",
+    type: "select",
     name: "dir",
     message: "ディレクトリは？",
     choices: [

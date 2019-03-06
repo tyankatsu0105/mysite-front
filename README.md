@@ -1,43 +1,16 @@
-**`.env`は gitignore に必ず入れる**
-
-# env
-
-dotenv を使用して環境変数を作成している。  
-.env を参照する。
-
-## config/.env.develop
-
-ローカル開発の環境情報を入れる
-
-## config/.env.production
-
-本番と同じ環境情報を入れる
-
-# command
-
-## gs:build,gs:develop
-
-使用しない
+![Netlify Status](https://api.netlify.com/api/v1/badges/ad5a74c0-56e8-4588-8baf-a8e5e3a58666/deploy-status)
 
 ## build
 
 デプロイする際に使用する
 
-## develop:dev
+## develop
 
 開発する際に使用する
-
-## develop:prod
-
-本番と同じ環境を手元で再現する
 
 ## explore
 
 graphiql みたいな画面を起動する
-
-## env-develop,env-production
-
-config 以下の env 情報をプロジェクト直下の`.env`にコピーする
 
 ## commit
 
@@ -47,6 +20,6 @@ config 以下の env 情報をプロジェクト直下の`.env`にコピーす�
 
 `package.json`のフォーマット
 
-## make:vue,make:store,make:util
+## gen:vue,gen:store,gen:util
 
 Hygen をもとにファイルを作成する
