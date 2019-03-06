@@ -101,7 +101,7 @@ export default {
       if (this.$page.post.eyecatch) {
         return `https:${this.$page.post.eyecatch.file.url}`;
       }
-      return `${process.env.VUE_APP_BASE_URL}/ogp.png`;
+      return `${process.env.GRIDSOME_APP_BASE_URL}/ogp.png`;
     }
   },
 
@@ -218,7 +218,7 @@ export default {
         {
           key: "og:url",
           property: "og:url",
-          content: `${process.env.VUE_APP_BASE_URL}${this.$page.post.path}`
+          content: `${process.env.GRIDSOME_APP_BASE_URL}${this.$page.post.path}`
         },
         {
           key: "og:image",
@@ -258,7 +258,7 @@ export default {
         {
           key: "twitter:url",
           name: "twitter:url",
-          content: `${process.env.VUE_APP_BASE_URL}${this.$page.post.path}`
+          content: `${process.env.GRIDSOME_APP_BASE_URL}${this.$page.post.path}`
         },
         {
           key: "twitter:description",

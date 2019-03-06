@@ -73,7 +73,7 @@ export default {
   data() {
     return {
       isOpenLists: false,
-      siteUrl: process.env.VUE_APP_BASE_URL
+      siteUrl: process.env.GRIDSOME_APP_BASE_URL
     };
   },
   created() {

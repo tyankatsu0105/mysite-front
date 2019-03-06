@@ -108,12 +108,12 @@ export default {
         {
           key: "og:url",
           property: "og:url",
-          content: `${process.env.VUE_APP_BASE_URL}/about`
+          content: `${process.env.GRIDSOME_APP_BASE_URL}/about`
         },
         {
           key: "og:image",
           property: "og:image",
-          content: `${process.env.VUE_APP_BASE_URL}/ogp.png`
+          content: `${process.env.GRIDSOME_APP_BASE_URL}/ogp.png`
         },
         {
           key: "og:site_name",
@@ -148,7 +148,7 @@ export default {
         {
           key: "twitter:url",
           name: "twitter:url",
-          content: `${process.env.VUE_APP_BASE_URL}/about`
+          content: `${process.env.GRIDSOME_APP_BASE_URL}/about`
         },
         {
           key: "twitter:description",
@@ -158,7 +158,7 @@ export default {
         {
           key: "twitter:image",
           name: "twitter:image",
-          content: `${process.env.VUE_APP_BASE_URL}/ogp.png`
+          content: `${process.env.GRIDSOME_APP_BASE_URL}/ogp.png`
         }
       ]
     };
