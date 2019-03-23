@@ -1,4 +1,3 @@
-
 <template>
 	<Layout>
 		<div class="ContentfulPosts">
@@ -16,8 +15,8 @@
 						width="100%"
 					/>
 				</div>
-			</Transition>
-		
+			</transition>
+
 			<h1 class="ContentfulPosts-Heading">
 				{{ $page.post.title }}
 			</h1>
@@ -31,13 +30,9 @@
 					:text="$page.post.date"
 					:time="$page.post.date"
 				/>
-				<PostsArticleCategory
-					:text="$page.post.category.title"
-				/>
+				<PostsArticleCategory :text="$page.post.category.title" />
 			</div>
 
-      
-			
 			<!-- eslint-disable vue/no-v-html -->
 			<VueMarkdown
 				:source="$page.post.contents"
@@ -45,7 +40,6 @@
 			/>
 			<!--eslint-enable-->
 
-			
 			<!-- <script
 					async
 					src="https://cdn.iframe.ly/embed.js"
@@ -56,11 +50,7 @@
 					src="https://platform.twitter.com/widgets.js"
 					charset="utf-8"
 				></script> -->
-			
-			
-			
-      
-      
+
 			<div class="ContentfulPosts-SnsLists">
 				<SnsLists :site-info="siteInfo" />
 			</div>
@@ -73,7 +63,7 @@ import PostsArticleDate from "@/components/PostsArticleDate.vue";
 import PostsArticleCategory from "@/components/PostsArticleCategory.vue";
 import PostsArticleTag from "@/components/PostsArticleTag.vue";
 import SnsLists from "@/components/SnsLists.vue";
-import Layout from "@/layouts/Default";
+import Layout from "@/layouts/Default.vue";
 
 import VueMarkdown from "vue-markdown";
 import Prism from "prismjs";

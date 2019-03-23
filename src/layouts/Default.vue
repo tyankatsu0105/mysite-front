@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import VHeader from "@/containers/VHeader";
-import VFooter from "@/containers/VFooter";
+import VHeader from "@/containers/VHeader.vue";
+import VFooter from "@/containers/VFooter.vue";
 export default {
   components: {
     VHeader,

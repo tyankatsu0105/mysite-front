@@ -43,7 +43,8 @@ exports[`About render 1`] = `
               好きなこと
             </dt>
             <dd class="About-ProfileListItemData">
-              コードを書くこと / Webのアニメーションを見ること / 効率化が図れそうな技術を試すこと / 技術ブログを見て回ること
+              コードを書くこと / Webのアニメーションを見ること /
+              効率化が図れそうな技術を試すこと / 技術ブログを見て回ること
             </dd>
           </div>
           <div class="About-ProfileListItem"><dt class="About-ProfileListItemHeading">

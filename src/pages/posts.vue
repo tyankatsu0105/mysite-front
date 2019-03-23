@@ -14,7 +14,7 @@
 						class="All-Pager"
 					/>
 				</div>
-			</Transition>
+			</transition>
 		</div>
 	</Layout>
 </template>
@@ -22,9 +22,9 @@
 <script>
 import { Pager } from "gridsome";
 
-import PostsArticles from "@/containers/PostsArticles";
-import PageHeader from "@/basics/PageHeader";
-import Layout from "@/layouts/Default";
+import PostsArticles from "@/containers/PostsArticles.vue";
+import PageHeader from "@/basics/PageHeader.vue";
+import Layout from "@/layouts/Default.vue";
 
 import { SITE_NAME } from "@/const";
 
@@ -166,8 +166,7 @@ query Post($page: Int) {
 }
 </page-query>
 
-
-<style scoped lang='scss'>
+<style scoped lang="scss">
 @import "@/styles/utility/transition-pager.scss";
 /* stylelint-disable selector-no-qualifying-type  */
 .All {

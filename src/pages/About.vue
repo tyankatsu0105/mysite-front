@@ -49,7 +49,8 @@
 								好きなこと
 							</dt>
 							<dd class="About-ProfileListItemData">
-								コードを書くこと / Webのアニメーションを見ること / 効率化が図れそうな技術を試すこと / 技術ブログを見て回ること
+								コードを書くこと / Webのアニメーションを見ること /
+								効率化が図れそうな技術を試すこと / 技術ブログを見て回ること
 							</dd>
 						</div>
 						<div class="About-ProfileListItem">
@@ -59,12 +60,16 @@
 							<dd class="About-ProfileListItemData">
 								<ul>
 									<li>
-										<g-link href="https://github.com/tyankatsu0105/cz-format-extension">
+										<g-link
+											href="https://github.com/tyankatsu0105/cz-format-extension"
+										>
 											cz-format-extension
 										</g-link>
 									</li>
 									<li>
-										<g-link href="https://github.com/gridsome/eslint-plugin-gridsome">
+										<g-link
+											href="https://github.com/gridsome/eslint-plugin-gridsome"
+										>
 											eslint-plugin-gridsome
 										</g-link>
 									</li>
@@ -79,9 +84,9 @@
 </template>
 
 <script>
-import PageHeader from "@/basics/PageHeader";
+import PageHeader from "@/basics/PageHeader.vue";
 import { SITE_NAME } from "@/const";
-import Layout from "@/layouts/Default";
+import Layout from "@/layouts/Default.vue";
 export default {
   components: {
     PageHeader,

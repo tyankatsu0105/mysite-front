@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import PostsArticle from "@/components/PostsArticle";
+import PostsArticle from "@/components/PostsArticle.vue";
 export default {
   components: {
     PostsArticle
@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .PostsArticles {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
