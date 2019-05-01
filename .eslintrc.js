@@ -1,10 +1,5 @@
 module.exports = {
   root: true,
-  env: {
-    node: true,
-    es6: true
-  },
-  parser: "vue-eslint-parser",
   extends: ["airbnb-base/legacy", "plugin:vue/recommended", "prettier", "plugin:gridsome/recommended"],
   plugins: ["gridsome", "prettier"],
   rules: {
