@@ -10,6 +10,7 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "gridsome/format-query-block": "error",
+    "gridsome/require-g-image-src": "error",
     // Web Componentsと差別化を図るため
     "vue/component-name-in-template-casing": "error",
     "vue/html-closing-bracket-newline": "error",
