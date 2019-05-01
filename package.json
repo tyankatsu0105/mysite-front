@@ -63,7 +63,6 @@
     "stylelint-config-prettier": "^5.1.0",
     "stylelint-config-recess-order": "^2.0.2",
     "stylelint-config-sass-guidelines": "^6.0.0",
-    "vue-eslint-parser": "^6.0.4",
     "vue-jest": "^3.0.4"
   },
   "private": true,
