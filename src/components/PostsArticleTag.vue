@@ -7,7 +7,7 @@
 		>
 			<li
 				v-for="tag in node"
-				:key="tag.sys.id"
+				:key="tag.id"
 				class="PostsArticleTag-Item"
 			>
 				#{{ tag.fields.title }}

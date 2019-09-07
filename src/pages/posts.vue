@@ -152,9 +152,7 @@ query Post($page: Int) {
           title
         }
         tags {
-          sys {
-            id
-          }
+          id
           fields {
             title
           }

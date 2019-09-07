@@ -19,17 +19,13 @@ const propsData = {
     },
     tags: [
       {
-        sys: {
-          id: "5HQR4kLzgc0IAeKoM0EwgI"
-        },
+        id: "5HQR4kLzgc0IAeKoM0EwgI",
         fields: {
           title: "Gridsome"
         }
       },
       {
-        sys: {
-          id: "5HQR4kLzgc0IAeKoM0EwgI"
-        },
+        id: "5HQR4kLzgc0IAeKoM0EwgI",
         fields: {
           title: "Frontend"
         }

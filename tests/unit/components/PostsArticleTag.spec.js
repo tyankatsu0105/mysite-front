@@ -4,17 +4,13 @@ import PostsArticleTag from "@/components/PostsArticleTag.vue";
 const propsData = {
   node: [
     {
-      sys: {
-        id: "5HQR4kLzgc0IAeKoM0EwgI"
-      },
+      id: "5HQR4kLzgc0IAeKoM0EwgI",
       fields: {
         title: "Gridsome"
       }
     },
     {
-      sys: {
-        id: "5HQR4kLzgc0IAeKoM0EwgI"
-      },
+      id: "5HQR4kLzgc0IAeKoM0EwgI",
       fields: {
         title: "Frontend"
       }

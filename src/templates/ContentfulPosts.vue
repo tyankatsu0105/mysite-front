@@ -283,9 +283,7 @@ query Post($path: String!) {
       title
     }
     tags {
-      sys {
-        id
-      }
+      id
       fields {
         title
       }
