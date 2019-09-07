@@ -53,16 +53,50 @@ exports[`About render 1`] = `
             <dd class="About-ProfileListItemData">
               <ul>
                 <li>
-                  <g-link href="https://github.com/tyankatsu0105/cz-format-extension">
-                    cz-format-extension
-                  </g-link>
-                </li>
-                <li>
                   <g-link href="https://github.com/gridsome/eslint-plugin-gridsome">
                     eslint-plugin-gridsome
                   </g-link>
                 </li>
+                <li>
+                  <g-link href="https://github.com/tyankatsu0105/stylelint-config-ecss">
+                    stylelint-config-ecss
+                  </g-link>
+                </li>
+                <li>
+                  <g-link href="https://github.com/tyankatsu0105/stylelint-plugin-ecss">
+                    stylelint-plugin-ecss
+                  </g-link>
+                </li>
               </ul>
+            </dd>
+          </div>
+          <div class="About-ProfileListItem"><dt class="About-ProfileListItemHeading">
+              コミュニティ
+            </dt>
+            <dd class="About-ProfileListItemData">
+              <g-link href="https://aniken.connpass.com/">
+                アニメーション研究会
+              </g-link> オーガナイザー
+            </dd>
+            <dd class="About-ProfileListItemData">
+              <g-link href="https://ffs.connpass.com/">
+                Frontend-Fukuoka.spec
+              </g-link> オーガナイザー
+            </dd>
+            <dd class="About-ProfileListItemData">
+              <g-link href="https://v-fukuoka.connpass.com/">
+                v-fukuoka
+              </g-link> 運営メンバー
+            </dd>
+            <dd class="About-ProfileListItemData">
+              <g-link href="https://github.com/gridsome">
+                Gridsome
+              </g-link> メンバー
+            </dd>
+            <dd class="About-ProfileListItemData">
+              <g-link href="https://github.com/stylelint">
+                stylelint
+              </g-link> メンバー
             </dd>
           </div>
         </dl>
