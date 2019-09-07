@@ -1,4 +1,5 @@
 module.exports = {
+  parser: "vue-eslint-parser",
   root: true,
   extends: ["airbnb-base/legacy", "plugin:vue/recommended", "prettier", "plugin:gridsome/recommended"],
   plugins: ["gridsome", "prettier"],
