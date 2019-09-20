@@ -10,7 +10,7 @@
 				:key="tag.id"
 				class="PostsArticleTag-Item"
 			>
-				#{{ tag.fields.title }}
+				#{{ tag.title }}
 			</li>
 		</ul>
 	</div>

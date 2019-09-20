@@ -5,15 +5,11 @@ const propsData = {
   node: [
     {
       id: "5HQR4kLzgc0IAeKoM0EwgI",
-      fields: {
-        title: "Gridsome"
-      }
+      title: "Gridsome"
     },
     {
       id: "5HQR4kLzgc0IAeKoM0EwgI",
-      fields: {
-        title: "Frontend"
-      }
+      title: "Frontend"
     }
   ]
 };
