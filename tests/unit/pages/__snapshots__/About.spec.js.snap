@@ -11,35 +11,40 @@ exports[`About render 1`] = `
           tyankatsu
         </h2>
         <dl class="About-ProfileList">
-          <div class="About-ProfileListItem"><dt class="About-ProfileListItemHeading">
+          <div class="About-ProfileListItem">
+            <dt class="About-ProfileListItemHeading">
               職業
             </dt>
             <dd class="About-ProfileListItemData">
               フロントエンドエンジニア
             </dd>
           </div>
-          <div class="About-ProfileListItem"><dt class="About-ProfileListItemHeading">
+          <div class="About-ProfileListItem">
+            <dt class="About-ProfileListItemHeading">
               前職
             </dt>
             <dd class="About-ProfileListItemData">
               Webデザイナー
             </dd>
           </div>
-          <div class="About-ProfileListItem"><dt class="About-ProfileListItemHeading">
+          <div class="About-ProfileListItem">
+            <dt class="About-ProfileListItemHeading">
               好きな食べ物
             </dt>
             <dd class="About-ProfileListItemData">
               ほうれん草
             </dd>
           </div>
-          <div class="About-ProfileListItem"><dt class="About-ProfileListItemHeading">
+          <div class="About-ProfileListItem">
+            <dt class="About-ProfileListItemHeading">
               嫌いな食べ物
             </dt>
             <dd class="About-ProfileListItemData">
               カレーライス
             </dd>
           </div>
-          <div class="About-ProfileListItem"><dt class="About-ProfileListItemHeading">
+          <div class="About-ProfileListItem">
+            <dt class="About-ProfileListItemHeading">
               好きなこと
             </dt>
             <dd class="About-ProfileListItemData">
@@ -47,7 +52,8 @@ exports[`About render 1`] = `
               効率化が図れそうな技術を試すこと / 技術ブログを見て回ること
             </dd>
           </div>
-          <div class="About-ProfileListItem"><dt class="About-ProfileListItemHeading">
+          <div class="About-ProfileListItem">
+            <dt class="About-ProfileListItemHeading">
               作ってるもの
             </dt>
             <dd class="About-ProfileListItemData">
@@ -70,7 +76,8 @@ exports[`About render 1`] = `
               </ul>
             </dd>
           </div>
-          <div class="About-ProfileListItem"><dt class="About-ProfileListItemHeading">
+          <div class="About-ProfileListItem">
+            <dt class="About-ProfileListItemHeading">
               コミュニティ
             </dt>
             <dd class="About-ProfileListItemData">
