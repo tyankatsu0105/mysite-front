@@ -1,6 +1,9 @@
 const path = require("path");
 
 module.exports = {
+  templates: {
+    ContentfulPosts: "/posts/:slug"
+  },
   plugins: [
     {
       use: "@gridsome/source-contentful",

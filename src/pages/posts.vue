@@ -142,7 +142,7 @@ query Post($page: Int) {
       node {
         id
         title
-        path
+        slug
         eyecatch {
           file {
             url
@@ -153,9 +153,7 @@ query Post($page: Int) {
         }
         tags {
           id
-          fields {
-            title
-          }
+          title
         }
         date(format: "YYYY.MM.DD", locale: "ja")
       }

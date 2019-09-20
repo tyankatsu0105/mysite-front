@@ -272,7 +272,7 @@ query Post($path: String!) {
     id
     contents
     title
-    path
+    slug
     date(format: "YYYY.MM.DD", locale: "ja")
     eyecatch {
       file {
@@ -284,9 +284,7 @@ query Post($path: String!) {
     }
     tags {
       id
-      fields {
-        title
-      }
+      title
     }
   }
 }

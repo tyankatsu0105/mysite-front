@@ -8,7 +8,7 @@
 				class="PostsArticle-Contents"
 			>
 				<g-link
-					:to="article.path"
+					:to="`/posts/${article.slug}`"
 					class="PostsArticle-ContentsWrapLink"
 				>
 					<div class="PostsArticle-WrapHeadBody">
