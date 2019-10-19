@@ -84,7 +84,7 @@ export default {
     siteInfo() {
       return {
         title: this.$page.post.title,
-        path: this.$page.post.path
+        slug: this.$page.post.slug
       };
     },
     ogpImage() {

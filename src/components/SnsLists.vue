@@ -13,7 +13,7 @@
 			</button>
 			<div class="SnsLists-Item _twitter">
 				<a
-					:href="`https://twitter.com/share?text=${siteInfo.title}&url=${siteUrl}${siteInfo.path}&hashtags=TyankatsuSB`"
+					:href="`https://twitter.com/share?text=${siteInfo.title}&url=${siteUrl}/posts/${siteInfo.slug}`"
 					onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"
 					rel="nofollow"
 					class="SnsLists-Link"
@@ -23,7 +23,7 @@
 			</div>
 			<div class="SnsLists-Item _hatena">
 				<a
-					:href="`http://b.hatena.ne.jp/entry/${siteUrl}${siteInfo.path}`"
+					:href="`http://b.hatena.ne.jp/entry/${siteUrl}/posts/${siteInfo.slug}`"
 					class="SnsLists-Link "
 					target="_blank"
 					title="このエントリーをはてなブックマークに追加"
@@ -37,7 +37,7 @@
 			</div>
 			<div class="SnsLists-Item _pocket">
 				<a
-					:href="`http://getpocket.com/edit?url=${siteUrl}${siteInfo.path}&title=${siteInfo.title}`"
+					:href="`http://getpocket.com/edit?url=${siteUrl}/posts/${siteInfo.slug}&title=${siteInfo.title}`"
 					class="SnsLists-Link "
 					onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
 				>

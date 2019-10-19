@@ -5,15 +5,15 @@ exports[`SnsLists render 1`] = `
   <div class="SnsLists-ContentsBox"><button type="button" class="SnsLists-Button">
       <fontawesomeicon-stub icon="[object Object]"></fontawesomeicon-stub>
     </button>
-    <div class="SnsLists-Item _twitter"><a href="https://twitter.com/share?text=サイトのタイトル&amp;url=http://www.hogefuga.com/to/path&amp;hashtags=TyankatsuSB" onclick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow" class="SnsLists-Link">
+    <div class="SnsLists-Item _twitter"><a href="https://twitter.com/share?text=サイトのタイトル&amp;url=http://www.hogefuga.com/posts/post-title" onclick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow" class="SnsLists-Link">
         <fontawesomeicon-stub icon="[object Object]"></fontawesomeicon-stub>
       </a></div>
-    <div class="SnsLists-Item _hatena"><a href="http://b.hatena.ne.jp/entry/http://www.hogefuga.com/to/path" target="_blank" title="このエントリーをはてなブックマークに追加" class="SnsLists-Link ">
+    <div class="SnsLists-Item _hatena"><a href="http://b.hatena.ne.jp/entry/http://www.hogefuga.com/posts/post-title" target="_blank" title="このエントリーをはてなブックマークに追加" class="SnsLists-Link ">
         <vicon-stub class="SnsLists-LinkIcon">
           <iconhatena-stub></iconhatena-stub>
         </vicon-stub>
       </a></div>
-    <div class="SnsLists-Item _pocket"><a href="http://getpocket.com/edit?url=http://www.hogefuga.com/to/path&amp;title=サイトのタイトル" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="SnsLists-Link ">
+    <div class="SnsLists-Item _pocket"><a href="http://getpocket.com/edit?url=http://www.hogefuga.com/posts/post-title&amp;title=サイトのタイトル" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="SnsLists-Link ">
         <fontawesomeicon-stub icon="[object Object]"></fontawesomeicon-stub>
       </a></div>
   </div>

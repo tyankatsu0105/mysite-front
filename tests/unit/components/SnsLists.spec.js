@@ -4,7 +4,7 @@ import SnsLists from "@/components/SnsLists.vue";
 const propsData = {
   siteInfo: {
     title: "サイトのタイトル",
-    path: "/to/path"
+    slug: "post-title"
   }
 };
 
