@@ -387,7 +387,6 @@ query Post($path: String!) {
     h2 {
       padding-bottom: 3px;
       font-size: 2rem;
-      font-size: 1.3rem;
       border-bottom: 3px solid lighten($color-accent, 20%);
     }
     h3 {
