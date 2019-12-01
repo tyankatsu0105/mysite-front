@@ -131,35 +131,35 @@ export default {
 </script>
 
 <page-query>
-query Post($page: Int) {
-  allContentfulPosts(perPage: 12, order: DESC, page: $page) @paginate {
-    pageInfo {
-      totalPages
-      currentPage
-    }
-    totalCount
-    edges {
-      node {
-        id
-        title
-        slug
-        eyecatch {
-          file {
-            url
-          }
-        }
-        category {
-          title
-        }
-        tags {
+  query Post($page: Int) {
+    allContentfulPosts(perPage: 12, order: DESC, page: $page) @paginate {
+      pageInfo {
+        totalPages
+        currentPage
+      }
+      totalCount
+      edges {
+        node {
           id
           title
+          slug
+          eyecatch {
+            file {
+              url
+            }
+          }
+          category {
+            title
+          }
+          tags {
+            id
+            title
+          }
+          date(format: "YYYY.MM.DD", locale: "ja")
         }
-        date(format: "YYYY.MM.DD", locale: "ja")
       }
     }
   }
-}
 </page-query>
 
 <style scoped lang="scss">

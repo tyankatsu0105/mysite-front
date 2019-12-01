@@ -24,6 +24,21 @@
 							About
 						</span>
 					</g-link>
+				</li>
+        
+				<li class="HeaderMenu_NavListItem">
+					<g-link
+						to="/works"
+						class="HeaderMenu_NavListItemLink"
+						exact
+					>
+						<span>
+							Works
+						</span>
+					</g-link>
+				</li>
+        
+				<li class="HeaderMenu_NavListItem">
 					<g-link
 						to="/posts"
 						class="HeaderMenu_NavListItemLink"

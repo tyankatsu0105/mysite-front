@@ -14,6 +14,11 @@
 						class="Index_Link"
 					/>
 					<LinkButtonPrimary
+						text="Works"
+						to="works"
+						class="Index_Link"
+					/>
+					<LinkButtonPrimary
 						text="Posts"
 						to="posts"
 						class="Index_Link"
