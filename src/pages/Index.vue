@@ -166,13 +166,14 @@ export default {
   }
   &_LinkBox {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 24px;
   }
   &_Link {
-    & + & {
-      margin-left: 12px;
-    }
+    margin-right: 12px;
+
+    margin-bottom: 12px;
   }
   .VFooter {
     position: absolute;
