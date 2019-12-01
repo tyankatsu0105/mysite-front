@@ -54,30 +54,6 @@ exports[`About render 1`] = `
           </div>
           <div class="About-ProfileListItem">
             <dt class="About-ProfileListItemHeading">
-              作ってるもの
-            </dt>
-            <dd class="About-ProfileListItemData">
-              <ul>
-                <li>
-                  <g-link href="https://github.com/gridsome/eslint-plugin-gridsome">
-                    eslint-plugin-gridsome
-                  </g-link>
-                </li>
-                <li>
-                  <g-link href="https://github.com/tyankatsu0105/stylelint-config-ecss">
-                    stylelint-config-ecss
-                  </g-link>
-                </li>
-                <li>
-                  <g-link href="https://github.com/tyankatsu0105/stylelint-plugin-ecss">
-                    stylelint-plugin-ecss
-                  </g-link>
-                </li>
-              </ul>
-            </dd>
-          </div>
-          <div class="About-ProfileListItem">
-            <dt class="About-ProfileListItemHeading">
               コミュニティ
             </dt>
             <dd class="About-ProfileListItemData">
