@@ -8,6 +8,28 @@
 			<ul class="Works-List">
 				<li class="Works-ListItem">
 					<g-link
+						href="https://github.com/tyankatsu0105/install-with-types"
+						class="Works-ListItemInner"
+					>
+						<div class="Works-ListItem_Head">
+							<FontAwesomeIcon
+								:icon="{ prefix: 'fab', iconName: 'github' }"
+								size="6x"
+							/>
+						</div>
+						<div class="Works-ListItem_Body">
+							<h3 class="Works-ListItem_BodyHeading">
+								install-with-types
+							</h3>
+							<p class="Works-ListItem_BodyDescription">
+								パッケージをインストールする際に、@types/xx があれば、それも一緒にインストールするCLI
+							</p>
+						</div>
+					</g-link>
+				</li>
+
+				<li class="Works-ListItem">
+					<g-link
 						href="https://github.com/tyankatsu0105/convert-mention-action"
 						class="Works-ListItemInner"
 					>
